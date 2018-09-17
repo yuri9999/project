@@ -5,7 +5,7 @@
 <mapper namespace="mybatis.memberMapper">
 	
 	<insert id="insertMember" parameterType="memberDTO">
-		INSERT INTO member VALUES(#{id},#{pwd},#{koreanName},#{englishName},#{birthday},#{gender},#{passportNum},#{nation},#{country},#{email1},#{email2},#{tel1},#{tel2},#{tel3},#{tel4},'silver',0,1000,0,0)
+		INSERT INTO member VALUES(#{id}, #{pwd}, #{koreanName}, #{englishName}, #{birthday}, #{gender}, #{passportNum}, #{nation}, #{country}, #{email1}, #{email2}, #{tel1}, #{tel2}, #{tel3}, #{tel4}, 'silver', 0, 1000, 0, 0)
 	</insert>
 
 	<update id="updateMember" parameterType="memberDTO">

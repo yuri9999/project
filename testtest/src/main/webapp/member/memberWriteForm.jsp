@@ -50,7 +50,7 @@
 		<tr>
 			<td>여권번호</td>
 			<td>
-				<input type="text" name="passporNum" placeholder="여권번호">
+				<input type="text" name="passportNum" placeholder="여권번호">
 			</td>
 		</tr>
 		<tr>
@@ -79,7 +79,7 @@
 		<tr>
 			<td align="center">핸드폰</td>
 			<td>
-			<select name="tel2" style="width: 70px;">
+			<select name="tel1" style="width: 70px;">
 				<option value="82">82대한민국</option>
 				<option value="81">81일본</option>
 				<option value="86">86중국</option>

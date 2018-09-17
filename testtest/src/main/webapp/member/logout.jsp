@@ -7,7 +7,7 @@
 <script type="text/javascript">
 	window.onload = function(){
 		alert("로그아웃");
-		location.href="../main/index.jsp"
+		location.href="../main/main.jsp"
 	}
 </script>
 </head>

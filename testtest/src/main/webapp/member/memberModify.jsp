@@ -8,24 +8,20 @@
 <head>
 <meta charset="UTF-8">
 <title>회원정보수정</title>
+<script type="text/javascript">
+window.onload = function() {
+	if(${su > 0 }){
+		alert("회원정보 수정 완료.");
+		location.href="../main/main.jsp";
+	}else{
+		alert("회원정보 수정 실패.");
+		history.back(-1);		
+	}
+}	
+</script>
 </head>
 <body>
-<c:if test="${su==0 }">
-		<p>회원 정보 수정 실패</p>
-</c:if>
-<c:if test="${su!=0 }">
-		<p>회원 정보 수정 성공</p>
-</c:if>
-<a href="../main/index.jsp">메인 화면</a>
-<%--
-이름 : <%=name %><br>
-아이디 : <%=id %><br>
-비밀번호 : <%=pwd %><br>
-성별 : <%=gender %><br>
-이메일 : <%=email1 %>@<%=email2 %><br>
-핸드폰 : <%=tel1 %>-<%=tel2 %>-<%=tel3 %><br>
-주소 : <%=addr %><br>
- --%>
+
 </body>
 </html>
 

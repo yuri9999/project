@@ -6,6 +6,7 @@ public class MemberDTO {
 	private String koreanName;
 	private String englishName;
 	private String birthday;
+	private String gender;
 	private String passportNum;
 	private String nation;
 	private String country;
@@ -43,13 +44,19 @@ public class MemberDTO {
 		return englishName;
 	}
 	public void setEnglishName(String englishName) {
-		englishName = englishName;
+		this.englishName = englishName;
 	}
 	public String getBirthday() {
 		return birthday;
 	}
 	public void setBirthday(String birthday) {
 		this.birthday = birthday;
+	}
+	public String getGender() {
+		return gender;
+	}
+	public void setGender(String gender) {
+		this.gender = gender;
 	}
 	public String getPassportNum() {
 		return passportNum;

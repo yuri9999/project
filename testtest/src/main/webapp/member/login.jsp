@@ -15,10 +15,10 @@
 	window.onload = function(){
 		if(${sessionScope.memId!=null}){
 			alert("로그인 성공")
-			location.href="loginOK.do"
+			location.href="../main/main.jsp"
 		}else{
 			alert("로그인 실패.")
-			history.back(-1)
+			history.back(-1);
 		}
 	}
 </script>

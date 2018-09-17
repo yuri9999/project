@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -189,9 +190,13 @@ $(document).on('mouseleave', 'div', function () {
 	<h2 class="logo"><a href="../main/main.jsp"><img src="../img/toplogo.png"><i>JAJUAIR</i></a></h2>
 	<div id="etc">
 		<ul>
-			<li class="etcMenu"><a href="#">로그인</a></li>
-			<li class="etcMenu"><a href="#">로그아웃</a></li>
+		<c:if test="${sessionScope.memId==null }">
+			<li class="etcMenu"><a href="../member/loginForm.do">로그인</a></li>
 			<li class="etcMenu"><a href="../member/memberWriteForm.do">회원가입</a></li>
+		</c:if>
+		<c:if test="${sessionScope.memId!=null }">
+			<li class="etcMenu"><a href="../member/logout.do">로그아웃</a></li>
+		</c:if>
 			<li class="etcMenu"><a href="#">고객센터</a></li>
 		</ul>
 	</div>
@@ -240,7 +245,7 @@ $(document).on('mouseleave', 'div', function () {
 						<td class="details1"><a href="#">나의 쿠폰</a></td>
 						<td class="details1"><a href="#">나의 탑승내역</a></td>
 						<td class="details1"><a href="#">나의 문의 내역</a></td>
-						<td class="details1"><a href="#">나의 정보수정</a></td>
+						<td class="details1"><a href="../member/memberModifyForm.do?id=${sessionScope.memId }">나의 정보수정</a></td>
 					</tr>
 					<tr>
 						<td class="details2"><a href="#">나의 예약 조회</a></td>

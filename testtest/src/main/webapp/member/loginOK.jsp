@@ -11,7 +11,7 @@
 </head>
 <body>
 <img src="../image/tumi.png" width="30" height="30"
-	onclick="location.href='../main/index.jsp'"
+	onclick="location.href='../main/main.jsp'"
 	style="cursor: pointer;">
 	${sessionScope.memName }님이 로그인
 <br><br>

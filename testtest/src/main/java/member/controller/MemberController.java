@@ -111,6 +111,7 @@ public class MemberController {
 		String koreanName = request.getParameter("koreanName");
 		String englishName = request.getParameter("englishName");
 		String birthday = request.getParameter("birthday");
+		String gender = request.getParameter("gender");
 		String passportNum = request.getParameter("passportNum");
 		String nation = request.getParameter("nation");
 		String country = request.getParameter("country");
@@ -128,6 +129,7 @@ public class MemberController {
 		memberDTO.setKoreanName(koreanName);
 		memberDTO.setEnglishName(englishName);
 		memberDTO.setBirthday(birthday);
+		memberDTO.setGender(gender);
 		memberDTO.setPassportNum(passportNum);
 		memberDTO.setNation(nation);
 		memberDTO.setCountry(country);
@@ -170,10 +172,11 @@ public class MemberController {
 		} catch (UnsupportedEncodingException e) {
 			e.printStackTrace();
 		}
-
+		String id = request.getParameter("id");
 		String koreanName = request.getParameter("koreanName");
-		String englishName = request.getParameter("EnglishName");
+		String englishName = request.getParameter("englishName");
 		String birthday = request.getParameter("birthday");
+		String gender = request.getParameter("gender");
 		String passportNum = request.getParameter("passportNum");
 		String nation = request.getParameter("nation");
 		String country = request.getParameter("country");
@@ -186,10 +189,11 @@ public class MemberController {
 		
 		// 데이터 전송하기
 		MemberDTO memberDTO = new MemberDTO();
-
+		memberDTO.setId(id);
 		memberDTO.setKoreanName(koreanName);
 		memberDTO.setEnglishName(englishName);
 		memberDTO.setBirthday(birthday);
+		memberDTO.setGender(gender);
 		memberDTO.setPassportNum(passportNum);
 		memberDTO.setNation(nation);
 		memberDTO.setCountry(country);
