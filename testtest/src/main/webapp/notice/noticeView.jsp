@@ -50,7 +50,7 @@
 		<td>
 			<input type="button" value="이벤트 수정" onclick="location.href='noticeModifyForm.do?seq=${noticeDTO.seq}'" class="mybutton">
 			<input type="button" value="이벤트 삭제" onclick="location.href='noticeDelete.do?seq=${noticeDTO.seq}'" class="mybutton">
-			<input type="button" value="목록으로" onclick="history.back()" class="mybutton">
+			<input type="button" value="이전으로" onclick="history.back()" class="mybutton">
 		</td>
 	</tr>
 </table>

@@ -10,6 +10,7 @@
 <context:component-scan base-package="event.**"/>
 <context:component-scan base-package="notice.**"/>
 <context:component-scan base-package="member.**"/>
+<context:component-scan base-package="body.**" />
 
 <!-- Example: a logical view name of 'showMessage' is mapped to '/WEB-INF/jsp/showMessage.jsp' -->
 <!-- <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver"><property name="prefix" value="/WEB-INF/view/"/><property name="suffix" value=".jsp"/></bean> -->

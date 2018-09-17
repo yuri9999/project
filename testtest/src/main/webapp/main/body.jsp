@@ -94,26 +94,18 @@
 	height: 220px;
 	border-bottom: 1px solid #ccc;
 }
-#notice ul{
-	margin-top: 20px;
-	margin-left: 35px;
-	list-style: none;
-	width: 1200px;
-	height: 170px;
+#notice table{
+	margin-top: 30px;
 }
-#notice ul li{
-	font-size: 17px;
-	text-align: left;
-	margin-bottom: 7px;
-}
-#notice ul li a{
-	float: left;
-	color: #353535;
+#notice #noticeSub a{
 	text-decoration: none;
+	text-align: left;
+	color: #353535;
 }
-#notice ul li p{
-	font-size: 14px;
+#notice #noticeLog{
+	text-decoration: none;
 	text-align: right;
+	color: #353535;
 }
 
 #service{
@@ -147,24 +139,25 @@
 	height: 400px;
 	border-bottom: 1px solid #ccc;
 }
-#event table{
+#event #bodyEvent{
 	width: 1100px;
-	height: 280px;
+	height: 240px;
 	margin: 30px auto;
 }
-#event table td{
-	width: 250px;
-	height: 250px;
+#event #bodyEvent .bodyEventLeft{
+	width: 400px;
+	height: 50px;
 	margin: auto;
 	font-size: 13px;
+	text-align: right;
 }
-#event table td a{
+#event #bodyEvent .bodyEventLeft a{
 	text-decoration: none;
 	color: #353535;
 }
-#event table td img{
-	width: 250px;
-	height: 250px;
+#event #bodyEvent .bodyEventLeft img{
+	width: 390px;
+	height: 50px;
 }
 
 #bodyetc{
@@ -201,6 +194,7 @@
 	text-decoration: none;
 	color: #ccc;
 }
+
 </style>
 <script type="text/javascript" src="../js/jquery-3.3.1.min.js"></script>
 <script type="text/javascript">
@@ -341,13 +335,14 @@ RollingBanner.prototype = {
 </div>
 <div id="notice">
 	<h2>새소식</h2>
-	<ul>
-		<li><a href="#">태풍 매미로 인한 일본 항공편 연착지연상황 안내</a><p>(09.13~)</p></li>
-		<li><a href="#">태풍 매미로 인한 동남아 항공편 연착지연상황 안내</a><p>(09.13~)</p></li>
-		<li><a href="#">2018년 8월 수화물 수령 현황</a><p>(~09.31)</li>
-		<li><a href="#">인도네시아 항공편 아시안게임 특가 종료 안내</a><p>(~09.07)</p></li>
-		<li><a href="#">국내선 유류 할증로 공지</a><p>(~10.11)</p></li>
-	</ul>
+	<table>
+		<c:forEach var="noticeDTO" items="${requestScope.listN }">
+			<tr>
+				<td id="noticeSub"><a href="../notice/noticeView.do?seq=${noticeDTO.seq }">${noticeDTO.subject }</a></td>
+				<td id="noticeLog">${noticeDTO.logtime }</td>	
+			</tr>
+		</c:forEach>
+	</table>
 </div>
 <div id="service">
 	<img src="../img/airfort.jpg" id="bakcimg">
@@ -376,37 +371,14 @@ RollingBanner.prototype = {
 </div>
 <div id="event">
 	<h2>이벤트</h2>
-	<table>
+	<table id="bodyEvent">
+	<c:forEach var="eventDTO" items="${requestScope.list }">
 		<tr>
-			<td>
-				<a href="#">
-					<img src="../img/event1.jpg"><br>
-					<b>신규가입 첫 탑승 이벤트</b>
-					<p>2018.09.13 ~ 2019.05.13</p>
-				</a>
-			</td>
-			<td>
-				<a href="#">
-					<img src="../img/event2.png"><br>
-					<b>JAJUAIR 페이스북 오픈 이벤트</b>
-					<p>2018.09.13 ~ 2019.05.13</p>
-				</a>
-			</td>
-			<td>
-				<a href="#">
-					<img src="../img/event3.jpg"><br>
-					<b>T-mon과 함께하는 마일리지 이벤트</b>
-					<p>2018.09.13 ~ 2019.05.13</p>
-				</a>
-			</td>
-			<td>
-				<a href="#">
-					<img src="../img/event4.jpg"><br>
-					<b>REPAIRA 마일리지 적립 이벤트</b>
-					<p>2018.09.13 ~ 2019.05.13</p>
-				</a>
-			</td>
+			<td class="bodyEventLeft"><a href="../event/eventView.do?seq=${eventDTO.seq }"><img src="../storage/${eventDTO.image }"></a></td>
+			<td class="bodyEventLeft">${eventDTO.subject }</td>
+			<td class="bodyEventLeft">${eventDTO.logtime }</td>	
 		</tr>
+	</c:forEach>
 	</table>
 </div>
 <div id="bodyetc">

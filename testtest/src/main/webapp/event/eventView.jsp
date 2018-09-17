@@ -55,7 +55,7 @@
 		<td>
 			<input type="button" value="이벤트 수정" onclick="location.href='eventModifyForm.do?seq=${eventDTO.seq}'" class="mybutton">
 			<input type="button" value="이벤트 삭제" onclick="location.href='eventDelete.do?seq=${eventDTO.seq}'" class="mybutton">
-			<input type="button" value="목록으로" onclick="history.back()" class="mybutton">
+			<input type="button" value="이전으로" onclick="history.back()" class="mybutton">
 		</td>
 	</tr>
 </table>

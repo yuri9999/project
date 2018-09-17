@@ -61,7 +61,7 @@
 
 <div id="mainContent">
 	<c:if test="${display==null }">
-		<jsp:include page="body.jsp" />
+		<jsp:include page="body.do" />
 	</c:if>
 	<c:if test="${display!=null }">
 		<jsp:include page="${display }" />
