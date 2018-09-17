@@ -191,7 +191,7 @@ $(document).on('mouseleave', 'div', function () {
 		<ul>
 			<li class="etcMenu"><a href="#">로그인</a></li>
 			<li class="etcMenu"><a href="#">로그아웃</a></li>
-			<li class="etcMenu"><a href="#">회원가입</a></li>
+			<li class="etcMenu"><a href="../member/memberWriteForm.do">회원가입</a></li>
 			<li class="etcMenu"><a href="#">고객센터</a></li>
 		</ul>
 	</div>

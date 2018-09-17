@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="mybatis.memberMapper">
+	
+	<insert id="insertMember" parameterType="memberDTO">
+		INSERT INTO member VALUES(#{id},#{pwd},#{koreanName},#{englishName},#{birthday},#{gender},#{passportNum},#{nation},#{country},#{email1},#{email2},#{tel1},#{tel2},#{tel3},#{tel4},'silver',0,1000,0,0)
+	</insert>
+
+	<update id="updateMember" parameterType="memberDTO">
+		UPDATE member SET koreanName=#{koreanName},englishName=#{englishName},birthday=#{birthday},gender=#{gender},passportNum=#{passportNum},nation=#{nation},country=#{country},email1=#{email1},email2=#{email2},tel1=#{tel1},tel2=#{tel2},tel3=#{tel3},tel4=#{tel4}
+		WHERE id = #{id}
+	</update>
+	
+	<select id="getMember" parameterType="String" resultType="memberDTO">
+		SELECT * FROM member WHERE id = #{id}
+	</select>
+	
+	<select id="login" parameterType="java.util.Map" resultType="String">
+		SELECT * FROM member WHERE id = #{id } and pwd = #{pwd }
+	</select>
+	
+	<select id="isExistId" parameterType="String" resultType="String">
+		select id from member where id = #{id }
+	</select>
+
+</mapper>
