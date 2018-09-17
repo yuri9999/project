@@ -145,19 +145,19 @@
 	margin: 30px auto;
 }
 #event #bodyEvent .bodyEventLeft{
-	width: 400px;
-	height: 50px;
+	width: 300px;
+	height: 300px;
 	margin: auto;
-	font-size: 13px;
-	text-align: right;
+	font-size: 15px;
+	text-align: left;
 }
 #event #bodyEvent .bodyEventLeft a{
 	text-decoration: none;
 	color: #353535;
 }
 #event #bodyEvent .bodyEventLeft img{
-	width: 390px;
-	height: 50px;
+	width: 290px;
+	height: 250px;
 }
 
 #bodyetc{
@@ -372,13 +372,15 @@ RollingBanner.prototype = {
 <div id="event">
 	<h2>이벤트</h2>
 	<table id="bodyEvent">
-	<c:forEach var="eventDTO" items="${requestScope.list }">
 		<tr>
-			<td class="bodyEventLeft"><a href="../event/eventView.do?seq=${eventDTO.seq }"><img src="../storage/${eventDTO.image }"></a></td>
-			<td class="bodyEventLeft">${eventDTO.subject }</td>
-			<td class="bodyEventLeft">${eventDTO.logtime }</td>	
+		<c:forEach var="eventDTO" items="${requestScope.list }">
+			<td class="bodyEventLeft">
+				<a href="../event/eventView.do?seq=${eventDTO.seq }"><img src="../storage/${eventDTO.image }"></a>
+				${eventDTO.subject }<br>
+				${eventDTO.logtime }
+			</td>
+		</c:forEach>	
 		</tr>
-	</c:forEach>
 	</table>
 </div>
 <div id="bodyetc">
