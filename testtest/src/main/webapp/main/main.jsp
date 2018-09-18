@@ -23,9 +23,13 @@
 	position: absolute;
 	left:0;
 	width: 100%;
-	height: 2450px;
+	height:100%;
 	margin-top: 100px;
 	margin: auto;
+}
+#bottom{
+	margin-left:700;
+	width: 100%;
 }
 #remote{
 	position: fixed;
@@ -46,12 +50,7 @@
 #remote table .info{
 	text-align: center;
 }
-#bottom{
-	margin-left:700;
-	position: absolute;
-	top: 2700px;
-	width: 100%;
-}
+
 </style>
 </head>
 <body>
@@ -66,7 +65,11 @@
 	<c:if test="${display!=null }">
 		<jsp:include page="${display }" />
 	</c:if>
+	<div id="bottom">
+		<jsp:include page="bottom.jsp" />
+	</div>
 </div>
+
 <div id="remote">
 	<table>
 		<tr>
@@ -84,8 +87,6 @@
 	</table>
 </div>
 
-<div id="bottom">
-	<jsp:include page="bottom.jsp" />
-</div>
+
 </body>
 </html>

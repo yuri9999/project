@@ -7,6 +7,9 @@
 <meta charset="UTF-8">
 <title>Insert title here</title>
 <style type="text/css">
+body{
+	height: 2450px;
+}
 .rolling-banner{
 	margin: 0 auto;
     position:relative;

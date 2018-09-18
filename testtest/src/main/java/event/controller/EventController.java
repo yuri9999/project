@@ -99,8 +99,7 @@ public class EventController {
 	
 	@RequestMapping(value="/event/eventListE.do")
 	public ModelAndView eventListE(HttpServletRequest request, EventDAO eventDAO) {
-		int pg = Integer.parseInt(request.getParameter("pg"));
-		System.out.println(pg);
+		int pg = 1;
 		List<Object> list = eventService.eventListE();
 		int totalA = eventService.getTotalE();
 		int totalP = (totalA+4)/5;

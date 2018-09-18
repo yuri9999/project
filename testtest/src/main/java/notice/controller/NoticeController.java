@@ -57,12 +57,12 @@ public class NoticeController {
 	public ModelAndView noticeList(HttpServletRequest request, NoticeDAO noticeDAO) throws Exception {
 		request.setCharacterEncoding("UTF-8");
 		int pg = Integer.parseInt(request.getParameter("pg"));
-		int endNum = pg*5;
-		int startNum = endNum-4;
+		int endNum = pg*10;
+		int startNum = endNum-9;
 		
 		List<Object> list = noticeService.noticeList(startNum, endNum);
 		int totalA = noticeService.getTotalA();
-		int totalP = (totalA+4)/5;
+		int totalP = (totalA+9)/10;
 		
 		int startPage = (pg-1)/3*3 + 1;
 		int endPage = startPage + 2;
@@ -85,7 +85,6 @@ public class NoticeController {
 		request.setCharacterEncoding("UTF-8");
 		int seq = Integer.parseInt(request.getParameter("seq"));
 		NoticeDTO noticeDTO = new NoticeDTO();
-		
 		noticeDTO = noticeService.noticeView(seq);
 		
 		noticeService.hit(seq);
