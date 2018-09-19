@@ -197,7 +197,7 @@ $(document).on('mouseleave', 'div', function () {
 		<c:if test="${sessionScope.memId!=null }">
 			<li class="etcMenu"><a href="../member/logout.do">로그아웃</a></li>
 		</c:if>
-			<li class="etcMenu"><a href="#">고객센터</a></li>
+			<li class="etcMenu"><a href="../qna/qnaMain.do?pg=1">고객센터</a></li>
 		</ul>
 	</div>
 	<br><br>

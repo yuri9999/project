@@ -7,10 +7,12 @@
 		<typeAlias type="event.bean.EventDTO" alias="eventDTO"></typeAlias>
 		<typeAlias type="notice.bean.NoticeDTO" alias="noticeDTO"></typeAlias>
 		<typeAlias type="member.bean.MemberDTO" alias="memberDTO"></typeAlias>
+		<typeAlias type="qna.bean.QnaDTO" alias="qnaDTO"></typeAlias>
 	</typeAliases>
 	<mappers>
 		<mapper resource="mybatis/event-mapping.xml" />
 		<mapper resource="mybatis/notice-mapping.xml"/>
 		<mapper resource="mybatis/member-mapping.xml"/>
+		<mapper resource="mybatis/qna-mapping.xml"/>
 	</mappers>
 </configuration>

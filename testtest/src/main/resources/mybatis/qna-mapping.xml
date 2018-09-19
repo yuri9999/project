@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="mybatis.qnaMapper">
+	
+	<insert id="insertQna" parameterType="qnaDTO">
+		INSERT INTO qna VALUES(#{koreanName},#{tel1},#{tel2},#{tel3},#{email1},#{email2},#{code1},#{code2},#{reservNum},#{boardName},#{englishName},#{boardDate},#{airportName1},#{airportName2},#{goodsName},#{goodsColor},#{subject},#{content})
+	</insert>
+
+	<update id="updateQna" parameterType="qnaDTO">
+		UPDATE qna SET subject=#{subject},content=#{content} WHERE koreanName=#{KoreanName}
+	</update>
+
+	<delete id="deleteQna" parameterType="int">
+		DELETE FROM qna WHERE seq = #{seq}
+	</delete>
+	
+	<select id="getQnaTotal" resultType="int">
+		SELECT count(*) FROM qna
+	</select>
+
+	<select id="getQnaList" parameterType="java.util.Map" resultType="qnaDTO">
+		<![CDATA[select * from (select rownum rn, tt. * from (select * from qna order by code2 desc)tt) where rn>=#{startNum} and rn<=#{endNum}]]>
+	</select>
+	
+	<select id="getQnaListD" parameterType="String" resultType="qnaDTO">
+		<![CDATA[select * from where code2=#{code2}]]>
+	</select>
+
+	<select id="getQnaOne" resultType="qnaDTO" parameterType="int">
+		SELECT * FROM qna WHERE koreanName=#{KoreanName}
+	</select>
+
+</mapper>
