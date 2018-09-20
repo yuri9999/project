@@ -1,6 +1,7 @@
 package qna.bean;
 
 public class QnaDTO {
+	private int seq;
 	private String koreanName;
 	private String tel1;
 	private String tel2;
@@ -19,6 +20,14 @@ public class QnaDTO {
 	private String goodsColor;
 	private String subject;
 	private String content;
+	private String answer;
+	
+	public int getSeq() {
+		return seq;
+	}
+	public void setSeq(int seq) {
+		this.seq = seq;
+	}
 	public String getKoreanName() {
 		return koreanName;
 	}
@@ -126,6 +135,12 @@ public class QnaDTO {
 	}
 	public void setContent(String content) {
 		this.content = content;
+	}
+	public String getAnswer() {
+		return answer;
+	}
+	public void setAnswer(String answer) {
+		this.answer = answer;
 	}	
 	
 	

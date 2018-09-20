@@ -30,28 +30,42 @@ public class QnaServiceImpl implements QnaService{
 	}
 
 	@Override
-	public int getTotalA() {
-		return qnaDAO.getTotalA();
+	public int getTotalA(String koreanName) {
+		return qnaDAO.getTotalA(koreanName);
+	}
+	
+	@Override
+	public int getTotalC(String koreanName) {
+		return qnaDAO.getTotalA(koreanName);
 	}
 
 	@Override
-	public QnaDTO qnaView(String koreanName) {
-		return qnaDAO.qnaView(koreanName);
+	public QnaDTO qnaView(int seq) {
+		return qnaDAO.qnaView(seq);
 	}
 
 	@Override
-	public int qnaDelete(String koreanName) {
-		return qnaDAO.qnaDelete(koreanName);
+	public int qnaDelete(int seq) {
+		return qnaDAO.qnaDelete(seq);
 	}
 
 	@Override
-	public QnaDTO qnaModifyForm(String koreanName) {
-		return qnaDAO.qnaModifyForm(koreanName);
+	public QnaDTO qnaModifyForm(int seq) {
+		return qnaDAO.qnaModifyForm(seq);
 	}
 
 	@Override
 	public int qnaModify(QnaDTO qnaDTO) {
 		return qnaDAO.qnaModify(qnaDTO);
 	}
+	
+	@Override
+	public QnaDTO qnaAnswerForm(int seq) {
+		return qnaDAO.qnaModifyForm(seq);
+	}
 
+	@Override
+	public int qnaAnswer(QnaDTO qnaDTO) {
+		return qnaDAO.qnaModify(qnaDTO);
+	}
 }

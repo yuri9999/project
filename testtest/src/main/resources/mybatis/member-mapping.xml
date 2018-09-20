@@ -18,7 +18,7 @@
 	</select>
 	
 	<select id="login" parameterType="java.util.Map" resultType="String">
-		SELECT * FROM member WHERE id = #{id } and pwd = #{pwd }
+		SELECT koreanName FROM member WHERE id = #{id } and pwd = #{pwd }
 	</select>
 	
 	<select id="isExistId" parameterType="String" resultType="String">

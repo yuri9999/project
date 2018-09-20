@@ -27,6 +27,19 @@ $(function () {
     $('.d'+$(this).val()).show();
   });
 });
+$(function() {
+	$("form[name='qnaWriteForm']").submit(function() {
+		if(!confirm("정말 저장하시겠습니까?")) {
+			return false;
+		}
+	});
+	
+	$("input[type='reset']").click(function() {
+		if(!confirm("정말 입력을 취소하시겠습니까?")) {
+			return false;
+		}
+	});
+});
 </script>
 </head>
 <body>
@@ -34,7 +47,7 @@ $(function () {
 <div class="qnaWrite">
 	<h3 id="qnaWriteNavi">JAJUAIR &gt; 고객센터</h3><br>
 	<h1>고객센터</h1>
-	<p>@@@님의 문의사항을 남겨주세요.</p>
+	<p>${sessionScope.memName }님의 문의사항을 남겨주세요.</p>
 	<table id="qnaTab" border="1">
 		<tr>
 			<td>
@@ -44,7 +57,7 @@ $(function () {
 		<tr>
 			<td>
 				<label>이름 *</label>
-				<input type="text" name="koreanName">
+				<input type="text" name="koreanName" value="${sessionScope.memName }">
 			</td>
 		</tr>
 		<tr>
@@ -85,12 +98,12 @@ $(function () {
 				</select>
 				<label class="content-panel d1">분류 *</label>
 				<select name="code2" class="content-panel d1">
-					<option value="5">항공권예약발권/변경/취소</option>
-					<option value="6">포인트</option>
-					<option value="7">홈페이지&모바일 이용</option>
-					<option value="8">공항서비스</option>
-					<option value="9">이벤트</option>
-					<option value="10">기타</option>
+					<option value="항공권예약발권&#47;변경&#47;취소">항공권예약발권/변경/취소</option>
+					<option value="포인트">포인트</option>
+					<option value="홈페이지&#38;모바일 이용">홈페이지&모바일 이용</option>
+					<option value="공항서비스">공항서비스</option>
+					<option value="이벤트">이벤트</option>
+					<option value="기타">기타</option>
 				</select>
 			</td>
 		</tr>
@@ -254,11 +267,13 @@ $(function () {
 			<td>
 				<label>문의내용 *</label>
 				<textarea rows="5" cols="50" name="content"></textarea>
+				<input type="hidden" name="answer">
 			</td>
 		</tr>
 		<tr>
 			<td>
 				<input type="submit" value="문의 작성">
+				<input type="reset" value="다시작성">
 			</td>
 		</tr>
 	</table>

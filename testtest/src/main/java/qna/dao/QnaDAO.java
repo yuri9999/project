@@ -30,20 +30,24 @@ public class QnaDAO {
 		return sqlsession.selectList("mybatis.qnaMapper.getQnaListD");
 	}
 	
-	public int getTotalA() {
-		return sqlsession.selectOne("mybatis.qnaMapper.getQnaTotal");
+	public int getTotalA(String koreanName) {
+		return sqlsession.selectOne("mybatis.qnaMapper.getQnaTotal",koreanName);
 	}
 	
-	public QnaDTO qnaView(String koreanName) {
-		return sqlsession.selectOne("mybatis.qnaMapper.getQnaOne",koreanName);
+	public int getTotalC(String koreanName) {
+		return sqlsession.selectOne("mybatis.qnaMapper.getQnaTotal",koreanName);
 	}
 	
-	public int qnaDelete(String koreanName) {
-		return sqlsession.delete("mybatis.qnaMapper.deleteQna",koreanName);
+	public QnaDTO qnaView(int seq) {
+		return sqlsession.selectOne("mybatis.qnaMapper.getQnaOne",seq);
 	}
 	
-	public QnaDTO qnaModifyForm(String koreanName) {
-		return sqlsession.selectOne("mybatis.qnaMapper.getQnaOne",koreanName);
+	public int qnaDelete(int seq) {
+		return sqlsession.delete("mybatis.qnaMapper.deleteQna",seq);
+	}
+	
+	public QnaDTO qnaModifyForm(int seq) {
+		return sqlsession.selectOne("mybatis.qnaMapper.getQnaOne",seq);
 	}
 	
 	public int qnaModify(QnaDTO qnaDTO) {

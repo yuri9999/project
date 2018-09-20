@@ -5,19 +5,19 @@
 <mapper namespace="mybatis.qnaMapper">
 	
 	<insert id="insertQna" parameterType="qnaDTO">
-		INSERT INTO qna VALUES(#{koreanName},#{tel1},#{tel2},#{tel3},#{email1},#{email2},#{code1},#{code2},#{reservNum},#{boardName},#{englishName},#{boardDate},#{airportName1},#{airportName2},#{goodsName},#{goodsColor},#{subject},#{content})
+		INSERT INTO qna VALUES(seq_qna.nextval, #{koreanName},#{tel1},#{tel2},#{tel3},#{email1},#{email2},#{code1},#{code2},#{reservNum},#{boardName},#{englishName},#{boardDate},#{airportName1},#{airportName2},#{goodsName},#{goodsColor},#{subject},#{content},#{answer})
 	</insert>
 
 	<update id="updateQna" parameterType="qnaDTO">
-		UPDATE qna SET subject=#{subject},content=#{content} WHERE koreanName=#{KoreanName}
+		UPDATE qna SET subject=#{subject},content=#{content},answer=#{answer} WHERE seq=#{seq}
 	</update>
 
 	<delete id="deleteQna" parameterType="int">
 		DELETE FROM qna WHERE seq = #{seq}
 	</delete>
 	
-	<select id="getQnaTotal" resultType="int">
-		SELECT count(*) FROM qna
+	<select id="getQnaTotal" resultType="int" parameterType="String">
+		SELECT count(*) FROM qna where koreanName=#{koreanName}
 	</select>
 
 	<select id="getQnaList" parameterType="java.util.Map" resultType="qnaDTO">
@@ -29,7 +29,7 @@
 	</select>
 
 	<select id="getQnaOne" resultType="qnaDTO" parameterType="int">
-		SELECT * FROM qna WHERE koreanName=#{KoreanName}
+		SELECT * FROM qna WHERE seq=#{seq}
 	</select>
 
 </mapper>

@@ -4,15 +4,15 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>문의사항 작성</title>
+<title>Insert title here</title>
 <script type="text/javascript">
 window.onload = function() {
 	if(${result > 0 }){
-		alert("문의사항 작성 완료.");
+		alert("문의사항 수정 완료.");
 		location.href="qnaMain.do?pg=1";
 	}else{
-		alert("문의사항 작성 실패.");
-		location.href="qnaWriteFrom.do";		
+		alert("문의사항 수정 실패.");
+		location.href="qnaModifyForm.do";		
 	}
 }	
 </script>

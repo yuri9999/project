@@ -12,13 +12,19 @@ public interface QnaService {
 	
 	public List<Object> qnaListD(String code2);
 	
-	public int getTotalA();
+	public int getTotalA(String koreanName);
 	
-	public QnaDTO qnaView(String koreanName);
+	public int getTotalC(String koreanName);
 	
-	public int qnaDelete(String koreanName);
+	public QnaDTO qnaView(int seq);
 	
-	public QnaDTO qnaModifyForm(String koreanName);
+	public int qnaDelete(int seq);
+	
+	public QnaDTO qnaModifyForm(int seq);
 	
 	public int qnaModify(QnaDTO qnaDTO);
+	
+	public QnaDTO qnaAnswerForm(int seq);
+	
+	public int qnaAnswer(QnaDTO qnaDTO);
 }
