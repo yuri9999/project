@@ -8,4 +8,5 @@ public interface MemberService {
 	public MemberDTO getMember(String id);
 	public String login(String id, String pwd);
 	public boolean isExistId(String id);
+	public int memberDelete(String id);
 }

@@ -38,4 +38,7 @@ public class MemberDAO {
 		}
 		return exist;
 	};
+	public int memberDelete(String id) {
+		return sqlsession.delete("mybatis.memberMapper.deleteMember",id);
+	}
 }

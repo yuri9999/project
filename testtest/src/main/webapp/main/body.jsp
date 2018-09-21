@@ -175,7 +175,7 @@ body{
 }
 #bodyetc .etc1{
 	float: left;
-	width: 500px;
+	width: 600px;
 	height: 280px;
 }
 #ebodyetc .etc1 td{
@@ -410,10 +410,10 @@ RollingBanner.prototype = {
 		</tr>
 		<tr>
 			<td>
-				<a href="#"><h3>고객센터</h3><br><p>→ 고객 불만사항 해결</p></a>
+				<a href="../qna/qnaMain.do?pg=1"><h3>고객센터</h3><br><p>→ 고객 불만사항<br>항공권 예약/변경 관련<br>수하물 및 유실물 관련</p></a>
 			</td>
 			<td>
-				<a href="#"><h3>고객센터</h3><br><p>→ 고객 문의</p></a>
+				<h3>고객문의</h3><br><p>→ 1699-1600<br>한국 > 08:00 ~ 18:00<br>일본 > 09:00 ~ 19:00</p></a>
 			</td>
 		</tr>
 	</table>

@@ -25,7 +25,13 @@ public class QnaController {
 		request.setCharacterEncoding("UTF-8");
 		int pg = Integer.parseInt(request.getParameter("pg"));
 		HttpSession session = request.getSession();
-		String koreanName = (String) session.getAttribute("memName");
+		String koreanName = "";
+		if((String) session.getAttribute("memName")!=null) {
+			koreanName = (String) session.getAttribute("memName");
+		}else {
+			koreanName = "notLogin";
+		}
+		
 		int endNum = pg*35;
 		int startNum = endNum-34;
 		

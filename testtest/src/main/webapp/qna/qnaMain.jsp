@@ -21,7 +21,11 @@
 	text-align: center;
 }
 #qnaTopTap .toptap1{
-	width: 400px;
+	width: 500px;
+	height: 300px;
+}
+#qnaTopTap .toptap1 img{
+	width: 500px;
 	height: 300px;
 }
 #qnaTopTap .toptap2{
@@ -177,7 +181,7 @@ $(function($) {
 <h1>고객센터</h1>
 <table id="qnaTopTap">
 	<tr>
-		<td rowspan="3" class="toptap1"><img alt="QnA로고" src="#"></td>
+		<td rowspan="3" class="toptap1"><img alt="QnA로고" src="../img/biglogo.jpg"></td>
 		<td colspan="3">Quick Menu</td>
 	</tr>
 	<tr>
@@ -327,6 +331,9 @@ $(function($) {
 	</div>
 	<div>
 		<h3>나의 문의 답변 내역</h3>
+		<c:if test="${sessionScope.memId==null}">
+			로그인 후 이용해주세요
+		</c:if>
 		<c:if test="${sessionScope.memId!=null}">
 			<table class="collapsible">
 					<c:forEach var="qnaDTO" items="${requestScope.listC }">

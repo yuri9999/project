@@ -17,7 +17,7 @@
 			alert("로그인 성공")
 			location.href="../main/main.jsp"
 		}else{
-			alert("로그인 실패.")
+			alert("아이디 또는 비밀번호가 잘못되었거나 없는 회원정보입니다.")
 			history.back(-1);
 		}
 	}

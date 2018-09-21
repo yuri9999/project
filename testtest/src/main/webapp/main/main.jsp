@@ -31,25 +31,7 @@
 	margin-left:700;
 	width: 100%;
 }
-#remote{
-	position: fixed;
-	top: 400px;
-	right: 30px;
-}
-#remote table{
-	border: 1px solid #ccc;
-	width: 200px;
-	height: 300px;
-}
-#remote table .controller{
-	height: 50px;
- 	text-decoration: none;
- 	text-align: center;
- 	border: 1px solid #ccc;
-}
-#remote table .info{
-	text-align: center;
-}
+
 
 </style>
 </head>
@@ -70,22 +52,7 @@
 	</div>
 </div>
 
-<div id="remote">
-	<table>
-		<tr>
-			<td colspan="2" class="controller"><a href="#">Top</a></td>
-		</tr>
-		<tr>
-			<td colspan="2" class="info">
-				이런 저런 정보
-			</td>
-		</tr>
-		<tr>
-			<td class="controller" width="95">이전</td>
-			<td class="controller" width="95">앞으로</td>
-		</tr>
-	</table>
-</div>
+<jsp:include page="remote.do" />
 
 
 </body>

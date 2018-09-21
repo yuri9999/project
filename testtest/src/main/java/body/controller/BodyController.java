@@ -4,6 +4,7 @@ import java.io.UnsupportedEncodingException;
 import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -12,6 +13,8 @@ import org.springframework.web.servlet.ModelAndView;
 
 import event.controller.EventService;
 import event.dao.EventDAO;
+import member.bean.MemberDTO;
+import member.controller.MemberService;
 import notice.controller.NoticeService;
 import notice.dao.NoticeDAO;
 
@@ -23,9 +26,11 @@ public class BodyController {
 	private EventService eventService;
 	@Autowired
 	private NoticeService noticeService;
+	@Autowired
+	private MemberService memberService;
 	
 	@RequestMapping(value="/main/body.do")
-	public ModelAndView bodyList(HttpServletRequest request,EventDAO eventDAO) {
+	public ModelAndView bodyList(HttpServletRequest request) {
 		try {
 			request.setCharacterEncoding("UTF-8");
 		} catch (UnsupportedEncodingException e) {
@@ -46,6 +51,31 @@ public class BodyController {
 		modelAndView.addObject("list", list);
 		modelAndView.addObject("listN", listN);
 		modelAndView.setViewName("../main/body.jsp");
+
+		return modelAndView;
+	}
+	
+	@RequestMapping(value="/main/remote.do")
+	public ModelAndView remote(HttpServletRequest request) {
+		try {
+			request.setCharacterEncoding("UTF-8");
+		} catch (UnsupportedEncodingException e) {
+			e.printStackTrace();
+		}
+		HttpSession session = request.getSession();
+		String id ="";
+		if((String) session.getAttribute("memId")!=null) {
+			id = (String) session.getAttribute("memId");
+		}else {
+			id = "notLogin";
+		}
+		
+				
+		MemberDTO memberDTO = memberService.getMember(id);
+		
+		ModelAndView modelAndView = new ModelAndView();
+		modelAndView.addObject("memberDTO", memberDTO);
+		modelAndView.setViewName("../main/remote.jsp");
 
 		return modelAndView;
 	}

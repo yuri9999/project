@@ -107,7 +107,7 @@ $( document ).ready( function() {
 				<td>탑승일 : ${qnaDTO.boardDate }</td>
 			</tr>
 			<tr>
-				<td>출발지 : ${qndDTO.airportName1 }</td>
+				<td>출발지 : ${qnaDTO.airportName1 }</td>
 				<td>도착지 : ${qnaDTO.airportName2 }</td>
 			</tr>
 		</c:if>
@@ -126,17 +126,22 @@ $( document ).ready( function() {
 	</c:if>
 	<tr>
 		<td class="qnaViewSub2">
+			<h3>문의사항</h3><br>
 			${qnaDTO.content }
 		</td>
 	</tr>
 	<tr>
-		<td>${qnaDTO.answer }</td>
+		
+		<td>
+			<h3>관리자 답변</h3><br>
+			${qnaDTO.answer }
+		</td>
 	</tr>
 	<tr>
 		<td>
 			<c:if test="${sessionScope.memName==qnaDTO.koreanName }">
-				<input type="button" value="이벤트 수정" onclick="location.href='qnaModifyForm.do?seq=${qnaDTO.seq}'" class="mybutton">
-				<input type="button" value="이벤트 삭제" onclick="location.href='qnaDelete.do?seq=${qnaDTO.seq}'" class="mybutton">
+				<input type="button" value="문의 수정" onclick="location.href='qnaModifyForm.do?seq=${qnaDTO.seq}'" class="mybutton">
+				<input type="button" value="문의 삭제" onclick="location.href='qnaDelete.do?seq=${qnaDTO.seq}'" class="mybutton">
 			</c:if>
 			<c:if test="${sessionScope.memId=='admin' }">
 				<input type="button" value="문의답변" onclick="location.href='qnaAnswerForm.do?seq=${qnaDTO.seq}'" class="mybutton">

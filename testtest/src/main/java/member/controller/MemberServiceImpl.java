@@ -36,5 +36,8 @@ public class MemberServiceImpl implements MemberService{
 	public boolean isExistId(String id) {
 		return memberDAO.isExistId(id);
 	}
-
+	
+	public int memberDelete(String id) {
+		return memberDAO.memberDelete(id);
+	}
 }

@@ -8,9 +8,9 @@
 <title>중복 체크</title>
 <script type="text/javascript">
 	function checkIDClose(){
-		opener.writeForm.id.value='${id }';
+		opener.WriteForm.id.value='${id }';
 		window.close();
-		opener.writeForm.pwd.focus();
+		opener.WriteForm.pwd.focus();
 	}
 </script>
 </head>

@@ -207,6 +207,7 @@ public class MemberController {
 		//DB
 		//MemberDAO memberDAO = new MemberDAO();
 		int su = memberService.modify(memberDTO);
+		
 		ModelAndView modelAndView = new ModelAndView();
 		modelAndView.addObject("su",su);
 		modelAndView.addObject("display", "../member/memberModify.jsp");
@@ -232,7 +233,18 @@ public class MemberController {
 	}
 	
 	
-	
+	@RequestMapping(value="/member/memberDelete.do")
+	public ModelAndView memberDelete(HttpServletRequest request, MemberDAO memberDAO) {
+		String id = request.getParameter("id");
+		
+		int result = 0;
+		result = memberService.memberDelete(id);
+		ModelAndView modelAndView = new ModelAndView();
+		modelAndView.addObject("result", result);
+		modelAndView.addObject("display", "../member/memberDelete.jsp");
+		modelAndView.setViewName("../main/main.jsp");
+		return modelAndView;	
+	}
 	
 	
 	
