@@ -23,6 +23,7 @@
 #qnaTopTap .toptap1{
 	width: 500px;
 	height: 300px;
+		background-color: #EAEAEA;
 }
 #qnaTopTap .toptap1 img{
 	width: 500px;
@@ -31,17 +32,46 @@
 #qnaTopTap .toptap2{
 	width: 400px;
 	height: 150px;
+		background-color: #EAEAEA;
 }
 #qnaTopTap .toptap2 a{
 	font-size: 13px;
 	color: #535353;
 }
 .qnaMain{margin-top:40px; margin-left:350px; width:1200px; height:1800px; display:inline-block;}
-.qnaMain .qnaTabMenu{clear:both;height:100px; background-color: #8C8C8C;}
-.qnaMain .qnaTabMenu .btnList{float:left;width:1200px;height:70px;}
-.qnaMain .qnaTabMenu .btnList li{width:155px;text-align:center;float:left;list-style:none;margin-top:35px; }
+.qnaMain .qnaTabMenu{clear:both;}
+.qnaMain .qnaTabMenu .btnList{float:left;}
+.qnaMain .qnaTabMenu .btnList li{width:155px;float:left;list-style:none;margin-top:35px; }
+.qnaMain .qnaTabMenu .btnList li button{
+	width: 150px;
+	height: 70px;
+	text-align: center;
+	background-color: #EAEAEA;
+	color: #4B1152;
+	font-size: 14px;
+	border: 0;
+	outline: 0;
+}
+.qnaMain .qnaTabMenu .btnList li button:focus{
+	width: 150px;
+	height: 70px;
+	text-align: center;
+	background-color: #ccc;
+	color: #4B1152;
+	font-size: 14px;
+	border-top: 10px solid #4B1152;
+}
 .target{
 	display: none;
+}
+.qnaTabContent{
+	text-align: center;
+}
+.qnaTabContent a{
+
+	text-decoration: none;
+	color: #353535;
+	border-bottom: 1px solid #ccc;
 }
 
 #qnaPaging{
@@ -89,8 +119,8 @@ $(function($) {
 	  // jquery 객체는 동적으로 사용하지 않는한 최대한 미리 셋팅
 	  // *셀렉트를 포함해 jquery동작은 자원을 많이 쓰므로 중복방지용
 	  $x.list_items = $("ul.btnList > li");
-	  $x.mn_items = $("ul.btnList > li > span:first-child");
-	  $x.mn_marks = $("ul.btnList > li > span.mark");
+	  $x.mn_items = $("ul.btnList > li > button:first-child");
+	  $x.mn_marks = $("ul.btnList > li > button.mark");
 	  $x.mn_curr_page = $("div.paging_wrap strong.page_num");
 	  $x.mn_total_pages = $("div.paging_wrap span.page_total");
 	  $x.mn_prev_page = $("div.btn_prev");
@@ -222,13 +252,13 @@ $(function($) {
 	<div class="qnaTabPart">
 		<div class="qnaTabMenu">
 			<ul class="btnList"> 
-				<li class="on"><span class="#qna_11">전체</span><span class="mark"></span></li>
-				<li><span class="#qna_12">항공권예약<br>발권/변경/취소</span><span class="mark"></span></li>
-				<li><span class="#qna_13">포인트</span><span class="mark"></span></li>
-				<li><span class="#qna_14">홈페이지&모바일</span><span class="mark"></span></li>
-				<li><span class="#qna_15">공항서비스</span><span class="mark"></span></li>
-				<li><span class="#qna_16">이벤트</span><span class="mark"></span></li>
-				<li><span class="#qna_17">기타</span><span class="mark"></span></li>        
+				<li class="on"><button class="#qna_11">전체</button><span class="mark"></span></li>
+				<li><button class="#qna_12">항공권예약<br>발권/변경/취소</button><span class="mark"></span></li>
+				<li><button class="#qna_13">포인트</button><span class="mark"></span></li>
+				<li><button class="#qna_14">홈페이지&모바일</button><span class="mark"></span></li>
+				<li><button class="#qna_15">공항서비스</button><span class="mark"></span></li>
+				<li><button class="#qna_16">이벤트</button><span class="mark"></span></li>
+				<li><button class="#qna_17">기타</button><span class="mark"></span></li>        
 			</ul>
 		</div>
 		<div class="qnaTabContent">
@@ -242,7 +272,6 @@ $(function($) {
 							</c:if>	
 						</tr>
 					</c:forEach>
-		
 				</table>
 			</div>
 			<div class="tab-pane" id="qna_12">

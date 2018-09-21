@@ -149,15 +149,7 @@ function checkId() {
 		window.open("../member/checkId.do?id=" + sId, "", "width=350 height=100 left=500 top=200");
 	}
 }
-$(function() {
-	$("input[name='del']").click(function() {
-		var a = confirm();
-		alert(a);
-		if(confirm("정말 탈퇴하시겠습니까?")) {
-			return false;
-		}
-	});
-});
+
 </script>
 <body>
 <div id="memberModifyForm">
@@ -218,7 +210,6 @@ $(function() {
           <td class="mt_left">여권번호</td>
           <td class="mt_right">
             <input type="text" name="passportNum" placeholder="여권번호" required="required" value="${memberDTO.passportNum }">   
-            <input type="button" value="내용보기">
           </td>
         </tr>
         <tr>
@@ -288,7 +279,7 @@ $(function() {
       </table>
      	<div class="foot">
     		<input type="submit" value="회원정보수정">
-			<input type="button" value="회원탈퇴" name="del" onclick="location.href='../member/memberDelete.do?id=${sessionScope.memId}'">
+			<input type="button" value="회원탈퇴" id="del" onclick="location.href='../member/memberDelete.do?id=${sessionScope.memId}'">
     	</div>
     </form>
   </div>
