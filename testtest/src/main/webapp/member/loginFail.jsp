@@ -4,9 +4,16 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>로그아웃</title>
+<title></title>
+<script type="text/javascript">
+	window.onload = function(){
+		if(${sessionScope.memId==null}){
+			alert("로그인을 먼저 해주세요")
+			history.back(-1);
+		}
+	}
+</script>
 </head>
 <body>
-<p>아이디 또는 비밀번호가 틀렸습니다.</p>
 </body>
 </html>

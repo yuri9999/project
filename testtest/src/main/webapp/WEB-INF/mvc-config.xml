@@ -6,12 +6,13 @@
 <mvc:resources mapping="/js/**" location="/js/"/>
 <mvc:resources mapping="/img/**" location="/img/"/>
 <mvc:resources mapping="/storage/**" location="/storage/"/>
-<mvc:resources mapping="/script/" location="/script/**" />
+<mvc:resources mapping="/script/**" location="/script/" />
 <context:component-scan base-package="event.**"/>
 <context:component-scan base-package="notice.**"/>
 <context:component-scan base-package="member.**"/>
 <context:component-scan base-package="body.**" />
 <context:component-scan base-package="qna.**" />
+<context:component-scan base-package="guide.**" />
 
 <!-- Example: a logical view name of 'showMessage' is mapped to '/WEB-INF/jsp/showMessage.jsp' -->
 <!-- <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver"><property name="prefix" value="/WEB-INF/view/"/><property name="suffix" value=".jsp"/></bean> -->

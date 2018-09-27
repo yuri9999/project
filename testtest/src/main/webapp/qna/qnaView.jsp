@@ -51,6 +51,7 @@
 .qnaViewSub1{
 	width: 800px;
 	border-bottom: 1px solid #ccc;
+	height: 70px;
 }
 .qnaViewSub2{
 	width: 90px;
@@ -60,6 +61,20 @@
 #qnaViewSub img{
 	width: 900px;
 	height: 700px;
+}
+.codeView{
+	height: 70px;
+	border-bottom: 1px solid #ccc;
+}
+.detailView{
+	width: 100px;
+	height: 70px;
+	border-bottom: 1px solid #ccc;
+}
+.qnaViewSub3{
+	height: 400px;
+	border-bottom: 1px solid #ccc;
+	vertical-align: top;
 }
 </style>
 <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
@@ -77,62 +92,62 @@ $( document ).ready( function() {
 <h1>이벤트</h1>
 <table id="qnaViewTab">
 	<tr id="qnaViewSub">
-		<td class="qnaViewSub1" align="left">
+		<td class="qnaViewSub1" align="left" colspan="2">
 			${qnaDTO.subject }
 		</td>
 	</tr>
 	<c:if test="${qnaDTO.code1!=null }">
 		<c:if test="${qnaDTO.code1=='1' }">
 			<tr>
-				<td>QnA &gt; ${qnaDTO.code2 }</td>
+				<td class="codeView">QnA &gt; ${qnaDTO.code2 }</td>
 			</tr>
 		</c:if>
 		<c:if test="${qnaDTO.code1=='2' }">
 			<tr>
-				<td>항공권영문정정</td>
+				<td class="codeView" colspan="2">항공권영문정정</td>
 			</tr>
 			<tr>
-				<td>예약번호 : ${qnaDTO.reservNum }</td>
-				<td>탑승자명 : ${qnaDTO.boardName }</td>
+				<td class="detailView">예약번호 : ${qnaDTO.reservNum }</td>
+				<td class="detailView">탑승자명 : ${qnaDTO.boardName }</td>
 			</tr>
 			<tr>
-				<td>변경할 영문 이름 : ${qnaDTO.englishName }</td>
+				<td class="detailView" colspan="2">변경할 영문 이름 : ${qnaDTO.englishName }</td>
 			</tr>
 		</c:if>
 		<c:if test="${qnaDTO.code1=='3' }">
 			<tr>
-				<td>수하물파손</td>
+				<td class="codeView" colspan="2">수하물파손</td>
 			</tr>
 			<tr>
-				<td>탑승일 : ${qnaDTO.boardDate }</td>
+				<td class="detailView" colspan="2">탑승일 : ${qnaDTO.boardDate }</td>
 			</tr>
 			<tr>
-				<td>출발지 : ${qnaDTO.airportName1 }</td>
-				<td>도착지 : ${qnaDTO.airportName2 }</td>
+				<td class="detailView">출발지 : ${qnaDTO.airportName1 }</td>
+				<td class="detailView">도착지 : ${qnaDTO.airportName2 }</td>
 			</tr>
 		</c:if>
 		<c:if test="${qnaDTO.code1=='4' }">
 			<tr>
-				<td>유실물</td>
+				<td class="codeView" colspan="2">유실물</td>
 			</tr>
 			<tr>
-				<td>물품명 : ${qnaDTO.goodsName }</td>
-				<td>색상 : ${qnaDTO.goodsColor }</td>
+				<td class="detailView">물품명 : ${qnaDTO.goodsName }</td>
+				<td class="detailView">색상 : ${qnaDTO.goodsColor }</td>
 			</tr>
 			<tr>
-				<td>탑승일 : ${qnaDTO.boardDate }</td>
+				<td class="detailView" colspan="2">탑승일 : ${qnaDTO.boardDate }</td>
 			</tr>
 		</c:if>
 	</c:if>
 	<tr>
-		<td class="qnaViewSub2">
+		<td class="qnaViewSub3" colspan="2">
 			<h3>문의사항</h3><br>
 			${qnaDTO.content }
 		</td>
 	</tr>
 	<tr>
 		
-		<td>
+		<td class="qnaViewSub3" colspan="2">
 			<h3>관리자 답변</h3><br>
 			${qnaDTO.answer }
 		</td>

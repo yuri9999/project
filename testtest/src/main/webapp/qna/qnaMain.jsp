@@ -9,6 +9,9 @@
 <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
 <style type="text/css">
+.qnaMain{
+	height: 2000px;
+}
 .qnaMain #qnaNavi{
 	font-weight: normal;
 	color: #353535;
@@ -23,11 +26,11 @@
 #qnaTopTap .toptap1{
 	width: 500px;
 	height: 300px;
-		background-color: #EAEAEA;
+	background-color: #EAEAEA;
 }
 #qnaTopTap .toptap1 img{
 	width: 500px;
-	height: 300px;
+	height: 330px;
 }
 #qnaTopTap .toptap2{
 	width: 400px;
@@ -38,17 +41,21 @@
 	font-size: 13px;
 	color: #535353;
 }
+#qnaTopTap .toptap3{
+	height: 30px;
+	background-color: #EAEAEA;
+}
 .qnaMain{margin-top:40px; margin-left:350px; width:1200px; height:1800px; display:inline-block;}
 .qnaMain .qnaTabMenu{clear:both;}
-.qnaMain .qnaTabMenu .btnList{float:left;}
-.qnaMain .qnaTabMenu .btnList li{width:155px;float:left;list-style:none;margin-top:35px; }
+.qnaMain .qnaTabMenu .btnList{float:left; background-color:#EAEAEA; }
+.qnaMain .qnaTabMenu .btnList li{width:171px;float:left;list-style:none;}
 .qnaMain .qnaTabMenu .btnList li button{
 	width: 150px;
 	height: 70px;
 	text-align: center;
 	background-color: #EAEAEA;
 	color: #4B1152;
-	font-size: 14px;
+	font-size: 17px;
 	border: 0;
 	outline: 0;
 }
@@ -68,10 +75,16 @@
 	text-align: center;
 }
 .qnaTabContent a{
-
 	text-decoration: none;
 	color: #353535;
 	border-bottom: 1px solid #ccc;
+	font-size: 17px;
+}
+.qnaTabContent span{
+	text-decoration: none;
+	color: #4B1152;
+	font-size: 23px;
+	font-weight: bold;
 }
 
 #qnaPaging{
@@ -107,7 +120,31 @@
 	color: white;
 	padding-top: 3px;
 }
+.mybutton{
+	background-color: #4B1152;
+	border: 1px solid #124d77;
+	display: inline-block;
+	color: white;
+	font-family: arial;
+	font-size: 15px;
+	font-weight: nomal;
+	padding: 6px 24px;
+	text-decoration: none;
+	text-shadow: 0px 1px 0px #154682;
+}
 
+.mybutton:hover {
+	background-color: #4A0BA3;
+}
+
+.mybutton:active {
+	position: relative;
+	top: 1px;
+}
+.myqna p{
+	font-size: 17px;
+	border-bottom: 1px solid #ccc;
+}
 </style>
 <script type="text/javascript">
 $(function($) {
@@ -212,12 +249,17 @@ $(function($) {
 <table id="qnaTopTap">
 	<tr>
 		<td rowspan="3" class="toptap1"><img alt="QnA로고" src="../img/biglogo.jpg"></td>
-		<td colspan="3">Quick Menu</td>
+		<td colspan="3" class="toptap3">Quick Menu</td>
 	</tr>
 	<tr>
 		<td class="toptap2">
 			<p>회원정보/예약</p><br>
-			<a>회원정보 변경/탈퇴 &gt;</a><br>
+			<c:if test="${sessionScope.memId==null }">
+				<a href="../member/loginFail.do">회원정보 변경/탈퇴 &gt;</a><br>
+			</c:if>
+			<c:if test="${sessionScope.memId!=null }">
+				<a href="../member/memberModifyForm.do?id=${sessionScope.memId }">회원정보 변경/탈퇴 &gt;</a><br>
+			</c:if>
 			<a>예약조회/변경/취소 &gt;</a>
 		</td>
 		<td class="toptap2">
@@ -267,8 +309,8 @@ $(function($) {
 					<c:forEach var="qnaDTO" items="${requestScope.list }">
 						<tr>
 							<c:if test="${qnaDTO.koreanName=='admin' }">
-								<td align="left"><a href="../qna/qnaView.do?seq=${qnaDTO.seq }">${qnaDTO.subject }</a></td>
-								<td>${qnaDTO.koreanName }</td>
+								<td align="left"><a href="../qna/qnaView.do?seq=${qnaDTO.seq }"><span>Q&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>${qnaDTO.subject }</a></td>
+
 							</c:if>	
 						</tr>
 					</c:forEach>
@@ -279,8 +321,7 @@ $(function($) {
 				<c:forEach var="qnaDTO" items="${requestScope.list }">
 						<tr>
 							<c:if test="${qnaDTO.code2=='항공권예약발권/변경/취소' }">
-								<td align="left"><a href="../qna/qnaView.do?seq=${qnaDTO.seq }">${qnaDTO.subject }</a></td>
-								<td>${qnaDTO.koreanName }</td>
+								<td align="left"><a href="../qna/qnaView.do?seq=${qnaDTO.seq }"><span>Q&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>${qnaDTO.subject }</a></td>
 							</c:if>
 						</tr>
 				</c:forEach>
@@ -291,8 +332,7 @@ $(function($) {
 					<c:forEach var="qnaDTO" items="${requestScope.list }">
 							<tr>
 								<c:if test="${qnaDTO.code2=='포인트' }">
-								<td align="left"><a href="../qna/qnaView.do?seq=${qnaDTO.seq }">${qnaDTO.subject }</a></td>
-								<td>${qnaDTO.koreanName }</td>
+								<td align="left"><a href="../qna/qnaView.do?seq=${qnaDTO.seq }"><span>Q&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>${qnaDTO.subject }</a></td>
 								</c:if>
 							</tr>
 					</c:forEach>
@@ -304,8 +344,7 @@ $(function($) {
 							<tr>
 							<c:if test="${qnaDTO.koreanName=='admin' }">
 								<c:if test="${qnaDTO.code2=='홈페이지&모바일 이용' }">
-									<td align="left"><a href="../qna/qnaView.do?seq=${qnaDTO.seq }">${qnaDTO.subject }</a></td>
-									<td>${qnaDTO.koreanName }</td>
+									<td align="left"><a href="../qna/qnaView.do?seq=${qnaDTO.seq }"><span>Q&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>${qnaDTO.subject }</a></td>
 								</c:if>
 							</c:if>	
 							</tr>
@@ -317,8 +356,7 @@ $(function($) {
 					<c:forEach var="qnaDTO" items="${requestScope.list }">
 							<tr>
 							<c:if test="${qnaDTO.code2=='공항서비스' }">
-								<td align="left"><a href="../qna/qnaView.do?seq=${qnaDTO.seq }">${qnaDTO.subject }</a></td>
-								<td>${qnaDTO.koreanName }</td>
+								<td align="left"><a href="../qna/qnaView.do?seq=${qnaDTO.seq }"><span>Q&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>${qnaDTO.subject }</a></td>
 							</c:if>	
 							</tr>
 					</c:forEach>
@@ -329,8 +367,8 @@ $(function($) {
 					<c:forEach var="qnaDTO" items="${requestScope.list }">
 							<tr>
 							<c:if test="${qnaDTO.code2=='이벤트' }">
-								<td align="left"><a href="../qna/qnaView.do?seq=${qnaDTO.seq }">${qnaDTO.subject }</a></td>
-								<td>${qnaDTO.koreanName }</td>
+								<td align="left"><a href="../qna/qnaView.do?seq=${qnaDTO.seq }"><span>Q&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>${qnaDTO.subject }</a></td>
+								
 							</c:if>	
 							</tr>
 					</c:forEach>
@@ -341,8 +379,8 @@ $(function($) {
 					<c:forEach var="qnaDTO" items="${requestScope.list }">
 							<tr>
 							<c:if test="${qnaDTO.code2=='기타' }">
-								<td align="left"><a href="../qna/qnaView.do?seq=${qnaDTO.seq }">${qnaDTO.subject }</a></td>
-								<td>${qnaDTO.koreanName }</td>
+								<td align="left"><a href="../qna/qnaView.do?seq=${qnaDTO.seq }"><span>Q&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>${qnaDTO.subject }</a></td>
+								
 							</c:if>	
 							</tr>
 					</c:forEach>
@@ -358,7 +396,7 @@ $(function($) {
 			<button class="mybutton" onclick="location.href='../qna/qnaWriteForm.do'">자주찾는 질문 등록</button>
 		</c:if>
 	</div>
-	<div>
+	<div class="myqna">
 		<h3>나의 문의 답변 내역</h3>
 		<c:if test="${sessionScope.memId==null}">
 			로그인 후 이용해주세요
@@ -369,16 +407,16 @@ $(function($) {
 						<tr>
 							<c:if test="${sessionScope.memId!='admin' }">
 								<c:if test="${qnaDTO.koreanName==sessionScope.memName }">
-										<td class="title" align="left"><a>${qnaDTO.subject }</a></td>
-										<td>${sessionScope.memName }</td>
-										<td><a href="../qna/qnaView.do?seq=${qnaDTO.seq }">자세히</a></td>
+										<td class="title" align="left"><p>${qnaDTO.subject }</p></td>
+										<td><p>${sessionScope.memName }</p></td>
+										<td><a href="../qna/qnaView.do?seq=${qnaDTO.seq }" class="mybutton">자세히</a></td>
 								</c:if>
 							</c:if>
 							<c:if test="${sessionScope.memId=='admin'}">
 								<c:if test="${qnaDTO.koreanName!='admin' }">
-										<td class="title" align="left"><a>${qnaDTO.subject }</a></td>
-										<td>${qnaDTO.koreanName }</td>
-										<td><a href="../qna/qnaAnswerForm.do?seq=${qnaDTO.seq }">답변하기</a> / <a href="../qna/qnaView.do?seq=${qnaDTO.seq }">자세히</a></td>
+										<td class="title" align="left"><p>${qnaDTO.subject }</p></td>
+										<td><p>${qnaDTO.koreanName }</p></td>
+										<td><a href="../qna/qnaAnswerForm.do?seq=${qnaDTO.seq }" class="mybutton">답변하기</a> <a href="../qna/qnaView.do?seq=${qnaDTO.seq }" class="mybutton">자세히</a></td>
 								</c:if>
 							</c:if>
 						</tr>
