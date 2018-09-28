@@ -53,6 +53,10 @@
 	text-decoration: none;
 	color: white;
 }
+.gologin{
+	text-decoration: none;
+	color: blue;
+}
 </style>
 </head>
 <body>
@@ -70,7 +74,7 @@
 					<p>보유포인트 : <span>${memberDTO.totalPoint } P</span></p>
 				</c:if>
 				<c:if test="${sessionScope.memId==null }">
-					<p>로그인을 해주세요</p>
+					<p><a href="../member/loginForm.do" class="gologin">로그인</a>을 해주세요</p>
 				</c:if>
 			</td>
 		</tr>

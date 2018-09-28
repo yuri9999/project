@@ -71,7 +71,7 @@ $( document ).ready( function() {
 </head>
 <body>
 <div id="noticeView">
-<h3 id="noticeViewNavi">JAJUAIR &gt; 이벤트/새소식 &gt; ${noticeDTO.subject }</h3><br>
+<h3 id="noticeViewNavi">JAJUAIR &gt; 이벤트/새소식 &gt; ${noticeDTO.subject }<img alt="" src="../img/navimg.png"></h3><br>
 <h1>새소식</h1>
 <table id="noticeViewTab">
 	<tr>

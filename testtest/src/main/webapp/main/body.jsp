@@ -25,40 +25,11 @@ body{
     width: 1400px;
     height: 400px;
 }
-#reservation{
-	margin: auto;
-	padding: 0;
+#jaju{
 	position: absolute;
 	top: 350px;
 	left: 350px;
-	width: 1200px;
-	height: 120px;
-	background-color: white;
-	border-bottom: 3px solid #4B1152;
-	border-left: 3px solid #4B1152;
 }
-#reservation a{
-	text-align: center;
-	color: #4B1152;
-	padding-bottom: 4px;
-	border-bottom: 3px solid #4B1152;
-}
-#reservation input{
-	margin: 0;
-	padding: 0;
-	width: 100px;
-	height: 40px;
-	background-color: white;
-	text-align: center;
-}
-#reservation img{
-	margin-top: 10px;
-	padding: 0;
-	width: 40px;
-	height: 40px;
-	vertical-align: bottom;
-}
-
 #price{
 	margin-top: 100px;
 	margin-left:375px;
@@ -181,7 +152,7 @@ body{
 #ebodyetc .etc1 td{
 	width: 250px;
 }
-#bodyetc .etc1 img{
+#bodyetc .etc1 .applogo{
 	width: 80px;
 	height: 80px;
 	float: left;
@@ -197,7 +168,10 @@ body{
 	text-decoration: none;
 	color: #ccc;
 }
-
+#bodyetc .social{
+	width: 35px;
+	height: 35px;
+}
 </style>
 <script type="text/javascript" src="../js/jquery-3.3.1.min.js"></script>
 <script type="text/javascript">
@@ -266,48 +240,8 @@ RollingBanner.prototype = {
 	<a href="#"><img src="../img/banner2.jpg"></a>
 	<a href="#"><img src="../img/banner3.jpg"></a>
 </div>
-<div id="reservation">
-	<table>
-		<tr>
-			<td align="center" colspan="2">
-				<a>왕복</a>
-			</td>
-			<td align="center" colspan="2">
-				<a>편도</a>
-			<td colspan="3">
-			
-			</td>
-		</tr>
-		<tr>
-			<td align="center">
-				<input type="text" name="start" disabled="disabled">
-				<img src="../img/start.jpg">
-			</td>
-			<td align="center">
-				<input type="text" name="arrive" disabled="disabled">
-				<img src="../img/arrive.jpg">
-			</td>
-			<td align="center">
-				<input type="text" name="startDay"  disabled="disabled">
-				<img src="../img/cal.jpg">
-			</td>
-			<td align="center">
-				<input type="text" name="arriveDay" disabled="disabled">
-				<img src="../img/cal.jpg">
-			</td>
-			<td align="center">
-				<input type="text" name="adult" disabled="disabled">
-				<img src="../img/man.jpg">
-			</td>
-			<td align="center">
-				<input type="text" name="kids" disabled="disabled">
-				<img src="../img/man.jpg">
-			</td>
-			<td align="center" valign="middle" id="reserButton">
-				<input type="button" value="예매하기">
-			</td>
-		</tr>
-	</table>
+<div id="jaju">
+	<jsp:include page="../book/jaju.jsp" />
 </div>
 <div id="price">
 	<h2>추천 특가</h2>
@@ -395,10 +329,19 @@ RollingBanner.prototype = {
 		</tr>
 		<tr>
 			<td>
-				<a href="#"><img src="../img/logo.png"><h3>자주에어 앱</h3><br><p>→ 디지털 여행 동반자</p></a>
+				<a href="#"><img src="../img/logo.png" class="applogo"><h3>자주에어 앱</h3><br><p>→ 디지털 여행 동반자</p></a>
 			</td>
 			<td>
 				<a href="#"><h3>자주에어 뉴스레터</h3><br>최신소식을 통해 매력적인<br>특가상품을 놓치지 마십시오<p>→ 지금 등록하기</p></a>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<h3>소셜미디어</h3><br>
+				<img src="../img/face.png" class="social">
+				<img src="../img/twit.png" class="social">
+				<img src="../img/utube.png" class="social">
+				<img src="../img/google.png" class="social">
 			</td>
 		</tr>
 	</table>

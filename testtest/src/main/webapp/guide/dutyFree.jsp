@@ -53,7 +53,7 @@
 </head>
 <body>
 <div id="dutyFree">
-<h3 id="dutyFreeNavi">JAJUAIR &gt; 서비스 안내 &gt; 기내서비스 &gt; 기내면세품 판매</h3><br>
+<h3 id="dutyFreeNavi">JAJUAIR &gt; 서비스 안내 &gt; 기내서비스 &gt; 기내면세품 판매<img alt="" src="../img/navimg.png"></h3><br>
 <h1>기내면세품 판매</h1>
 <div class="dutyFreeIntro">
 	<div class="imgdiv">

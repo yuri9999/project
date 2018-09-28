@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="mybatis.boardingMapper">
+
+	<select id="getBoardingList" parameterType="java.util.Map" resultType="boardingDTO">
+		<![CDATA[
+			SELECT * FROM
+			(SELECT rownum rn, tt. * FROM 
+			(SELECT * FROM boarding ORDER BY boardingDate DESC) tt) 
+			WHERE rn>=#{startNum} AND rn<=#{endNum}
+		]]>
+	</select>
+	
+	<select id="getBoardingList1m" parameterType="java.util.Map" resultType="boardingDTO">
+		<![CDATA[
+			SELECT * FROM
+			(SELECT rownum rn, tt. * FROM 
+			(SELECT * FROM boarding
+			where boardingDate between
+			to_date(add_months(sysdate,-1),'yy/mm/dd')
+			and to_date(add_months(sysdate, 0),'yy/mm/dd')
+			order by boardingDate desc) tt) 
+			WHERE rn>=#{startNum} AND rn<=#{endNum}
+		]]>
+	</select>
+	
+	<select id="getBoardingList3m" parameterType="java.util.Map" resultType="boardingDTO">
+		<![CDATA[
+			SELECT * FROM
+			(SELECT rownum rn, tt. * FROM 
+			(SELECT * FROM boarding
+			where boardingDate between
+			to_date(add_months(sysdate,-3),'yy/mm/dd')
+			and to_date(add_months(sysdate, 0),'yy/mm/dd')
+			order by boardingDate desc) tt) 
+			WHERE rn>=#{startNum} AND rn<=#{endNum}
+		]]>
+	</select>
+	
+	<select id="getBoardingList6m" parameterType="java.util.Map" resultType="boardingDTO">
+		<![CDATA[
+			SELECT * FROM
+			(SELECT rownum rn, tt. * FROM 
+			(SELECT * FROM boarding
+			where boardingDate between
+			to_date(add_months(sysdate,-6),'yy/mm/dd')
+			and to_date(add_months(sysdate, 0),'yy/mm/dd')
+			order by boardingDate desc) tt) 
+			WHERE rn>=#{startNum} AND rn<=#{endNum}
+		]]>
+	</select>
+	
+	<select id="getBoardingListM" parameterType="java.util.Map" resultType="boardingDTO">
+		<![CDATA[
+			SELECT * FROM
+			(SELECT rownum rn, tt. * FROM 
+			(SELECT * FROM boarding
+			where boardingDate between
+			to_date(#{datepicker},'rr/mm/dd')
+			and to_date(#{datepicker2},'rr/mm/dd')
+			order by boardingDate desc) tt) 
+			WHERE rn>=#{startNum} AND rn<=#{endNum}
+		]]>
+	</select>
+	
+	<select id="getTotalA" resultType="int">
+		select count(*) from boarding
+	</select>
+	
+	<select id="getTotalA1m" resultType="int">
+		<![CDATA[
+			select count(*) from boarding
+			where boardingDate between 
+			to_date(add_months(sysdate,-1),'yy/mm/dd')
+			and to_date(add_months(sysdate, 0),'yy/mm/dd')
+		]]>
+	</select>
+	
+	<select id="getTotalA3m" resultType="int">
+		<![CDATA[
+			select count(*) from boarding
+			where boardingDate between
+			to_date(add_months(sysdate,-3),'yy/mm/dd')
+			and to_date(add_months(sysdate, 0),'yy/mm/dd')
+		]]>
+	</select>
+	
+	<select id="getTotalA6m" resultType="int">
+		<![CDATA[
+			select count(*) from boarding
+			where boardingDate between
+			to_date(add_months(sysdate,-6),'yy/mm/dd')
+			and to_date(add_months(sysdate, 0),'yy/mm/dd')
+		]]>
+	</select>
+	
+	<select id="getTotalAm" parameterType="java.util.Map" resultType="int">
+		<![CDATA[
+			select count(*) from boarding
+			where boardingDate between
+			to_date(add_months(#{datepicker},0),'rr/mm/dd')
+			and to_date(trunc(add_months(#{datepicker2},0),'dd')+1, 'rr/mm/dd')
+		]]>
+	</select>
+
+</mapper>

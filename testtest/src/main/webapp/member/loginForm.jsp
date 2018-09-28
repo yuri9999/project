@@ -25,6 +25,10 @@
 	height: 80px;
 	padding-left: 27px;
 }
+.loginFormLeft input{
+	width: 220px;
+	height: 40px;
+}
 .loginFormRight{
 	margin:0;
 	padding:0;

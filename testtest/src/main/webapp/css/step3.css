@@ -1,0 +1,214 @@
+@charset "UTF-8";
+/* tab css */
+
+*, *:before, *:after {
+  margin: 0 auto;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+
+ul, li {
+  list-style: none;
+}
+
+#container, .part_container{
+   
+   margin:0 auto; 
+   width:1000px;
+   
+}
+
+   }
+h1 {
+ padding-top: 50px;
+  font-weight: 400;
+  text-align: left;
+}
+
+
+section {
+  display: none;
+  padding: 20px 0 0;
+  border-top: 1px solid #ddd;/*회색 밑줄  */
+  border-bottom: 1px solid #ddd;
+}
+/*항공권검색 위에 회색 밑줄  */
+#selectBtn{
+   border-top: 1px solid #ddd;
+    padding: 20px 20px;
+    
+}
+/*항공권검색 버튼  */
+#airBtn{
+   padding-right:45px;
+   padding-left:45px;
+    margin-left: 380px;
+}
+/*라디오버튼 안먹히는거 우선 적용  */
+#tab1{display: none !important}
+#part_tab1,#part_tab2,#part_tab3,#part_tab4,#part_tab5,#part_tab6,#part_tab7{display: none !important}
+
+input #tab1,#tab2,#tab3{
+  display: none;
+}
+
+/*구간선택 (왕복,편도,다구간 tab부분)  */
+label.tabClass{
+  display: inline-block;
+  margin: 0 0 -1px;
+  padding: 5px 25px;
+  font-weight: 320;
+  text-align: left;
+  color: #555;
+  border: 1px solid #cacaca;
+ background-color: #efefef;
+   background:url('img/tab_bg.png') 5px -8px no-repeat;
+  
+}
+/*part1,2 부분  */
+label.part_label{
+  display: inline-block;
+  margin: 0 0 -1px;
+  padding: 11px 16px;
+  font-weight: 600;
+  text-align: center;
+  color: #bbb;
+  border: 1px solid transparent;
+}
+
+
+/*구간선택부분에서 글자간격 조절  */
+#part1 {
+    word-spacing: 1em;
+    padding: 5px;
+}
+#part2 {
+    word-spacing: 1em;
+    padding: 5px;
+}
+#part3 {
+    word-spacing: 1em;
+    padding: 5px;
+}
+#part4 {
+    word-spacing: 1em;
+    padding: 5px;
+}
+
+label:before {
+  font-family: fontawesome;
+  font-weight: normal;
+  margin-right: 10px;
+}
+/*icon 설정  */
+/* label[for*='1']:before { content: '\f1cb'; }
+label[for*='2']:before { content: '\f17d'; }
+label[for*='3']:before { content: '\f16b'; }
+label[for*='4']:before { content: '\f1a9'; } */
+
+label:hover {
+  color: #888;
+  cursor: pointer;
+}
+
+
+  
+/*part1,2부분 */
+input:checked + label.part_label {
+  color: #555;
+  border-left: 4px solid #4B1152;
+  border-right: 4px solid #4B1152;
+  border-top: 4px solid #4B1152;
+  border-bottom: 4px solid #fff;
+}
+/* part1,2부분*/
+#part_content1, #part_content2, #part_content3, #part_content4, #part_content5, #part_content6, #part_content7{display: none;}
+#part_tab1:checked ~ #part_content1,
+#part_tab2:checked ~ #part_content2,
+#part_tab3:checked ~ #part_content3,
+#part_tab4:checked ~ #part_content4,
+#part_tab5:checked ~ #part_content5,
+#part_tab6:checked ~ #part_content6,
+#part_tab7:checked ~ #part_content7{
+  display: block;
+}
+
+
+  
+
+#tab1:checked ~ #content1,
+#tab2:checked ~ #content2,
+#tab3:checked ~ #content3,
+#tab4:checked ~ #content4 {
+  display: block;
+}
+
+/* @media screen and (max-width: 650px) {
+  label {
+    font-size: 0;
+  }
+  label:before {
+    margin: 0;
+    font-size: 18px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  label {
+    padding: 15px;
+  }
+}
+ */
+
+/*step2.jsp에 관한 css  */
+/*탑승자정보 회색 밑줄 ,설명부분 */
+#passengerInfo,#text{
+   border-bottom: 1px solid #ddd;
+    padding: 20px 20px;
+}
+
+#text > ul >li{
+   list-style-type: disc ; 
+}
+
+#contactInfo{margin-bottom: 50px;}
+#text{margin-bottom: 50px;}
+
+
+/* step03 혹은 step3 */
+
+h4 {display: inline-block; margin: 20px 0;}
+h4:after {clear: both;}
+h4 strong {margin-left:10px; font-size: 20px;}
+.choices {margin-bottom: 80px;}
+.small {display: inline-block; margin-left:20px; font-size: 18px; color:#686868;} 
+.small:after {clear: both;}
+.small input {background-color: #66176f; color:white; border-radius: 0.4em; width: 150px; height: 35px; font-size: 16px;}
+
+.step3_imgAanGray {margin-bottom: 20px;}
+.step3_imgAanGray .bigImg {margin-left: 10px;}
+.step3_imgAanGray img {display: inline-block; }
+.step3_imgAanGray .step3_graysection{
+	display: inline-block; 
+	background-color: #ebebeb; 
+	padding: 20px 80px 20px 10px; 
+	border-radius: 0.3em;
+	width: 550px;
+	float: right;
+	margin-right: 300px;
+}
+.step3_imgAanGray img, .step3_imgAanGray .step3_graysection{
+	clear: both;
+}
+
+.seatName1{color: #a223af; margin-left: 120px; font-size: 16px; font-weight: bold;}
+
+.result {float: right; font-size: 19px; font-weight: bold; margin-right: 300px; margin-top: 20px;}
+.result:after {clear: both;}
+
+.prices {color: #a223af; margin-left: 170px; margin-right: 10px;}
+
+.name1 {margin: 5px 40px;}
+

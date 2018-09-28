@@ -244,7 +244,7 @@ $(function($) {
 </head>
 <body>
 <div class="qnaMain">
-<h3 id="qnaNavi">JAJUAIR &gt; 고객센터</h3><br>
+<h3 id="qnaNavi">JAJUAIR &gt; 고객센터<img alt="" src="../img/navimg.png"></h3><br>
 <h1>고객센터</h1>
 <table id="qnaTopTap">
 	<tr>

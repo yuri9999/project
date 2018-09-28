@@ -8,11 +8,17 @@
 		<typeAlias type="notice.bean.NoticeDTO" alias="noticeDTO"></typeAlias>
 		<typeAlias type="member.bean.MemberDTO" alias="memberDTO"></typeAlias>
 		<typeAlias type="qna.bean.QnaDTO" alias="qnaDTO"></typeAlias>
+		<typeAlias type="boarding.bean.BoardingDTO" alias="boardingDTO"></typeAlias>
+		<typeAlias type="book.bean.BookDTO" alias="bookDTO"></typeAlias>
+		<typeAlias alias="flightInfoDTO" type="bookAdmin.bean.FlightInfoDTO"/>
 	</typeAliases>
 	<mappers>
 		<mapper resource="mybatis/event-mapping.xml" />
 		<mapper resource="mybatis/notice-mapping.xml"/>
 		<mapper resource="mybatis/member-mapping.xml"/>
 		<mapper resource="mybatis/qna-mapping.xml"/>
+		<mapper resource="mybatis/boarding-mapping.xml"/>
+		<mapper resource="mybatis/book-mapping.xml"/>
+		<mapper resource="mybatis/bookAdmin-mapping.xml"/>
 	</mappers>
 </configuration>

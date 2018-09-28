@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="mybatis.bookMapper">
+	
+	<insert id="insertBook" parameterType="bookDTO">
+		INSERT INTO book VALUES(seq_book.nextval, #{code}, #{flightName1}, #{flightName2}, #{depGo}, #{arrGo}, #{depBack}, #{arrBack}, #{age}, #{totalPrice}, #{memberId}, #{nop}, #{payment}, #{luggage}, #{seat}, #{eatery}, sysdate)
+	</insert>
+
+	<delete id="deleteBook" parameterType="int">
+		DELETE FROM book WHERE seq = #{seq}
+	</delete>
+	
+	<select id="getBookTotal" resultType="int">
+		<![CDATA[SELECT count(*) FROM book]]>
+	</select>
+
+	<select id="getBookAll" parameterType="java.util.Map" resultType="bookDTO">
+		SELECT * FROM book
+	</select>
+
+	<select id="getBookOne" resultType="bookDTO" parameterType="int">
+		SELECT * FROM book WHERE seq=#{seq}
+	</select>
+
+</mapper>

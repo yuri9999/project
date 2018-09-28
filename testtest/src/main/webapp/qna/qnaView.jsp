@@ -87,7 +87,7 @@ $( document ).ready( function() {
 </head>
 <body>
 <div id="qnaView">
-<h3 id="qnaNavi">JAJUAIR &gt; 고객센터 &gt; <c:if test="${qnaDTO.koreanName=='admin' }">자주찾는 질문</c:if>
+<h3 id="qnaNavi">JAJUAIR &gt; 고객센터 &gt; <c:if test="${qnaDTO.koreanName=='admin' }">자주찾는 질문<img alt="" src="../img/navimg.png"></c:if>
 <c:if test="${qnaDTO.koreanName!='admin' }">1:1문의사항</c:if> &gt; ${qnaDTO.subject }</h3><br>
 <h1>이벤트</h1>
 <table id="qnaViewTab">

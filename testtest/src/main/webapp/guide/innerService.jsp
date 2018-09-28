@@ -67,7 +67,7 @@
 </head>
 <body>
 <div id="innerService">
-<h3 id="innerServiceNavi">JAJUAIR &gt; 서비스 안내 &gt; 기내서비스 &gt; 기내서비스</h3><br>
+<h3 id="innerServiceNavi">JAJUAIR &gt; 서비스 안내 &gt; 기내서비스 &gt; 기내서비스<img alt="" src="../img/navimg.png"></h3><br>
 <h1>기내서비스</h1>
 <div class="enjoy">
 	<img alt="플라이트" src="../img/funfly.png">

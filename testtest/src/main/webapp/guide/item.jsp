@@ -58,7 +58,7 @@
 </head>
 <body>
 <div id="item">
-<h3 id="itemNavi">JAJUAIR &gt; 서비스 안내 &gt; 부가서비스 &gt; 유료 아이템</h3><br>
+<h3 id="itemNavi">JAJUAIR &gt; 서비스 안내 &gt; 부가서비스 &gt; 유료 아이템<img alt="" src="../img/navimg.png"></h3><br>
 <h1>유료 아이템</h1>
 <div class="itemIntro">
 	<img alt="" src="../img/item.png">

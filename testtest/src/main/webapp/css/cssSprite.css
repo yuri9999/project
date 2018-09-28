@@ -1,0 +1,67 @@
+@charset "UTF-8";
+/*초기화  */
+*, *:before, *:after {
+  margin: 0;
+  padding: 0;
+}
+
+
+section {
+  display: none ;
+  padding: 20px 0 0;
+  border-top: 1px solid #ddd;/*회색 밑줄  */
+  border-bottom: 1px solid #ddd;
+}
+
+
+label{
+  display: inline-block;
+  margin: 0 0 -1px;
+  padding: 5px 25px;
+  font-weight: 320;
+  text-align: left;
+  color: #555;
+  border: 1px solid #cacaca;
+  background-color: #efefef;
+  background:url('tab_bg.png') 5px -8px no-repeat ;/*체크이미지  회색으로 변환  */
+ 
+}
+
+label:before {
+  font-family: fontawesome ;
+  font-weight: normal;
+  margin-right: 10px;
+}
+
+/*라디오버튼 안먹히는거 우선 적용  */
+ #tab1{display: none !important}
+
+input #tab1,#tab2,#tab3{
+  display: none ;
+}
+
+/*마우스포인터   */
+label:hover {
+  color: #888;
+  cursor: pointer;
+}
+
+/*해당 탭 클릭시  */
+input:checked + label {
+  color: #393939;
+  border: 3px solid #4B1152;
+  border-top: 2px solid #4B1152;
+  border-bottom: 1px solid #fff;
+  background-color: #fff;
+  background:url('tab_bg.png') 5px 13px no-repeat;/*체크이미지 색 변환  */
+}
+
+ #content1, #content2, #content3{display: none;} 
+
+#tab1:checked ~ #content1,
+#tab2:checked ~ #content2,
+#tab3:checked ~ #content3 {
+  display: block ;
+}
+
+

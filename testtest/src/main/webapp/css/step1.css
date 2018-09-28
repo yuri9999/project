@@ -1,0 +1,35 @@
+@charset "UTF-8";
+
+
+/* 스텝별 배경 스플리트  */   
+.stepNav.threeWide.setp01{background:url('img/step_bg.png') no-repeat 0 0 }
+.stepNav.threeWide.setp02{background:url('img/step_bg.png') no-repeat -5px -60px } 
+.stepNav.threeWide.setp03{background:url('img/step_bg.png') no-repeat -10px -120px } 
+.stepNav.threeWide.setp04{background:url('img/step_bg.png') no-repeat -15px -180px } 
+
+/* 리스트 상세 style sheet */
+.stepNav.threeWide{overflow:hidden;}  
+.stepNav.threeWide li{float: left; width:20% }
+.stepNav.threeWide li >span {display:block; padding: 10px 0 2px 10px; color:#000} 
+.stepNav.threeWide li >strong {display:block;padding: 0px 0 7px 10px;color:#000} 
+
+ 
+/* 가입내역 step 해당 on 시 폰트 색상 */
+.stepNav.threeWide.setp01>li>span.stepNavOn1,.stepNav.threeWide.setp01>li>strong.stepNavOn2{color:#fff}
+.stepNav.threeWide.setp02>li>span.stepNavOn1,.stepNav.threeWide.setp02>li>strong.stepNavOn2{color:#fff}
+.stepNav.threeWide.setp03>li>span.stepNavOn1,.stepNav.threeWide.setp03>li>strong.stepNavOn2{color:#fff}
+.stepNav.threeWide.setp04>li>span.stepNavOn1,.stepNav.threeWide.setp04>li>strong.stepNavOn2{color:#fff}
+
+/*stepr과 구간선택 사이 공백부분  */
+#top{margin-bottom: 100px;}
+   
+/*step3 css*/
+div#glayLayer{
+	display: none; position: fixed; left: 0; top: 0;
+	height: 100%; width: 100%; background: black;
+	filter: alpha(opacity=60); opacity: 0.60;
+}
+#overLayer{
+	left: 50%; top: 50%; display: none; position: fixed;
+	margin-top: -244px; margin-left: -325px;
+}

@@ -46,7 +46,7 @@ $(function() {
 <body>
 <form action="../qna/qnaAnswer.do?seq=${qnaDTO.seq }" name="qnaAnswerForm" method="post">
 <div class="qnaAnswer">
-	<h3 id="qnaAnswerNavi">JAJUAIR &gt; 고객센터</h3><br>
+	<h3 id="qnaAnswerNavi">JAJUAIR &gt; 고객센터<img alt="" src="../img/navimg.png"></h3><br>
 	<h1>고객센터</h1>
 	<p>${sessionScope.memName }님의 문의사항을 남겨주세요.</p>
 	<table id="qnaTab" border="1">

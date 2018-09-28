@@ -203,7 +203,7 @@ $(document).on('mouseleave', 'div', function () {
 	<br><br>
 	<div>
 		<ul id="menu">
-			<li class="mainMenu"><a href="#">항공권 예매</a></li>
+			<li class="mainMenu"><a href="../book/goAvail.do">항공권 예매</a></li>
 			<li class="mainMenu"><a href="#">마이페이지</a></li>
 			<li class="mainMenu"><a href="#">서비스 안내</a></li>
 			<li class="mainMenu"><a href="../event/eventListC.do?pg=1">이벤트/새소식</a></li>
@@ -215,7 +215,7 @@ $(document).on('mouseleave', 'div', function () {
 			<div class="detailMenu1">
 				<table>
 					<tr>
-						<td class="details1"><a href="#">항공권예매</a></td>
+						<td class="details1"><a href="../book/goAvail.do">항공권예매</a></td>
 						<td class="details1"><a href="#">운항일정</a></td>
 						<td class="details1"><a href="#">운임안내</a></td>
 						<td class="details1"><a href="#">단체예약신청</a></td>
@@ -243,7 +243,7 @@ $(document).on('mouseleave', 'div', function () {
 						<td class="details1"><a href="#">나의 예약</a></td>
 						<td class="details1"><a href="#">나의 포인트</a></td>
 						<td class="details1"><a href="#">나의 쿠폰</a></td>
-						<td class="details1"><a href="#">나의 탑승내역</a></td>
+						<td class="details1"><a href="../boarding/boarding.do?pg=1">나의 탑승내역</a></td>
 						<td class="details1"><a href="#">나의 문의 내역</a></td>
 						<td class="details1"><a href="../member/memberModifyForm.do?id=${sessionScope.memId }">나의 정보수정</a></td>
 					</tr>
@@ -391,7 +391,7 @@ $(document).on('mouseleave', 'div', function () {
 			<div class="detailMenu6">
 				<table>
 					<tr>
-						<td class="details1"><a href="#">자주포인트</a></td>
+						<td class="details1"><a href="../point/jpointInfo.do">자주포인트</a></td>
 						<td class="details1"><a href="#">포인트 내역 조회</a></td>
 						<td class="details1"><a href="#">포인트 선물</a></td>
 						<td class="details1"><a href="#">포인트 양도</a></td>

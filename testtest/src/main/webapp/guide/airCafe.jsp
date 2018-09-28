@@ -44,7 +44,7 @@
 </head>
 <body>
 <div id="airCafe">
-<h3 id="airCafeNavi">JAJUAIR &gt; 서비스 안내 &gt; 기내서비스 &gt; Air Cafe</h3><br>
+<h3 id="airCafeNavi">JAJUAIR &gt; 서비스 안내 &gt; 기내서비스 &gt; Air Cafe<img alt="" src="../img/navimg.png"></h3><br>
 <h1>Air Cafe</h1>
 <div class="aircafeIntro">
 	<img alt="" src="../img/aircafe.png">

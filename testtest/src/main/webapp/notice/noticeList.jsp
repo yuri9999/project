@@ -96,7 +96,7 @@
 </head>
 <body>
 <div id="noticeList">
-<h3 id="noticeNavi">JAJUAIR &gt; 이벤트/새소식 &gt; 새소식(목록)</h3><br>
+<h3 id="noticeNavi">JAJUAIR &gt; 이벤트/새소식 &gt; 새소식(목록)<img alt="" src="../img/navimg.png"></h3><br>
 <h1>새소식</h1>
 <table id="noticeListTab">
 	<tr>

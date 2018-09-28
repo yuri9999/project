@@ -154,7 +154,7 @@ function checkId() {
 <body>
 <div id="memberModifyForm">
   <div class="container">
-    <p class="text-left">JEJUAIR > 마이페이지 > 나의 정보 수정</p>
+    <p class="text-left">JEJUAIR > 마이페이지 > 나의 정보 수정<img alt="" src="../img/navimg.png"></p>
     <h2 class="text-left">나의 정보 수정</h2>
     <div class="ModifyTop">
       <p class="title1">

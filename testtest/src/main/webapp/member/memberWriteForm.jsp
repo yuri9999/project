@@ -152,7 +152,7 @@ function checkId() {
 <body>
 <div id="memberWriteForm">
   <div class="container">
-    <p class="text-left">JEJUAIR > 회원가입</p>
+    <p class="text-left">JEJUAIR > 회원가입<img alt="" src="../img/navimg.png"></p>
     <h2 class="text-left">회원가입</h2>
     <div class="writeTop">
       <p class="title1">

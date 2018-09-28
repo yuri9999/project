@@ -92,7 +92,7 @@
 </head>
 <body>
 <div id="eventList">
-<h3 id="eventNavi">JAJUAIR &gt; 이벤트/새소식 &gt; 진행중인 이벤트(목록)</h3><br>
+<h3 id="eventNavi">JAJUAIR &gt; 이벤트/새소식 &gt; 진행중인 이벤트(목록)<img alt="" src="../img/navimg.png"></h3><br>
 <h1>진행중인 이벤트</h1>
 <table id="eventListC">
 	<c:forEach var="eventDTO" items="${requestScope.list }">

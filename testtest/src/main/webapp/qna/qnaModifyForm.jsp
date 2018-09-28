@@ -46,7 +46,7 @@ $(function() {
 <body>
 <form action="../qna/qnaModify.do?seq=${qnaDTO.seq }" name="qnaModifyForm" method="post">
 <div class="qnaModify">
-	<h3 id="qnaModifyNavi">JAJUAIR &gt; 고객센터</h3><br>
+	<h3 id="qnaModifyNavi">JAJUAIR &gt; 고객센터<img alt="" src="../img/navimg.png"></h3><br>
 	<h1>고객센터</h1>
 	<p>@@@님의 문의사항을 남겨주세요.</p>
 	<table id="qnaTab" border="1">
