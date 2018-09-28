@@ -237,7 +237,7 @@ RollingBanner.prototype = {
 <body>
 <div id="banner1" class="rolling-banner">
 	<c:forEach var="eventDTO" items="${requestScope.list }">
-		<a href="#"><img src="../img/${eventDTO.image }"></a>
+		<a href="../event/eventView.do?seq=${eventDTO.seq }"><img src="../img/${eventDTO.image }"></a>
 	</c:forEach>
 </div>
 <div id="jaju">
