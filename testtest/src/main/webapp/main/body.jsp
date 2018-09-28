@@ -236,9 +236,9 @@ RollingBanner.prototype = {
 </head>
 <body>
 <div id="banner1" class="rolling-banner">
-	<a href="#"><img src="../img/banner1.jpg"></a>
-	<a href="#"><img src="../img/banner2.jpg"></a>
-	<a href="#"><img src="../img/banner3.jpg"></a>
+	<c:forEach var="eventDTO" items="${requestScope.list }">
+		<a href="#"><img src="../img/${eventDTO.image }"></a>
+	</c:forEach>
 </div>
 <div id="jaju">
 	<jsp:include page="../book/jaju.jsp" />
@@ -292,15 +292,15 @@ RollingBanner.prototype = {
 		</tr>
 		<tr>
 			<td>
-				<a>예약안내</a><br>
+				<a href="">예약안내</a><br>
 				<img src="../img/infos.jpg">
 			</td>
 			<td>
-				<a>기내서비스</a><br>
+				<a href="../guide/innerService.do">기내서비스</a><br>
 				<img src="../img/inners.jpg">
 			</td>
 			<td>
-				<a>부가서비스</a><br>
+				<a href="../guide/item.do">부가서비스</a><br>
 				<img src="../img/vs.jpg">
 			</td>
 		</tr>
@@ -338,10 +338,10 @@ RollingBanner.prototype = {
 		<tr>
 			<td>
 				<h3>소셜미디어</h3><br>
-				<img src="../img/face.png" class="social">
-				<img src="../img/twit.png" class="social">
-				<img src="../img/utube.png" class="social">
-				<img src="../img/google.png" class="social">
+				<a href="http://www.facebook.com"><img src="../img/face.png" class="social"></a>
+				<a href="https://twitter.com/"><img src="../img/twit.png" class="social"></a>
+				<a href="https://www.youtube.com/"><img src="../img/utube.png" class="social"></a>
+				<a href="https://www.google.co.kr/"><img src="../img/google.png" class="social"></a>
 			</td>
 		</tr>
 	</table>

@@ -40,4 +40,12 @@ public class GuideController {
 		modelAndView.setViewName("../main/main.jsp");
 		return modelAndView;
 	}
+	
+	@RequestMapping(value="/guide/lounge.do")
+	public ModelAndView lounge(HttpServletRequest request) {
+		ModelAndView modelAndView = new ModelAndView();
+		modelAndView.addObject("display","../guide/lounge.jsp");
+		modelAndView.setViewName("../main/main.jsp");
+		return modelAndView;
+	}
 }

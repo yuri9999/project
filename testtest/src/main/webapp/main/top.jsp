@@ -28,6 +28,7 @@ nav{
 	color: white;
 	text-align:center;
 	font-size: 50px;
+	font-weight: bold;
 }
 .logo img{
 	margin-right: -10px;
@@ -96,7 +97,7 @@ nav{
 	margin: 0 0 20px 20px;
 	display: none;
 	width: 1200px;
-	height: 240px;
+	height: 160px;
 	border: 1px solid #ccc;
 }
 
@@ -293,7 +294,7 @@ $(document).on('mouseleave', 'div', function () {
 					<tr>
 						<td class="details2"><a href="#">항공권 환불</a></td>
 						<td class="details2"><a href="../guide/airCafe.do">air cafe</a></td>
-						<td class="details2"><a href="#">자주항공 라운지</a></td>
+						<td class="details2"><a href="../guide/lounge.do">자주항공 라운지</a></td>
 						<td class="details2"><a href="#">온라인/모바일 탑승권</a></td>
 						<td class="details2"><a></a></td>
 					</tr>
