@@ -284,7 +284,7 @@ $(document).on('mouseleave', 'div', function () {
 						<td class="details1"><a href="#">제휴할인</a></td>
 					</tr>
 					<tr>
-						<td class="details2"><a href="#">항공권예매</a></td>
+						<td class="details2"><a href="../guide/airReservation.do">항공권예매</a></td>
 						<td class="details2"><a href="../guide/innerService.do">기내서비스</a></td>
 						<td class="details2"><a href="../guide/item.do">유료아이템</a></td>
 						<td class="details2"><a href="#">탑승수속절차</a></td>
