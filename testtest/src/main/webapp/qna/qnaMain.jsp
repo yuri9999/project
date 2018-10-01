@@ -66,7 +66,9 @@
 	background-color: #ccc;
 	color: #4B1152;
 	font-size: 14px;
-	border-top: 10px solid #4B1152;
+	border-top: 2px solid #4B1152;
+	border-left: 2px solid #4B1152; 
+	border-right: 2px solid #4B1152;
 }
 .target{
 	display: none;

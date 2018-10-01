@@ -206,7 +206,7 @@
 </head>
 <body>
 <div id="airReservation">
-	<h3 id="airReservationNavi">JAJUAIR &gt; 서비스 안내 &gt; 기내서비스 &gt; 항공권 예매<img alt="" src="../img/navimg.png"></h3><br>
+	<h3 id="airReservationNavi">JAJUAIR &gt; 서비스 안내 &gt; 예약안내 &gt; 항공권 예매<img alt="" src="../img/navimg.png"></h3><br>
 	<h1>항공권 예매</h1>
 	<p class="reserimg"><img alt="" src="../img/airReservation.png">자주항공 홈페이지에서는 24시간 언제든지 항공권을 구입하실 수 있습니다.</p><br><br>
 	<p>바로가기</p>

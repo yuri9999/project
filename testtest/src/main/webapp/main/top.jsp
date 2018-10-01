@@ -287,12 +287,12 @@ $(document).on('mouseleave', 'div', function () {
 						<td class="details2"><a href="../guide/airReservation.do">항공권예매</a></td>
 						<td class="details2"><a href="../guide/innerService.do">기내서비스</a></td>
 						<td class="details2"><a href="../guide/item.do">유료아이템</a></td>
-						<td class="details2"><a href="#">탑승수속절차</a></td>
+						<td class="details2"><a href="../guide/boardingRule.do">탑승수속절차</a></td>
 						<td class="details2"><a></a></td>
 
 					</tr>
 					<tr>
-						<td class="details2"><a href="#">항공권 환불</a></td>
+						<td class="details2"><a href="../guide/airRefund.do">항공권 환불</a></td>
 						<td class="details2"><a href="../guide/airCafe.do">air cafe</a></td>
 						<td class="details2"><a href="../guide/lounge.do">자주항공 라운지</a></td>
 						<td class="details2"><a href="#">온라인/모바일 탑승권</a></td>

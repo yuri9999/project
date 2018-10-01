@@ -56,4 +56,20 @@ public class GuideController {
 		modelAndView.setViewName("../main/main.jsp");
 		return modelAndView;
 	}
+	
+	@RequestMapping(value="/guide/airRefund.do")
+	public ModelAndView airRefund(HttpServletRequest request) {
+		ModelAndView modelAndView = new ModelAndView();
+		modelAndView.addObject("display","../guide/airRefund.jsp");
+		modelAndView.setViewName("../main/main.jsp");
+		return modelAndView;
+	}
+
+	@RequestMapping(value="/guide/boardingRule.do")
+	public ModelAndView boardingRule(HttpServletRequest request) {
+		ModelAndView modelAndView = new ModelAndView();
+		modelAndView.addObject("display","../guide/boardingRule.jsp");
+		modelAndView.setViewName("../main/main.jsp");
+		return modelAndView;
+	}
 }
