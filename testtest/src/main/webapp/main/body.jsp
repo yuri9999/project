@@ -292,7 +292,7 @@ RollingBanner.prototype = {
 		</tr>
 		<tr>
 			<td>
-				<a href="">예약안내</a><br>
+				<a href="../guide/airReservation.do">예약안내</a><br>
 				<img src="../img/infos.jpg">
 			</td>
 			<td>

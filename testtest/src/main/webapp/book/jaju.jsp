@@ -250,7 +250,7 @@
 	</div>
 </div>
 <div class="console">
-	<div id="selectWay">
+	<div id="selectWay" style="width: 1200px;">
 		<ul class="tabWay">
 			<li><a href="#">왕복</a></li>
 			<li><a href="#">편도</a></li>

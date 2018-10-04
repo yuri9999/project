@@ -295,21 +295,21 @@ $(document).on('mouseleave', 'div', function () {
 						<td class="details2"><a href="../guide/airRefund.do">항공권 환불</a></td>
 						<td class="details2"><a href="../guide/airCafe.do">air cafe</a></td>
 						<td class="details2"><a href="../guide/lounge.do">자주항공 라운지</a></td>
-						<td class="details2"><a href="#">온라인/모바일 탑승권</a></td>
+						<td class="details2"><a href="../guide/onlineTicket.do">온라인 탑승권</a></td>
 						<td class="details2"><a></a></td>
 					</tr>
 					<tr>
 						<td class="details2"><a></a></td>
 						<td class="details2"><a href="../guide/dutyFree.do">기내면세품판매</a></td>
 						<td class="details2"><a></a></td>
-						<td class="details2"><a href="#">도심공항이용안내</a></td>
+						<td class="details2"><a href="../guide/cityAirport.do">도심공항이용안내</a></td>
 						<td class="details2"><a></a></td>
 					</tr>
 					<tr>
 						<td class="details2"><a></a></td>
 						<td class="details2"><a></a></td>
 						<td class="details2"><a></a></td>
-						<td class="details2"><a href="#">수하물</a></td>
+						<td class="details2"><a href="../guide/luggage.do">수하물</a></td>
 						<td class="details2"><a></a></td>
 					</tr>
 					<tr>
@@ -323,7 +323,7 @@ $(document).on('mouseleave', 'div', function () {
 						<td class="details2"><a></a></td>
 						<td class="details2"><a></a></td>
 						<td class="details2"><a></a></td>
-						<td class="details2"><a href="#">도움이필요한 고객</a></td>
+						<td class="details2"><a href="../guide/help.do">도움이필요한 고객</a></td>
 						<td class="details2"><a></a></td>
 					</tr>
 				</table>

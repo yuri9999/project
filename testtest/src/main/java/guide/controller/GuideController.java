@@ -72,4 +72,36 @@ public class GuideController {
 		modelAndView.setViewName("../main/main.jsp");
 		return modelAndView;
 	}
+	
+	@RequestMapping(value="/guide/onlineTicket.do")
+	public ModelAndView onlineTicket(HttpServletRequest request) {
+		ModelAndView modelAndView = new ModelAndView();
+		modelAndView.addObject("display","../guide/onlineTicket.jsp");
+		modelAndView.setViewName("../main/main.jsp");
+		return modelAndView;
+	}
+
+	@RequestMapping(value="/guide/cityAirport.do")
+	public ModelAndView cityAirport(HttpServletRequest request) {
+		ModelAndView modelAndView = new ModelAndView();
+		modelAndView.addObject("display","../guide/cityAirport.jsp");
+		modelAndView.setViewName("../main/main.jsp");
+		return modelAndView;
+	}
+	
+	@RequestMapping(value="/guide/luggage.do")
+	public ModelAndView luggage(HttpServletRequest request) {
+		ModelAndView modelAndView = new ModelAndView();
+		modelAndView.addObject("display","../guide/luggage.jsp");
+		modelAndView.setViewName("../main/main.jsp");
+		return modelAndView;
+	}
+	
+	@RequestMapping(value="/guide/help.do")
+	public ModelAndView help(HttpServletRequest request) {
+		ModelAndView modelAndView = new ModelAndView();
+		modelAndView.addObject("display","../guide/help.jsp");
+		modelAndView.setViewName("../main/main.jsp");
+		return modelAndView;
+	}
 }
