@@ -104,7 +104,10 @@ body{
 	width: 330px;
 	height: 150px;
 }
-
+#service a{
+	text-decoration: none;
+	color: black;
+}
 #event{
 	margin-top: 40px;
 	margin-left:375px;
@@ -292,16 +295,16 @@ RollingBanner.prototype = {
 		</tr>
 		<tr>
 			<td>
-				<a href="../guide/airReservation.do">예약안내</a><br>
-				<img src="../img/infos.jpg">
+				<a href="../guide/airReservation.do">예약안내<br>
+				<img src="../img/infos.jpg"></a>
 			</td>
 			<td>
-				<a href="../guide/innerService.do">기내서비스</a><br>
-				<img src="../img/inners.jpg">
+				<a href="../guide/innerService.do">기내서비스<br>
+				<img src="../img/inners.jpg"></a>
 			</td>
 			<td>
-				<a href="../guide/item.do">부가서비스</a><br>
-				<img src="../img/vs.jpg">
+				<a href="../guide/item.do">부가서비스<br>
+				<img src="../img/vs.jpg"></a>
 			</td>
 		</tr>
 	</table>

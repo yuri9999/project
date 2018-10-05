@@ -104,4 +104,13 @@ public class GuideController {
 		modelAndView.setViewName("../main/main.jsp");
 		return modelAndView;
 	}
+	
+	
+	@RequestMapping(value="/guide/counter.do")
+	public ModelAndView counter(HttpServletRequest request) {
+		ModelAndView modelAndView = new ModelAndView();
+		modelAndView.addObject("display","../guide/counter.jsp");
+		modelAndView.setViewName("../main/main.jsp");
+		return modelAndView;
+	}
 }

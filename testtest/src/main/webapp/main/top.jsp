@@ -316,7 +316,7 @@ $(document).on('mouseleave', 'div', function () {
 						<td class="details2"><a></a></td>
 						<td class="details2"><a></a></td>
 						<td class="details2"><a></a></td>
-						<td class="details2"><a href="#">자주항공 카운터</a></td>
+						<td class="details2"><a href="../guide/counter.do">자주항공 카운터</a></td>
 						<td class="details2"><a></a></td>
 					</tr>
 					<tr>
