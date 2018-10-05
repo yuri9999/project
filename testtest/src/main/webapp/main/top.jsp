@@ -97,17 +97,22 @@ nav{
 	margin: 0 0 20px 20px;
 	display: none;
 	width: 1200px;
-	height: 160px;
+	height: 180px;
 	border: 1px solid #ccc;
 }
-
+#slide table{
+	width: 1200px;
+}
 #slide div .details1{
 	width: 90px;
 }
 #slide div .details1 a{
 	color: #8C8C8C;
-	font-size: 15px;
+	font-size: 19px;
 	text-decoration: none;
+}
+#slide div .details1 a:hover{
+	color: #4B1152;
 }
 #slide div .details1 a:active{
 	color: #8C8C8C;
@@ -118,6 +123,9 @@ nav{
 	text-decoration: none;
 	color: #8C8C8C;
 	font-size: 10px;
+}
+#slide div .details2 a:hover {
+	color: #4B1152;
 }
 </style>
 <script type="text/javascript" src="../js/jquery-3.3.1.min.js"></script>
@@ -206,8 +214,8 @@ $(document).on('mouseleave', 'div', function () {
 		<ul id="menu">
 			<li class="mainMenu"><a href="../book/goAvail.do">항공권 예매</a></li>
 			<li class="mainMenu"><a href="#">마이페이지</a></li>
-			<li class="mainMenu"><a href="#">서비스 안내</a></li>
-			<li class="mainMenu"><a href="../event/eventListC.do?pg=1">이벤트/새소식</a></li>
+			<li class="mainMenu"><a href="../guide/guideHome.do">서비스 안내</a></li>
+			<li class="mainMenu"><a href="../event/eventHome.do">이벤트/새소식</a></li>
 			<li class="mainMenu"><a href="#">여행상품</a></li>
 			<li class="mainMenu"><a href="#">포인트/마일리지</a></li>
 			<li class="mainMenu"><a href="#">회사소개</a></li>
@@ -367,25 +375,25 @@ $(document).on('mouseleave', 'div', function () {
 						<td class="details1"></td>
 					</tr>
 					<tr>
-						<td class="details1"><a href="#"></a></td>
-						<td class="details1"><a href="#"></a></td>
-						<td class="details1"><a href="#"></a></td>
-						<td class="details1"><a href="#"></a></td>
-						<td class="details1"><a href="#"></a></td>
+						<td class="details2"><a href="#"></a></td>
+						<td class="details2"><a href="#"></a></td>
+						<td class="details2"><a href="#"></a></td>
+						<td class="details2"><a href="#"></a></td>
+						<td class="details2"><a href="#"></a></td>
 					</tr>
 					<tr>
-						<td class="details1"><a href="#"></a></td>
-						<td class="details1"><a href="#"></a></td>
-						<td class="details1"><a href="#"></a></td>
-						<td class="details1"><a href="#"></a></td>
-						<td class="details1"><a href="#"></a></td>
+						<td class="details2"><a href="#"></a></td>
+						<td class="details2"><a href="#"></a></td>
+						<td class="details2"><a href="#"></a></td>
+						<td class="details2"><a href="#"></a></td>
+						<td class="details2"><a href="#"></a></td>
 					</tr>
 					<tr>
-						<td class="details1"><a href="#"></a></td>
-						<td class="details1"><a href="#"></a></td>
-						<td class="details1"><a href="#"></a></td>
-						<td class="details1"><a href="#"></a></td>
-						<td class="details1"><a href="#"></a></td>
+						<td class="details2"><a href="#"></a></td>
+						<td class="details2"><a href="#"></a></td>
+						<td class="details2"><a href="#"></a></td>
+						<td class="details2"><a href="#"></a></td>
+						<td class="details2"><a href="#"></a></td>
 					</tr>
 				</table>
 			</div>
@@ -399,32 +407,32 @@ $(document).on('mouseleave', 'div', function () {
 						<td class="details1"><a href="#">제휴포인트</a></td>
 					</tr>
 					<tr>
-						<td class="details1"><a href="#"></a></td>
-						<td class="details1"><a href="#"></a></td>
-						<td class="details1"><a href="#"></a></td>
-						<td class="details1"><a href="#"></a></td>
-						<td class="details1"><a href="#"></a></td>
+						<td class="details2"><a href="#"></a></td>
+						<td class="details2"><a href="#"></a></td>
+						<td class="details2"><a href="#"></a></td>
+						<td class="details2"><a href="#"></a></td>
+						<td class="details2"><a href="#"></a></td>
 					</tr>
 					<tr>
-						<td class="details1"><a href="#"></a></td>
-						<td class="details1"><a href="#"></a></td>
-						<td class="details1"><a href="#"></a></td>
-						<td class="details1"><a href="#"></a></td>
-						<td class="details1"><a href="#"></a></td>
+						<td class="details2"><a href="#"></a></td>
+						<td class="details2"><a href="#"></a></td>
+						<td class="details2"><a href="#"></a></td>
+						<td class="details2"><a href="#"></a></td>
+						<td class="details2"><a href="#"></a></td>
 					</tr>
 					<tr>
-						<td class="details1"><a href="#"></a></td>
-						<td class="details1"><a href="#"></a></td>
-						<td class="details1"><a href="#"></a></td>
-						<td class="details1"><a href="#"></a></td>
-						<td class="details1"><a href="#"></a></td>
+						<td class="details2"><a href="#"></a></td>
+						<td class="details2"><a href="#"></a></td>
+						<td class="details2"><a href="#"></a></td>
+						<td class="details2"><a href="#"></a></td>
+						<td class="details2"><a href="#"></a></td>
 					</tr>
 					<tr>
-						<td class="details1"><a href="#"></a></td>
-						<td class="details1"><a href="#"></a></td>
-						<td class="details1"><a href="#"></a></td>
-						<td class="details1"><a href="#"></a></td>
-						<td class="details1"><a href="#"></a></td>
+						<td class="details2"><a href="#"></a></td>
+						<td class="details2"><a href="#"></a></td>
+						<td class="details2"><a href="#"></a></td>
+						<td class="details2"><a href="#"></a></td>
+						<td class="details2"><a href="#"></a></td>
 					</tr>
 				</table>
 			</div>
@@ -439,25 +447,28 @@ $(document).on('mouseleave', 'div', function () {
 						<td class="details1"><a href="#">항공기 소개</a></td>
 					</tr>
 					<tr>
-						<td class="details1"><a href="#"></a></td>
-						<td class="details1"><a href="#"></a></td>
-						<td class="details1"><a href="#"></a></td>
-						<td class="details1"><a href="#"></a></td>
-						<td class="details1"><a href="#"></a></td>
+						<td class="details2"><a href="#"></a></td>
+						<td class="details2"><a href="#"></a></td>
+						<td class="details2"><a href="#"></a></td>
+						<td class="details2"><a href="#"></a></td>
+						<td class="details2"><a href="#"></a></td>
+						<td class="details2"><a href="#"></a></td>
 					</tr>
 					<tr>
-						<td class="details1"><a href="#"></a></td>
-						<td class="details1"><a href="#"></a></td>
-						<td class="details1"><a href="#"></a></td>
-						<td class="details1"><a href="#"></a></td>
-						<td class="details1"><a href="#"></a></td>
+						<td class="details2"><a href="#"></a></td>
+						<td class="details2"><a href="#"></a></td>
+						<td class="details2"><a href="#"></a></td>
+						<td class="details2"><a href="#"></a></td>
+						<td class="details2"><a href="#"></a></td>
+						<td class="details2"><a href="#"></a></td>
 					</tr>
 					<tr>
-						<td class="details1"><a href="#"></a></td>
-						<td class="details1"><a href="#"></a></td>
-						<td class="details1"><a href="#"></a></td>
-						<td class="details1"><a href="#"></a></td>
-						<td class="details1"><a href="#"></a></td>
+						<td class="details2"><a href="#"></a></td>
+						<td class="details2"><a href="#"></a></td>
+						<td class="details2"><a href="#"></a></td>
+						<td class="details2"><a href="#"></a></td>
+						<td class="details2"><a href="#"></a></td>
+						<td class="details2"><a href="#"></a></td>
 					</tr>
 				</table>
 			</div>

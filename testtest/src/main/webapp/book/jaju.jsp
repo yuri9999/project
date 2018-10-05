@@ -16,6 +16,12 @@
 	position: absolute;
 	top: 350px;
 }
+#flightInput{
+	width: 1200px;
+}
+#flightInput td{
+	background-color: #4B1152;
+}
 #selectDep{
 	position: fixed;
 	width: 1200px;

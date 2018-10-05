@@ -265,14 +265,12 @@ $(function($) {
 			<a>예약조회/변경/취소 &gt;</a>
 		</td>
 		<td class="toptap2">
-			<p>이티켓/영수증</p><br>
-			<a>이티켓 발급 &gt;</a><br>
-			<a>영수증 발급 &gt;</a>
+			<p>항공권예매</p><br>
+			<a href="../book/goAvail.do">항공권예매 &gt;</a><br>
 		</td>
 		<td class="toptap2">
-			<p>온라인 체크인</p><br>
-			<a>온라인탑승권 발급 &gt;</a><br>
-			<a>온라인탑승권 확인 &gt;</a>
+			<p>온라인탑승권 안내</p><br>
+			<a href="../guide/onlineTicket.do">온라인탑승권 안내 &gt;</a><br>
 		</td>
 	</tr>
 	<tr>
@@ -283,13 +281,13 @@ $(function($) {
 		</td>
 		<td class="toptap2">
 			<p>부가서비스</p><br>
-			<a>부가서비스 안내 &gt;</a>
+			<a href="../guide/item.do">부가서비스 안내 &gt;</a>
 		</td>
 		<td class="toptap2">
 			<p>규졍안내</p><br>
 			<a>국내선 위약금 규정 &gt;</a><br>
 			<a>국재선 위약금 규정 &gt;</a><br>
-			<a>수하물 규정 &gt;</a>
+			<a href="../guide/luggage.do">수하물 규정 &gt;</a>
 		</td>
 	</tr>
 </table>

@@ -26,6 +26,14 @@ public class EventController {
 	@Autowired
 	private EventService eventService;
 	
+	@RequestMapping(value="/event/eventHome.do",method=RequestMethod.GET)
+	public ModelAndView eventHome(HttpServletRequest request, EventDAO eventDAO) {
+		ModelAndView modelAndView = new ModelAndView();
+		modelAndView.addObject("display", "../event/eventHome.jsp");
+		modelAndView.setViewName("../main/main.jsp");
+		return modelAndView;
+	}
+	
 	@RequestMapping(value="/event/eventWriteForm.do",method=RequestMethod.GET)
 	public ModelAndView eventWriteForm(HttpServletRequest request, EventDAO eventDAO) {
 		ModelAndView modelAndView = new ModelAndView();

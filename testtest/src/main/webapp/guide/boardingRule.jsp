@@ -84,8 +84,8 @@
 </head>
 <body>
 <div id="boardingRule">
-	<h3 id="boardingRuleNavi">JAJUAIR &gt; 서비스 안내 &gt; 공항서비스 &gt; 탑승수속 절차<img alt="" src="../img/navimg.png"></h3><br>
-	<h1>항공권 예매</h1>
+	<h3 id="boardingRuleNavi">JAJUAIR &gt; 서비스 안내 &gt; 공항서비스 &gt; 탑승 수속 절차<img alt="" src="../img/navimg.png"></h3><br>
+	<h1>탑승 수속 절차</h1>
 	<img alt="" src="../img/boardingRule.png" class="boardingRuleimg"><p><br><br>자주항공을 이용하시는 고객님의 공항 도착에서부터 항공기 탑승까지 절차를 안내해 드립니다.</p><br><br>
 	
 	<div id="boardingProcess">

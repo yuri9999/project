@@ -16,7 +16,7 @@
 	height: 130px;
 	background-color: #EAEAEA;
 }
-table{
+#footer table{
 	width: 1200px;
 	height: 100px;
 	margin: auto;

@@ -22,6 +22,8 @@
 }
 #eventListC{
 	margin-top: 40px;
+	width: 1200px;
+	border-spacing: 0;
 }
 #eventListC .eventContent{
 	padding: 20px;

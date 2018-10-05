@@ -113,4 +113,13 @@ public class GuideController {
 		modelAndView.setViewName("../main/main.jsp");
 		return modelAndView;
 	}
+	
+	
+	@RequestMapping(value="/guide/guideHome.do")
+	public ModelAndView guideHome(HttpServletRequest request) {
+		ModelAndView modelAndView = new ModelAndView();
+		modelAndView.addObject("display","../guide/guideHome.jsp");
+		modelAndView.setViewName("../main/main.jsp");
+		return modelAndView;
+	}
 }

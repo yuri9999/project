@@ -38,6 +38,7 @@
 .noticeViewCon{
 	height: 510px;
 	border-bottom: 1px solid #353535;
+	vertical-align: top;
 }
 .mybutton{
 	background-color: #4B1152;
