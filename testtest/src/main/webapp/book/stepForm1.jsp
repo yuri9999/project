@@ -17,23 +17,30 @@
 <link rel="stylesheet" href="../css/datepicker.css">
 <link rel="stylesheet" href="../css/step1.css">
 <!--=====전진씨 CSS=========  -->
+<!--sidebar  -->
+<link rel="stylesheet" type="text/css" href="../css/showConsole.css">
 <link rel="stylesheet" type="text/css" href="../css/airport.css">
 <link rel="stylesheet" type="text/css" href="../css/flightBooking.css">
 <script src="../js/inputChk.js"></script>
+<!--sidebar  -->
+<script src="../js/showConsole.js"></script>
 
 
 <script type="text/javascript">
 
 	window.onload = $(function() {
 		$("#tab1").click();
+		
+
 	});
+	
 
 
 </script>
 
 </head>
 <body>
-	<form action="step1.do" method="post" name="stepForm1">
+	<form action="../book/step1.do" method="post" name="stepForm1">
 
 		<div id="container">
 			<!--step1,2,3,4 부분  -->
@@ -46,6 +53,8 @@
 					<li><span>Step.4</span> <strong>항공권 결제</strong></li>
 				</ul>
 			</div>
+			<!-- left Space -->
+  			 <div id="leftSpace">
 
 			<!--구간 선택 부분  -->
 			<h4>
@@ -76,7 +85,7 @@
 						<hr id="headerEnd">
 						<ul class="nav">
 						<div class="navAirports">
-							<div id="navKor" class="column">
+						<div id="navKor" class="column">
 							<h3>한국</h3>
 							<ul>
 								<li value="인천(ICN)"><a href="#">인천(ICN)</a></li>
@@ -115,7 +124,7 @@
 							</ul>
 						</div>
 					</div>
-				</ul>
+					</ul>
 			</div>
 
 	<!--===========도착지팝업창 ================ -->
@@ -191,10 +200,7 @@
 						<div class="btn"><input type="button" class="calendar" id="datepicker" name="dayGo" value="가는 날"></div>
 						<a class="inputImg"><img alt="dep2" src="../img/cal.jpg" height="30px" width="30px"></a>
 					</td>
-					<td id="dayCome">
-						<div class="btn"><input type="button" class="calendar" id="datepicker2" name="dayCome" value="오는 날"></div>
-						<a class="inputImg"><img alt="arr2" src="../img/cal.jpg" height="30px" width="30px"></a>
-					</td>
+					
 					
 					<td>
 						<!-- hidden input태그  -->
@@ -238,22 +244,41 @@
 			<!--========================구간2 ================================= -->
 				<div id="part2">
 					<label><img alt="bul0.png" src="../img/bul0.png">구간2</label>
-					<select name="start">
-						<option>---출발지 ---</option>
-						<option value="FUK">후쿠오카</option>
-						<option value="OKA">오키나와</option>
-						<option value="DAD">다낭</option>
-						<option value="PEK">베이징</option>
-						<option value="MNL">마닐라</option>
-					</select> <select name="end">
-						<option>---도착지 ---</option>
-						<option value="ICN">서울(인천)</option>
-						<option value="GMP">서울(김포)</option>
-						<option value="PUS">부산</option>
-						<option value="CIU">제주</option>
-						<option value="KWJ">광주</option>
-					</select> 
-					<input type="text" id="datepicker2" onclick="datepicker()">
+					<div class="roundtrip">
+	<!-- 	<form action="goAvail.do" name="round" method="post"> -->
+			<table id="flightInput">
+				<tr id="mybutton">
+					<td>
+						<div class="btn"><input type="button" class="location" name="arr" id="arr" value="출발지" ></div>
+						<a class="inputImg" href="#"><img alt="dep1" src="../img/dep.jpg" height="30px" width="30px"></a>
+					</td>
+					<td>
+						<div class="btn"><input type="button" class="location" name="dep" id="dep" value="도착지"></div>
+						<a class="inputImg" href="#"><img alt="arr1" src="../img/arr.jpg" height="30px" width="30px"></a>
+					</td>
+					<td id="dayCome">
+						<div class="btn"><input type="button" class="calendar" id="datepicker2" name="dayCome" value="오는 날"></div>
+						<a class="inputImg"><img alt="arr2" src="../img/cal.jpg" height="30px" width="30px"></a>
+					</td>
+					
+					<td>
+						<!-- hidden input태그  -->
+						<!--hdep와 harr는   -->
+						<input type="hidden" id="hdep" name="hdep">
+						<input type="hidden" id="harr" name="harr">
+						
+						<input type="hidden" id="hdayGo" name="hdayGo">
+						<input type="hidden" id="hdayCome" name="hdayCome">
+						<input type="hidden" id="hadult" name="hadult">
+						<input type="hidden" id="hkid" name="hkid">
+						<input type="hidden" id="hbaby" name="hbaby">
+						
+					</td>
+				</tr>
+				
+					
+				</table>
+				</div>
 				</div>
 
 
@@ -297,6 +322,7 @@
 					<label><img alt="bul0.png" src="../img/bul0.png">결제</label> 
 					<input type="radio" id="pay" name="radio" value="1" checked>일반결제
 				</div>
+
 
 				<!--검색 버튼  -->
 				<div id="selectBtn">
@@ -377,209 +403,33 @@
 			<div class="part_container" style="display: none;">
 				<!--구간1 제목  -->
 				<h4>
-					<img alt="title1.jpg" src="../img/title1.jpg"><strong>구간1:서울(인천)- 다낭 </strong>
+			
+					<img alt="title1.jpg" src="../img/title1.jpg"><strong>구간1:인천->다낭</strong>
+
+				
 				</h4>
 				<br>
 
 				<!--tabs 날짜 부분  -->
-				<input id="part_tab1" type="radio" name="tabs" checked> 
-				<label for="part_tab1" class="part_label"> 9-13(목)<br> <strong>69,000</strong></label> 
-				<input id="part_tab2" type="radio" name="tabs"> 
-				<label for="part_tab2" class="part_label"> 9-14(금)<br> <strong>70,000</strong></label> 
-				<input id="part_tab3" type="radio" name="tabs"> 
-				<label for="part_tab3" class="part_label"> 9-15(토)<br> <strong>73,000</strong></label> 
-				<input id="part_tab4" type="radio" name="tabs"> 
-				<label for="part_tab4" class="part_label"> 9-16(일)<br> <strong>56,000</strong></label> 
-				<input id="part_tab5" type="radio" name="tabs"> 
-				<label for="part_tab5" class="part_label"> 9-17(월)<br> <strong>80,000</strong></label> 
-				<input id="part_tab6" type="radio" name="tabs"> 
-				<label for="part_tab6" class="part_label"> 9-18(화)<br> <strong>45,000</strong></label> 
-				<input id="part_tab7" type="radio" name="tabs"> 
-				<label for="part_tab7" class="part_label"> 9-19(수)<br> <strong>50,000</strong></label>
+				
+				<div id="boardTab"></div>
 
 				<!--해당 날짜에 대한 sectiton부분  -->
 				<section id="part_content1">
-					<table class="table table-bordered">
-						<tr>
-							<td>1편명</td>
-							<td>출발시간</td>
-							<td>도착시간</td>
-							<td>정규운임</td>
-						</tr>
-					 <c:forEach var="flightInfoDTO" items="${requestScope.list}">
-					 <tr>
-							<td>${flightInfoDTO.flightName1 }</td>
-							<td>${flightInfoDTO.depTime1 }</td>
-							<td>${flightInfoDTO.arrTime1 }</td>
-							<td><input type="checkbox" name="pay2">${flightInfoDTO.depPrice1 }</td>
-						</tr>
-					</c:forEach>	
-					
-					</table>
 
-				</section>
+					<div><table id = "boardList" class="table table-bordered" border = "1" >
+						<thead>
+							<tr>
+								<td>편명</td>
+								<td>출발시간</td>
+								<td>도착시간</td>
+								<td>정규운임</td>
+							</tr>
+						</thead>
+						<tbody id ="boardListTr">
+						</tbody>
+					</table></div>	
 
-				<section id="part_content2">
-					<table class="table table-bordered">
-						<tr>
-							<td>2편명</td>
-							<td>출발시간</td>
-							<td>도착시간</td>
-							<td>특가운임</td>
-							<td>정규운임</td>
-						</tr>
-						<tr>
-							<td>7C2903</td>
-							<td>21:20</td>
-							<td>23:59</td>
-							<td><input type="checkbox" name="pay1">7,000KRW</td>
-							<td><input type="checkbox" name="pay2">637,800KRW</td>
-						</tr>
-						<tr>
-							<td>7C2907</td>
-							<td>22:40</td>
-							<td>01:30</td>
-							<td><input type="checkbox" name="pay3">7,000KRW</td>
-							<td><input type="checkbox" name="pay4">637,800KRW</td>
-						</tr>
-						<tr>
-							<td>7C2907</td>
-							<td>22:40</td>
-							<td>01:30</td>
-							<td><input type="checkbox" name="pay3">7,000KRW</td>
-							<td><input type="checkbox" name="pay4">637,800KRW</td>
-						</tr>
-					</table>
-				</section>
-
-				<section id="part_content3">
-					<table class="table table-bordered">
-						<tr>
-							<td>3편명</td>
-							<td>출발시간</td>
-							<td>도착시간</td>
-							<td>특가운임</td>
-							<td>정규운임</td>
-						</tr>
-						<tr>
-							<td>7C2903</td>
-							<td>21:20</td>
-							<td>23:59</td>
-							<td><input type="checkbox" name="pay1">7,000KRW</td>
-							<td><input type="checkbox" name="pay2">637,800KRW</td>
-						</tr>
-						<tr>
-							<td>7C2907</td>
-							<td>22:40</td>
-							<td>01:30</td>
-							<td><input type="checkbox" name="pay3">7,000KRW</td>
-							<td><input type="checkbox" name="pay4">637,800KRW</td>
-						</tr>
-					</table>
-				</section>
-
-				<section id="part_content4">
-					<table class="table table-bordered">
-						<tr>
-							<td>편명</td>
-							<td>출발시간</td>
-							<td>도착시간</td>
-							<td>특가운임</td>
-							<td>정규운임</td>
-						</tr>
-						<tr>
-							<td>7C2903</td>
-							<td>21:20</td>
-							<td>23:59</td>
-							<td><input type="checkbox" name="pay1">7,000KRW</td>
-							<td><input type="checkbox" name="pay2">637,800KRW</td>
-						</tr>
-						<tr>
-							<td>7C2907</td>
-							<td>22:40</td>
-							<td>01:30</td>
-							<td><input type="checkbox" name="pay3">7,000KRW</td>
-							<td><input type="checkbox" name="pay4">637,800KRW</td>
-						</tr>
-					</table>
-				</section>
-
-				<section id="part_content5">
-					<table class="table table-bordered">
-						<tr>
-							<td>편명</td>
-							<td>출발시간</td>
-							<td>도착시간</td>
-							<td>특가운임</td>
-							<td>정규운임</td>
-						</tr>
-						<tr>
-							<td>7C2903</td>
-							<td>21:20</td>
-							<td>23:59</td>
-							<td><input type="checkbox" name="pay1">7,000KRW</td>
-							<td><input type="checkbox" name="pay2">637,800KRW</td>
-						</tr>
-						<tr>
-							<td>7C2907</td>
-							<td>22:40</td>
-							<td>01:30</td>
-							<td><input type="checkbox" name="pay3">7,000KRW</td>
-							<td><input type="checkbox" name="pay4">637,800KRW</td>
-						</tr>
-					</table>
-				</section>
-
-				<section id="part_content6">
-					<table class="table table-bordered">
-						<tr>
-							<td>편명</td>
-							<td>출발시간</td>
-							<td>도착시간</td>
-							<td>특가운임</td>
-							<td>정규운임</td>
-						</tr>
-						<tr>
-							<td>7C2903</td>
-							<td>21:20</td>
-							<td>23:59</td>
-							<td><input type="checkbox" name="pay1">7,000KRW</td>
-							<td><input type="checkbox" name="pay2">637,800KRW</td>
-						</tr>
-						<tr>
-							<td>7C2907</td>
-							<td>22:40</td>
-							<td>01:30</td>
-							<td><input type="checkbox" name="pay3">7,000KRW</td>
-							<td><input type="checkbox" name="pay4">637,800KRW</td>
-						</tr>
-					</table>
-				</section>
-
-				<section id="part_content7">
-					<table class="table table-bordered">
-						<tr>
-							<td>편명</td>
-							<td>출발시간</td>
-							<td>도착시간</td>
-							<td>특가운임</td>
-							<td>정규운임</td>
-						</tr>
-						<tr>
-							<td>7C2903</td>
-							<td>21:20</td>
-							<td>23:59</td>
-							<td><input type="checkbox" name="pay1">7,000KRW</td>
-							<td><input type="checkbox" name="pay2">637,800KRW</td>
-						</tr>
-						<tr>
-							<td>7C2907</td>
-							<td>22:40</td>
-							<td>01:30</td>
-							<td><input type="checkbox" name="pay3">7,000KRW</td>
-							<td><input type="checkbox" name="pay4">637,800KRW</td>
-						</tr>
-					</table>
 				</section>
 
 
@@ -612,211 +462,24 @@
 				<br>
 
 				<!--tabs 날짜 부분  -->
-				<input id="part_tab1" type="radio" name="tabs" checked> 
+				<div id="boardTab2"></div>
+				<!-- <input id="part_tab1" type="radio" name="tabs" checked> 
 				<label for="part_tab1" class="part_label"> 9-13(목)<br> <strong>69,000</strong></label> 
-				<input id="part_tab2" type="radio" name="tabs"> 
-				<label for="part_tab2" class="part_label"> 9-14(금)<br> <strong>70,000</strong></label> 
-				<input id="part_tab3" type="radio" name="tabs"> 
-				<label for="part_tab3" class="part_label"> 9-15(토)<br> <strong>73,000</strong></label> 
-				<input id="part_tab4" type="radio" name="tabs"> 
-				<label for="part_tab4" class="part_label"> 9-16(일)<br> <strong>56,000</strong></label> 
-				<input id="part_tab5" type="radio" name="tabs"> 
-				<label for="part_tab5" class="part_label"> 9-17(월)<br> <strong>80,000</strong></label> 
-				<input id="part_tab6" type="radio" name="tabs"> 
-				<label for="part_tab6" class="part_label"> 9-18(화)<br> <strong>45,000</strong></label> 
-				<input id="part_tab7" type="radio" name="tabs"> 
-				<label for="part_tab7" class="part_label"> 9-19(수)<br> <strong>50,000</strong></label>
-
+ -->
 				<!--해당 날짜에 대한 sectiton부분  -->
-				<section id="part_content1">
-					<table class="table table-bordered">
-						<tr>
-							<td>1편명</td>
-							<td>출발시간</td>
-							<td>도착시간</td>
-							<td>특가운임</td>
-							<td>정규운임</td>
-						</tr>
-						<tr>
-							<td>7C2903<input type="hidden" name="flightName2"
-								value="7C2111"></td>
-							<td>21:20</td>
-							<td>23:59</td>
-							<td><input type="checkbox" name="pay1">7,000KRW</td>
-							<td><input type="checkbox" name="pay2">637,800KRW</td>
-						</tr>
-						<tr>
-							<td>7C2907</td>
-							<td>22:40</td>
-							<td>01:30</td>
-							<td><input type="checkbox" name="pay3">7,000KRW</td>
-							<td><input type="checkbox" name="pay4">637,800KRW</td>
-						</tr>
-					</table>
-
-				</section>
-
 				<section id="part_content2">
-					<table class="table table-bordered">
-						<tr>
-							<td>2편명</td>
-							<td>출발시간</td>
-							<td>도착시간</td>
-							<td>특가운임</td>
-							<td>정규운임</td>
-						</tr>
-						<tr>
-							<td>7C2903</td>
-							<td>21:20</td>
-							<td>23:59</td>
-							<td><input type="checkbox" name="pay1">7,000KRW</td>
-							<td><input type="checkbox" name="pay2">637,800KRW</td>
-						</tr>
-						<tr>
-							<td>7C2907</td>
-							<td>22:40</td>
-							<td>01:30</td>
-							<td><input type="checkbox" name="pay3">7,000KRW</td>
-							<td><input type="checkbox" name="pay4">637,800KRW</td>
-						</tr>
-						<tr>
-							<td>7C2907</td>
-							<td>22:40</td>
-							<td>01:30</td>
-							<td><input type="checkbox" name="pay3">7,000KRW</td>
-							<td><input type="checkbox" name="pay4">637,800KRW</td>
-						</tr>
-					</table>
-				</section>
-
-				<section id="part_content3">
-					<table class="table table-bordered">
-						<tr>
-							<td>3편명</td>
-							<td>출발시간</td>
-							<td>도착시간</td>
-							<td>특가운임</td>
-							<td>정규운임</td>
-						</tr>
-						<tr>
-							<td>7C2903</td>
-							<td>21:20</td>
-							<td>23:59</td>
-							<td><input type="checkbox" name="pay1">7,000KRW</td>
-							<td><input type="checkbox" name="pay2">637,800KRW</td>
-						</tr>
-						<tr>
-							<td>7C2907</td>
-							<td>22:40</td>
-							<td>01:30</td>
-							<td><input type="checkbox" name="pay3">7,000KRW</td>
-							<td><input type="checkbox" name="pay4">637,800KRW</td>
-						</tr>
-					</table>
-				</section>
-
-				<section id="part_content4">
-					<table class="table table-bordered">
-						<tr>
-							<td>편명</td>
-							<td>출발시간</td>
-							<td>도착시간</td>
-							<td>특가운임</td>
-							<td>정규운임</td>
-						</tr>
-						<tr>
-							<td>7C2903</td>
-							<td>21:20</td>
-							<td>23:59</td>
-							<td><input type="checkbox" name="pay1">7,000KRW</td>
-							<td><input type="checkbox" name="pay2">637,800KRW</td>
-						</tr>
-						<tr>
-							<td>7C2907</td>
-							<td>22:40</td>
-							<td>01:30</td>
-							<td><input type="checkbox" name="pay3">7,000KRW</td>
-							<td><input type="checkbox" name="pay4">637,800KRW</td>
-						</tr>
-					</table>
-				</section>
-
-				<section id="part_content5">
-					<table class="table table-bordered">
-						<tr>
-							<td>편명</td>
-							<td>출발시간</td>
-							<td>도착시간</td>
-							<td>특가운임</td>
-							<td>정규운임</td>
-						</tr>
-						<tr>
-							<td>7C2903</td>
-							<td>21:20</td>
-							<td>23:59</td>
-							<td><input type="checkbox" name="pay1">7,000KRW</td>
-							<td><input type="checkbox" name="pay2">637,800KRW</td>
-						</tr>
-						<tr>
-							<td>7C2907</td>
-							<td>22:40</td>
-							<td>01:30</td>
-							<td><input type="checkbox" name="pay3">7,000KRW</td>
-							<td><input type="checkbox" name="pay4">637,800KRW</td>
-						</tr>
-					</table>
-				</section>
-
-				<section id="part_content6">
-					<table class="table table-bordered">
-						<tr>
-							<td>편명</td>
-							<td>출발시간</td>
-							<td>도착시간</td>
-							<td>특가운임</td>
-							<td>정규운임</td>
-						</tr>
-						<tr>
-							<td>7C2903</td>
-							<td>21:20</td>
-							<td>23:59</td>
-							<td><input type="checkbox" name="pay1">7,000KRW</td>
-							<td><input type="checkbox" name="pay2">637,800KRW</td>
-						</tr>
-						<tr>
-							<td>7C2907</td>
-							<td>22:40</td>
-							<td>01:30</td>
-							<td><input type="checkbox" name="pay3">7,000KRW</td>
-							<td><input type="checkbox" name="pay4">637,800KRW</td>
-						</tr>
-					</table>
-				</section>
-
-				<section id="part_content7">
-					<table class="table table-bordered">
-						<tr>
-							<td>편명</td>
-							<td>출발시간</td>
-							<td>도착시간</td>
-							<td>특가운임</td>
-							<td>정규운임</td>
-						</tr>
-						<tr>
-							<td>7C2903</td>
-							<td>21:20</td>
-							<td>23:59</td>
-							<td><input type="checkbox" name="pay1">7,000KRW</td>
-							<td><input type="checkbox" name="pay2">637,800KRW</td>
-						</tr>
-						<tr>
-							<td>7C2907</td>
-							<td>22:40</td>
-							<td>01:30</td>
-							<td><input type="checkbox" name="pay3">7,000KRW</td>
-							<td><input type="checkbox" name="pay4">637,800KRW</td>
-						</tr>
-					</table>
+						<div><table id = "boardList2" class="table table-bordered" border = "1" >
+						<thead>
+							<tr>
+								<td>편명</td>
+								<td>출발시간</td>
+								<td>도착시간</td>
+								<td>정규운임</td>
+							</tr>
+						</thead>
+						<tbody id ="boardListTr2">
+						</tbody>
+					</table></div>
 				</section>
 
 
@@ -837,10 +500,84 @@
 					</ul>
 
 				</div>
-
-				<input type="submit" value="구간 및 운임 선택 완료">
+				<input type="hidden" id="hiddenGetChecked" name="hiddenGetChecked" value=" ">
+				<input type="hidden" id="hiddenGetChecked2" name="hiddenGetChecked2" value=" ">
+				<input type="submit" value="구간 및 운임 선택 완료" onclick="getChecked()" >
 			</div>
 	</div>
+	</div>
+	<div id="rightSpace"></div>
+	
+	<!-- step1,2,3,4 우측 결제정보 콘솔 -->
+		<div id="showConsole">
+			<div id="innerConsole">
+				<div id="showInfo">
+					<img src="../img/ico_silver.png">
+					<div id="memInfo">
+						<p><span id="memName">${memName}</span> 님</p>
+						<span id="memId">ID: ${memId}</span>
+					</div>
+				</div>
+				<div id="showPoint">
+					<span id="pointHead">가용포인트</span>
+					<span id="memPoint" class="pointRight">${memPoint}50000</span>					
+					<span id="pointFoot" class="pointRight">P</span>
+				</div>
+				<div id="showFlightInfo">
+					<h2 id="showTitle">구간 및 운임</h2>
+					<table>
+						<thead>
+							<tr id="memAge">
+								<td colspan="2">성인1명/소아0명/유아0명</td>
+							</tr>
+						</thead>
+						<tbody>
+							<tr id="showTripInfo1">
+								<td colspan="2">
+									<p class="gugan" >구간1</p>
+									<div id="guganDate1"></div>
+									<%-- <span id="showTrip1">간다${arr}</span><br>
+									<span id="showTime1">${dayGo}+출시 ~ 도시</span> --%>
+								</td>
+							</tr>
+							<tr id="showTripInfo2">
+								<td colspan="2">
+									<p class="gugan">구간2</p>
+									<div id="guganDate2"></div>
+									<%-- <span id="showTrip2">${arr}온다${dep}</span><br>
+									<span id="showTime2">${dayCome}+출시 ~ 도시</span> --%>
+								</td>
+							</tr>
+							<tr class="showPay" id="showPayJs">
+								<!-- <td class="showPayL">
+									<li>ㆍ항공운임</li>
+									<li>ㆍ유류할증료</li>
+									<li>ㆍ공항시설사용료</li>
+									<li>ㆍ서비스 옵션</li>
+								</td>
+								<td class="showPayR">
+									<span>0</span> KRW<br>
+									<span>0</span> KRW<br>
+									<span>0</span> KRW<br>
+									<span>0</span> KRW<br>
+								</td> -->
+							</tr>
+						</tbody>
+						<tfoot id="tfootShowTotal" >
+							 <tr>
+								<td colspan="2">
+									<h4>항공운임 등 총액</h4>
+									<div id="showTotal">
+										 <span id="showTotalNum"></span><span id="tfootKrw">KRW</span> 
+									</div>
+								</td>
+							</tr> 
+						</tfoot>
+					</table>
+				</div>
+			</div>
+		</div>
+	
 	</form>
 </body>
 </html>

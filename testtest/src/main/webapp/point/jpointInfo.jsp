@@ -169,6 +169,7 @@
   	padding: 0 10px 0 10px;
   	margin-left : 20px;
   	border: 0;
+  	font-size : 20px;
   	font-weight : bold;
   	background: left 0 no-repeat;
   }
@@ -198,7 +199,7 @@
   	border-left: 1px solid gray;
   	text-align: center;
   	font-weight:bold;
-  	font-size: 15px;
+  	font-size: 20px;
   	letter-spacing: -1px;
   	background: 50% 6px no-repeat;
   }
@@ -209,6 +210,7 @@
   }
   .point01 {
   	padding: 10px 10px 40px 10px;
+  	font-size: 17px;
   }
   .pointSave ul li img{
   	padding: 10px 0 15px 0;
@@ -235,7 +237,7 @@
   	border-left: 1px solid gray;
   	text-align: center;
   	font-weight: bold;
-  	font-size: 14px;
+  	font-size: 20px;
   	letter-spacing: -1px;
   	background: 50% 6px no-repeat;
   }
@@ -289,27 +291,31 @@
 <div class="jpinfocontainer">
     <p class="text-left">HOME > 리프레시 포인트 > 리프레시 포인트 > 소개</p>
     <h2 class="text-left">Refresh point</h2>
-    <c:if test="${sessionScope.memId != null }">
-	    <table class="jpinfotable">
+    <c:if test="${sessionScope.memId == memberDTO.id }">
+    <hr>
+	    <table class="table">
 	      <tr>
-	        <td>${sessionScope.memName }(${sessionScope.memId })님, 안녕하세요!</td>
+	        <td>${sessionScope.memId }님, 안녕하세요!</td>
 	        <td>
 	          <div class="userInfo">
-	            <ul class="tab">
+	            <ul class="saveTab">
 	              <li class="grade">
-	                <span>SILVER</span>
+	                <span>${memberDTO.grade }</span>
 	              </li>
 	              <li class="usedPoint">
-	                <span>1000P</span>
+	                <span>${memberDTO.totalPoint }P</span>
 	              </li>
 	              <li class="modify">
-	                <a href="#">MODIFY</a>
+	                <a href="../member/memberModifyForm.do?id=${sessionScope.memId }">MODIFY</a>
 	              </li>
 	            </ul>
 	          </div>
 	        </td>
 	      </tr>
 	   	</table>
+   	</c:if>
+   	<c:if test="${sessionScope.memId != memberDTO.id }">
+    <hr>
    	</c:if>
    	<div class="banner">
    		<h2>항공마일리지의 새로운 기준! <br> 항공운임 기준 5% 적립</h2>

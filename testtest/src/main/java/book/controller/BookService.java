@@ -12,5 +12,5 @@ public interface BookService {
 	public List<Object> getBookAll(int startNum, int endNum);
 	public BookDTO getBookOne(int seq);
 	public List<FlightInfoDTO> getAirlineTicket(FlightInfoDTO dto);
-	public BookDTO passengerCharge(String flightName1);
+	public FlightInfoDTO passengerCharge(String flightName1);
 }

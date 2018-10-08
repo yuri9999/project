@@ -46,7 +46,7 @@ public class BookAdminController {
 		flightInfoDTO.setArrAirport1(arrAirport1);
 		flightInfoDTO.setArrAirCode1(arrAirCode1);
 		flightInfoDTO.setDepDate1(depDate1);
-		flightInfoDTO.setArrDate1(arrDate1);
+		flightInfoDTO.setDepDate1(arrDate1);
 		flightInfoDTO.setFlightName1(flightName1);
 		flightInfoDTO.setDepTime1(depTime1);
 		flightInfoDTO.setArrTime1(arrTime1);

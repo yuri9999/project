@@ -113,12 +113,81 @@ public class GuideController {
 		modelAndView.setViewName("../main/main.jsp");
 		return modelAndView;
 	}
-	
-	
-	@RequestMapping(value="/guide/guideHome.do")
-	public ModelAndView guideHome(HttpServletRequest request) {
+	@RequestMapping(value="/company/airIntroduce.do")
+	public ModelAndView airIntroduce(HttpServletRequest request) {
 		ModelAndView modelAndView = new ModelAndView();
-		modelAndView.addObject("display","../guide/guideHome.jsp");
+		modelAndView.addObject("display","../company/airIntroduce.jsp");
+		modelAndView.setViewName("../main/main.jsp");
+		return modelAndView;
+	}
+	@RequestMapping(value="/company/introduce.do")
+	public ModelAndView Introduce(HttpServletRequest request) {
+		ModelAndView modelAndView = new ModelAndView();
+		modelAndView.addObject("display","../company/introduce.jsp");
+		modelAndView.setViewName("../main/main.jsp");
+		return modelAndView;
+	}
+	@RequestMapping(value="/product/rooms.do")
+	public ModelAndView rooms(HttpServletRequest request) {
+		ModelAndView modelAndView = new ModelAndView();
+		modelAndView.addObject("display","../product/rooms.jsp");
+		modelAndView.setViewName("../main/main.jsp");
+		return modelAndView;
+	}
+	@RequestMapping(value="/product/rentalCar.do")
+	public ModelAndView rentalCar(HttpServletRequest request) {
+		ModelAndView modelAndView = new ModelAndView();
+		modelAndView.addObject("display","../product/rentalCar.jsp");
+		modelAndView.setViewName("../main/main.jsp");
+		return modelAndView;
+	}
+	@RequestMapping(value="/product/insurance.do")
+	public ModelAndView insurance(HttpServletRequest request) {
+		ModelAndView modelAndView = new ModelAndView();
+		modelAndView.addObject("display","../product/insurance.jsp");
+		modelAndView.setViewName("../main/main.jsp");
+		return modelAndView;
+	}
+	@RequestMapping(value="/product/pet.do")
+	public ModelAndView pet(HttpServletRequest request) {
+		ModelAndView modelAndView = new ModelAndView();
+		modelAndView.addObject("display","../product/pet.jsp");
+		modelAndView.setViewName("../main/main.jsp");
+		return modelAndView;
+	}
+	@RequestMapping(value="/terms/airServise.do")
+	public ModelAndView airServise(HttpServletRequest request) {
+		ModelAndView modelAndView = new ModelAndView();
+		modelAndView.addObject("display","../terms/airServise.jsp");
+		modelAndView.setViewName("../main/main.jsp");
+		return modelAndView;
+	}
+	@RequestMapping(value="/terms/homepage.do")
+	public ModelAndView homepage(HttpServletRequest request) {
+		ModelAndView modelAndView = new ModelAndView();
+		modelAndView.addObject("display","../terms/homepage.jsp");
+		modelAndView.setViewName("../main/main.jsp");
+		return modelAndView;
+	}
+	@RequestMapping(value="/terms/passenger.do")
+	public ModelAndView passenger(HttpServletRequest request) {
+		ModelAndView modelAndView = new ModelAndView();
+		modelAndView.addObject("display","../terms/passenger.jsp");
+		modelAndView.setViewName("../main/main.jsp");
+		return modelAndView;
+	}
+	@RequestMapping(value="/terms/privacy.do")
+	public ModelAndView privacy(HttpServletRequest request) {
+		ModelAndView modelAndView = new ModelAndView();
+		modelAndView.addObject("display","../terms/privacy.jsp");
+		modelAndView.setViewName("../main/main.jsp");
+		return modelAndView;
+	}
+	
+	@RequestMapping(value="/product/product.do")
+	public ModelAndView product(HttpServletRequest request) {
+		ModelAndView modelAndView = new ModelAndView();
+		modelAndView.addObject("display", "../product/product.jsp");
 		modelAndView.setViewName("../main/main.jsp");
 		return modelAndView;
 	}

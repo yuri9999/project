@@ -7,6 +7,15 @@
 <meta charset="UTF-8">
 <title>Insert title here</title>
 <style type="text/css">
+*{
+	margin: auto;
+	padding: 0;
+}
+.qnaAnswer{
+	width: 1200px;
+	height: 1250px;
+	margin: auto;
+}
 .qnaAnswer #qnaAnswerNavi{
 	font-weight: normal;
 	color: #353535;
@@ -14,6 +23,52 @@
 .qnaAnswer h1{
 	color: #4B1152;
 	border-bottom: 2px solid #4B1152;
+}
+#qnaTab{
+	margin-left: 140px;
+	width: 1000px;
+}
+#qnaTab td{
+	width: 1000px;
+	height: 70px;
+	border-bottom: 1px solid #ccc;
+}
+#qnaTab label{
+	font-size: 20px;
+	margin-right: 20px;
+	vertical-align: middle;
+}
+#qnaTab select{
+	width: 200px;
+	height: 30px;
+}
+#qnaTab input{
+	width: 200px;
+	height: 30px;
+}
+#qnaTab textarea{
+	margin-left: 120px;
+}
+.mybutton{
+	background-color: #4B1152;
+	border: 1px solid #124d77;
+	display: inline-block;
+	color: white;
+	font-family: arial;
+	font-size: 15px;
+	font-weight: nomal;
+	padding: 6px 24px;
+	text-decoration: none;
+	text-shadow: 0px 1px 0px #154682;
+}
+
+.mybutton:hover {
+	background-color: #4A0BA3;
+}
+
+.mybutton:active {
+	position: relative;
+	top: 1px;
 }
 </style>
 <script type="text/javascript" src="../js/jquery-3.3.1.min.js"></script>
@@ -49,7 +104,7 @@ $(function() {
 	<h3 id="qnaAnswerNavi">JAJUAIR &gt; 고객센터<img alt="" src="../img/navimg.png"></h3><br>
 	<h1>고객센터</h1>
 	<p>${sessionScope.memName }님의 문의사항을 남겨주세요.</p>
-	<table id="qnaTab" border="1">
+	<table id="qnaTab">
 		<tr>
 			<td>
 				<h2>고객정보</h2>	
@@ -124,8 +179,8 @@ $(function() {
 		</tr>
 		<tr>
 			<td>
-				<input type="submit" value="답변작성">
-				<input type="reset" value="다시작성">
+				<input type="submit" value="답변작성" class="mybutton">
+				<input type="reset" value="다시작성" class="mybutton">
 			</td>
 		</tr>
 	</table>

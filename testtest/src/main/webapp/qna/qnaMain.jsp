@@ -26,11 +26,11 @@
 #qnaTopTap .toptap1{
 	width: 500px;
 	height: 300px;
-	background-color: #EAEAEA;
+	background-color: #4B1152;
 }
-#qnaTopTap .toptap1 img{
-	width: 500px;
-	height: 330px;
+#qnaTopTap .toptap1 h2{
+	text-align: center;
+	color: white;
 }
 #qnaTopTap .toptap2{
 	width: 400px;
@@ -143,6 +143,13 @@
 	position: relative;
 	top: 1px;
 }
+.myqna{
+	margin-top: 30px;
+}
+.myqna table{
+	width: 1400px;
+	margin-left: 150px;
+}
 .myqna p{
 	font-size: 17px;
 	border-bottom: 1px solid #ccc;
@@ -250,7 +257,7 @@ $(function($) {
 <h1>고객센터</h1>
 <table id="qnaTopTap">
 	<tr>
-		<td rowspan="3" class="toptap1"><img alt="QnA로고" src="../img/biglogo.jpg"></td>
+		<td rowspan="3" class="toptap1"><h2>어떤 것이<br>궁금하신가요?</h2></td>
 		<td colspan="3" class="toptap3">Quick Menu</td>
 	</tr>
 	<tr>

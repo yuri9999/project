@@ -9,7 +9,6 @@ public class FlightInfoDTO {
 	private String arrAirport1;		//도착공항
 	private String arrAirCode1;		//도착공항코드
 	private String depDate1;		//출발날짜
-	private String arrDate1;		//도착날짜
 	private String flightName1;		//편명
 	private String depTime1;		//가는시간
 	private String arrTime1;		//도착시간
@@ -19,12 +18,6 @@ public class FlightInfoDTO {
 	
 	
 	
-	public String getArrDate1() {
-		return arrDate1;
-	}
-	public void setArrDate1(String arrDate1) {
-		this.arrDate1 = arrDate1;
-	}
 	public String getDepAirCode1() {
 		return depAirCode1;
 	}

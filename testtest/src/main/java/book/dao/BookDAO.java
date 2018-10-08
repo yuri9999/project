@@ -48,7 +48,7 @@ public class BookDAO {
 	}
 	
 	//step2 탑승객별 운임
-	public BookDTO passengerCharge(String flightName1){
+	public FlightInfoDTO passengerCharge(String flightName1){
 		return sqlsession.selectOne("mybatis.bookMapper.passengerCharge",flightName1);
 	}
 	

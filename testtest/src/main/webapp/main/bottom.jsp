@@ -48,19 +48,16 @@
 		</tr>
 		<tr>
 			<td class="footerMenu">
-				<a href="#">여객운송약관</a>
+				<a href="../terms/passenger.do">여객운송약관</a>
 			</td>
 			<td class="footerMenu">
-				<a href="#">홈페이지 이용약관</a>
+				<a href="../terms/homepage.do">홈페이지 이용약관</a>
 			</td>
 			<td class="footerMenu">
-				<a href="#">개인정보처리방침</a>
+				<a href="../terms/privacy.do">개인정보처리방침</a>
 			</td>
 			<td class="footerMenu">
-				<a href="#">항공교통이용자 서비스계획</a>
-			</td>
-			<td class="footerMenu">
-				<a href="#">사이트맵</a>
+				<a href="../terms/airServise.do">항공교통이용자 서비스계획</a>
 			</td>
 		</tr>
 		<tr class="prod">

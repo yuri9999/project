@@ -45,7 +45,7 @@ public class BookServiceImpl implements BookService{
 	}
 
 	@Override
-	public BookDTO passengerCharge(String flightName1) {
+	public FlightInfoDTO passengerCharge(String flightName1) {
 		return bookDAO.passengerCharge(flightName1);
 	}
 

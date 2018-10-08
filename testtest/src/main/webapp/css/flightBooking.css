@@ -102,6 +102,7 @@ form {
 	position: absolute;
 	display: block;
 }
+/*버튼 길이,높이  */
 #mybutton .location {
 	width: 130px;
 	height: 40px;

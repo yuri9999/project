@@ -97,22 +97,20 @@ nav{
 	margin: 0 0 20px 20px;
 	display: none;
 	width: 1200px;
-	height: 180px;
+	height: 160px;
 	border: 1px solid #ccc;
 }
-#slide table{
+#slide table {
 	width: 1200px;
 }
+
 #slide div .details1{
 	width: 90px;
 }
 #slide div .details1 a{
 	color: #8C8C8C;
-	font-size: 19px;
+	font-size: 15px;
 	text-decoration: none;
-}
-#slide div .details1 a:hover{
-	color: #4B1152;
 }
 #slide div .details1 a:active{
 	color: #8C8C8C;
@@ -123,9 +121,6 @@ nav{
 	text-decoration: none;
 	color: #8C8C8C;
 	font-size: 10px;
-}
-#slide div .details2 a:hover {
-	color: #4B1152;
 }
 </style>
 <script type="text/javascript" src="../js/jquery-3.3.1.min.js"></script>
@@ -212,32 +207,35 @@ $(document).on('mouseleave', 'div', function () {
 	<br><br>
 	<div>
 		<ul id="menu">
-			<li class="mainMenu"><a href="../book/goAvail.do">항공권 예매</a></li>
+			<li class="mainMenu"><a href="../book/stepForm1.do">항공권 예매</a></li>
 			<li class="mainMenu"><a href="#">마이페이지</a></li>
-			<li class="mainMenu"><a href="../guide/guideHome.do">서비스 안내</a></li>
-			<li class="mainMenu"><a href="../event/eventHome.do">이벤트/새소식</a></li>
-			<li class="mainMenu"><a href="#">여행상품</a></li>
+			<li class="mainMenu"><a href="#">서비스 안내</a></li>
+			<li class="mainMenu"><a href="../event/eventListC.do?pg=1">이벤트/새소식</a></li>
+			<li class="mainMenu"><a href="../product/product.do">여행상품</a></li>
 			<li class="mainMenu"><a href="#">포인트/마일리지</a></li>
-			<li class="mainMenu"><a href="#">회사소개</a></li>
+			<li class="mainMenu"><a href="../company/introduce.do">회사소개</a></li>
 		</ul>
 		<div id="slide">
 			<div class="detailMenu1">
 				<table>
 					<tr>
-						<td class="details1"><a href="../book/goAvail.do">항공권예매</a></td>
+						<td class="details1"><a href="#"></a></td>
+						<td class="details1"><a href="../book/stepForm1.do">항공권예매</a></td>
 						<td class="details1"><a href="#">운항일정</a></td>
 						<td class="details1"><a href="#">운임안내</a></td>
 						<td class="details1"><a href="#">단체예약신청</a></td>
 						<td class="details1"><a href="#">온라인 탑승권</a></td>
 					</tr>
 					<tr>
-						<td></td>
+						<td class="details2"></td>
+						<td class="details2"></td>
 						<td class="details2"><a href="#">운항스케줄</a></td>
 						<td class="details2"><a href="#">국제선운임</a></td>
 						<td class="details2"></td>
 						<td class="details2"><a href="#">국제선</a></td>
 					</tr>
 					<tr>
+						<td class="details2"></td>
 						<td class="details2"></td>
 						<td class="details2"><a href="#">출발/도착조회</a></td>
 						<td class="details2"><a href="#">국내선운임</a></td>
@@ -285,21 +283,23 @@ $(document).on('mouseleave', 'div', function () {
 			<div class="detailMenu3">
 				<table>
 					<tr>
+						<td class="details1"><a href="#"></a></td>
 						<td class="details1"><a href="#">예약안내</a></td>
 						<td class="details1"><a href="#">기내서비스</a></td>
 						<td class="details1"><a href="#">부가서비스</a></td>
 						<td class="details1"><a href="#">공항서비스</a></td>
-						<td class="details1"><a href="#">제휴할인</a></td>
+						<td class="details1"><a href="#"></a></td>
 					</tr>
 					<tr>
+						<td class="details1"><a href="#"></a></td>
 						<td class="details2"><a href="../guide/airReservation.do">항공권예매</a></td>
 						<td class="details2"><a href="../guide/innerService.do">기내서비스</a></td>
 						<td class="details2"><a href="../guide/item.do">유료아이템</a></td>
 						<td class="details2"><a href="../guide/boardingRule.do">탑승수속절차</a></td>
 						<td class="details2"><a></a></td>
-
 					</tr>
 					<tr>
+						<td class="details1"><a href="#"></a></td>
 						<td class="details2"><a href="../guide/airRefund.do">항공권 환불</a></td>
 						<td class="details2"><a href="../guide/airCafe.do">air cafe</a></td>
 						<td class="details2"><a href="../guide/lounge.do">자주항공 라운지</a></td>
@@ -309,29 +309,17 @@ $(document).on('mouseleave', 'div', function () {
 					<tr>
 						<td class="details2"><a></a></td>
 						<td class="details2"><a href="../guide/dutyFree.do">기내면세품판매</a></td>
-						<td class="details2"><a></a></td>
-						<td class="details2"><a href="../guide/cityAirport.do">도심공항이용안내</a></td>
-						<td class="details2"><a></a></td>
-					</tr>
-					<tr>
-						<td class="details2"><a></a></td>
-						<td class="details2"><a></a></td>
-						<td class="details2"><a></a></td>
 						<td class="details2"><a href="../guide/luggage.do">수하물</a></td>
-						<td class="details2"><a></a></td>
-					</tr>
-					<tr>
-						<td class="details2"><a></a></td>
-						<td class="details2"><a></a></td>
-						<td class="details2"><a></a></td>
+						<td class="details2"><a href="../guide/cityAirport.do">도심공항이용안내</a></td>
 						<td class="details2"><a href="../guide/counter.do">자주항공 카운터</a></td>
 						<td class="details2"><a></a></td>
 					</tr>
 					<tr>
-						<td class="details2"><a></a></td>
+						<td class="details1"><a href="#"></a></td>
 						<td class="details2"><a></a></td>
 						<td class="details2"><a></a></td>
 						<td class="details2"><a href="../guide/help.do">도움이필요한 고객</a></td>
+						<td class="details2"><a></a></td>
 						<td class="details2"><a></a></td>
 					</tr>
 				</table>
@@ -340,23 +328,24 @@ $(document).on('mouseleave', 'div', function () {
 				<table>
 					<tr>
 						<td class="details1"></td>
+						<td class="details1"></td>
 						<td class="details1"><a href="../event/eventListC.do?pg=1">이벤트</a></td>
 						<td class="details1"></td>
 						<td class="details1"><a href="../notice/noticeList.do?pg=1">새소식</a></td>
 						<td class="details1"></td>
 					</tr>
 					<tr>
+						<td class="details1"><a href="#"></a></td>
 						<td class="details2"><a></a></td>
 						<td class="details2"><a href="../event/eventListC.do?pg=1">진행중인 이벤트</a></td>
-						<td class="details2"><a></a></td>
 						<td class="details2"><a></a></td>
 						<td class="details2"><a></a></td>
 						<td class="details2"><a></a></td>
 					</tr>
 					<tr>
 						<td class="details2"><a></a></td>
-						<td class="details2"><a href="../event/eventListE.do?pg=1">종료된 이벤트</a></td>
 						<td class="details2"><a></a></td>
+						<td class="details2"><a href="../event/eventListE.do?pg=1">종료된 이벤트</a></td>
 						<td class="details2"><a></a></td>
 						<td class="details2"><a></a></td>
 						<td class="details2"><a></a></td>
@@ -366,12 +355,11 @@ $(document).on('mouseleave', 'div', function () {
 			<div class="detailMenu5">
 				<table>
 					<tr>
+						<td class="details1"><a href="../product/rooms.do">숙소</a></td>
 						<td class="details1"></td>
-						<td class="details1"><a href="#">숙소</a></td>
+						<td class="details1"><a href="../product/rentalCar.do">렌터카</a></td>
 						<td class="details1"></td>
-						<td class="details1"><a href="#">렌터카</a></td>
-						<td class="details1"></td>
-						<td class="details1"><a href="#">제휴상품</a></td>
+						<td class="details1"><a href="../product/insurance.do">제휴상품</a></td>
 						<td class="details1"></td>
 					</tr>
 					<tr>
@@ -379,6 +367,7 @@ $(document).on('mouseleave', 'div', function () {
 						<td class="details2"><a href="#"></a></td>
 						<td class="details2"><a href="#"></a></td>
 						<td class="details2"><a href="#"></a></td>
+						<td class="details2"><a href="../product/insurance.do">여행자 보험</a></td>
 						<td class="details2"><a href="#"></a></td>
 					</tr>
 					<tr>
@@ -386,13 +375,7 @@ $(document).on('mouseleave', 'div', function () {
 						<td class="details2"><a href="#"></a></td>
 						<td class="details2"><a href="#"></a></td>
 						<td class="details2"><a href="#"></a></td>
-						<td class="details2"><a href="#"></a></td>
-					</tr>
-					<tr>
-						<td class="details2"><a href="#"></a></td>
-						<td class="details2"><a href="#"></a></td>
-						<td class="details2"><a href="#"></a></td>
-						<td class="details2"><a href="#"></a></td>
+						<td class="details2"><a href="../product/pet.do">애견호텔</a></td>
 						<td class="details2"><a href="#"></a></td>
 					</tr>
 				</table>
@@ -400,21 +383,16 @@ $(document).on('mouseleave', 'div', function () {
 			<div class="detailMenu6">
 				<table>
 					<tr>
+						<td class="details1"></td>
 						<td class="details1"><a href="../point/jpointInfo.do">자주포인트</a></td>
 						<td class="details1"><a href="#">포인트 내역 조회</a></td>
 						<td class="details1"><a href="#">포인트 선물</a></td>
-						<td class="details1"><a href="#">포인트 양도</a></td>
-						<td class="details1"><a href="#">제휴포인트</a></td>
+						<td class="details1"><a href="../point/jpointAlliance.do">제휴포인트</a></td>
+						<td class="details1"></td>
 					</tr>
 					<tr>
 						<td class="details2"><a href="#"></a></td>
-						<td class="details2"><a href="#"></a></td>
-						<td class="details2"><a href="#"></a></td>
-						<td class="details2"><a href="#"></a></td>
-						<td class="details2"><a href="#"></a></td>
-					</tr>
-					<tr>
-						<td class="details2"><a href="#"></a></td>
+						<td class="details2"><a href="../point/jpointInfo.do">소개</a></td>
 						<td class="details2"><a href="#"></a></td>
 						<td class="details2"><a href="#"></a></td>
 						<td class="details2"><a href="#"></a></td>
@@ -422,6 +400,7 @@ $(document).on('mouseleave', 'div', function () {
 					</tr>
 					<tr>
 						<td class="details2"><a href="#"></a></td>
+						<td class="details2"><a href="../point/jpointGrade.do">회원등급</a></td>
 						<td class="details2"><a href="#"></a></td>
 						<td class="details2"><a href="#"></a></td>
 						<td class="details2"><a href="#"></a></td>
@@ -429,6 +408,7 @@ $(document).on('mouseleave', 'div', function () {
 					</tr>
 					<tr>
 						<td class="details2"><a href="#"></a></td>
+						<td class="details2"><a href="../point/jpointSave.do">포인트 적립</a></td>
 						<td class="details2"><a href="#"></a></td>
 						<td class="details2"><a href="#"></a></td>
 						<td class="details2"><a href="#"></a></td>
@@ -440,35 +420,11 @@ $(document).on('mouseleave', 'div', function () {
 				<table>
 					<tr>
 						<td class="details1"></td>
-						<td class="details1"><a href="#">자주항공 소개</a></td>
+						<td class="details1"><a href="../company/introduce.do">자주항공 소개</a></td>
 						<td class="details1"></td>
-						<td class="details1"><a href="#">취항노선</a></td>
+						<td class="details1"><a href="../company/airIntroduce.do">항공기 소개</a></td>
 						<td class="details1"></td>
-						<td class="details1"><a href="#">항공기 소개</a></td>
-					</tr>
-					<tr>
-						<td class="details2"><a href="#"></a></td>
-						<td class="details2"><a href="#"></a></td>
-						<td class="details2"><a href="#"></a></td>
-						<td class="details2"><a href="#"></a></td>
-						<td class="details2"><a href="#"></a></td>
-						<td class="details2"><a href="#"></a></td>
-					</tr>
-					<tr>
-						<td class="details2"><a href="#"></a></td>
-						<td class="details2"><a href="#"></a></td>
-						<td class="details2"><a href="#"></a></td>
-						<td class="details2"><a href="#"></a></td>
-						<td class="details2"><a href="#"></a></td>
-						<td class="details2"><a href="#"></a></td>
-					</tr>
-					<tr>
-						<td class="details2"><a href="#"></a></td>
-						<td class="details2"><a href="#"></a></td>
-						<td class="details2"><a href="#"></a></td>
-						<td class="details2"><a href="#"></a></td>
-						<td class="details2"><a href="#"></a></td>
-						<td class="details2"><a href="#"></a></td>
+						<td class="details1"></td>
 					</tr>
 				</table>
 			</div>

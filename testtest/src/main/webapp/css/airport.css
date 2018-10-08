@@ -1,10 +1,10 @@
 @charset "UTF-8";
-body {
+/*  body {
 	font-family: 'Orienta', sans-serif;
 	position: relative;
 	padding:0;
 	margin: 0;
-}
+}  */
 .container {
 	width:900px;
 	margin: 0 auto;
@@ -12,12 +12,16 @@ body {
 	border: none;
 	position: relative;
 }
+section#content1{position: relative;}
 #selectDep {
+	width:90%;
 	padding: 0px 10px;
 	height: 430px;
 	visibility: hidden;
-	display: block;
-}
+	display: none;
+	position:absolute; left:0; top:0;
+
+}/*���� ����*/
 #headerDep {
 	font-size: 17px;
 	color: #464047;
@@ -121,7 +125,10 @@ body {
 }
 
 #selectArr {
+	width:90%;
 	padding: 0px 10px;
 	height: 430px;
 	display: none;
+	visibility: hidden;
+	position:absolute; left:0; top:0;
 }

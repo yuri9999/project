@@ -7,6 +7,7 @@ pwd varchar2(50) not null, -- 비밀번호
 koreanName varchar2(50) not null, -- 한글 이름
 englishName varchar2(50) not null, --영어이름
 birthday varchar2(30) not null, -- 생년월일
+gender varchar2(10) not null,	-- 성별
 passportNum varchar2(30) not null, -- 여권번호
 nation varchar2(20) not null, --국적
 country varchar2(20) not null, --거주 국가
@@ -120,7 +121,7 @@ SELECT * FROM notice WHERE seq=#{seq}
 --공지사항 조회수 증가
 UPDATE notice SET hit=hit+1 WHERE seq=#{seq}
 
-
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
 

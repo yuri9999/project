@@ -65,8 +65,8 @@
 <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
 <script type="text/javascript">
 $( document ).ready( function() {
-    var jbExcerpt = $( 'p' ).text().substring( 0, 10 );
-    $( 'p' ).html( '<p>' + jbExcerpt + '</p>' );
+    var jbExcerpt = $( '#log' ).text().substring( 0, 10 );
+    $( '#log' ).html(jbExcerpt);
   } );
 </script>
 </head>
@@ -83,7 +83,7 @@ $( document ).ready( function() {
 			${eventDTO.hit }
 		</td>
 		<td class="eventViewSub2" align="center">
-			<p>${eventDTO.logtime }</p>
+			<p id="log">${eventDTO.logtime }</p>
 		</td>
 	</tr>
 	<tr>

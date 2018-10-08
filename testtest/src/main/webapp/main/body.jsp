@@ -8,7 +8,7 @@
 <title>Insert title here</title>
 <style type="text/css">
 body{
-	height: 2450px;
+	height: 2350px;
 }
 .rolling-banner{
 	margin: 0 auto;
@@ -70,6 +70,7 @@ body{
 }
 #notice table{
 	margin-top: 30px;
+	margin-left: 50px;
 }
 #notice #noticeSub a{
 	text-decoration: none;
@@ -97,8 +98,9 @@ body{
 	height: 600px;
 }
 #service table{
-	margin-top: -250px;
+	margin-top: -300px;
 	margin-left: 125px;
+	border-spacing: 30px;
 }
 #service table img{
 	width: 330px;
@@ -109,12 +111,15 @@ body{
 	color: black;
 }
 #event{
-	margin-top: 40px;
+	margin-top: 90px;
 	margin-left:375px;
 	padding: 0;
 	width: 1200px;
 	height: 400px;
 	border-bottom: 1px solid #ccc;
+}
+#event table{
+	border-spacing: 10px;
 }
 #event #bodyEvent{
 	width: 1100px;
@@ -246,32 +251,19 @@ RollingBanner.prototype = {
 <div id="jaju">
 	<jsp:include page="../book/jaju.jsp" />
 </div>
-<div id="price">
-	<h2>추천 특가</h2>
-	
-	<ul>
-		<h3>일본 특가</h3>
-		<li><a href="#">~일본어디 ￦175,000</a></li>
-		<li><a href="#">~일본어디 ￦175,000</a></li>
-		<li><a href="#">~일본어디 ￦175,000</a></li>
-		<li><a href="#">~일본어디 ￦175,000</a></li>
-	</ul>
-	
-	<ul>
-		<h3>동남아 특가</h3>
-		<li><a href="#">~동남아어디 ￦175,000</a></li>
-		<li><a href="#">~동남아어디 ￦175,000</a></li>
-		<li><a href="#">~동남아어디 ￦175,000</a></li>
-		<li><a href="#">~동남아어디 ￦175,000</a></li>
-	</ul>
-	
-	<ul>
-		<h3>추천여행지 특가</h3>
-		<li><a href="#">~추천여행지 ￦175,000</a></li>
-		<li><a href="#">~추천여행지 ￦175,000</a></li>
-		<li><a href="#">~추천여행지 ￦175,000</a></li>
-		<li><a href="#">~추천여행지 ￦175,000</a></li>
-	</ul>
+<div id="event">
+	<h2>이벤트</h2>
+	<table id="bodyEvent">
+		<tr>
+		<c:forEach var="eventDTO" items="${requestScope.list }">
+			<td class="bodyEventLeft">
+				<a href="../event/eventView.do?seq=${eventDTO.seq }"><img src="../storage/${eventDTO.image }"></a>
+				${eventDTO.subject }<br>
+				${eventDTO.logtime }
+			</td>
+		</c:forEach>	
+		</tr>
+	</table>
 </div>
 <div id="notice">
 	<h2>새소식</h2>
@@ -285,7 +277,7 @@ RollingBanner.prototype = {
 	</table>
 </div>
 <div id="service">
-	<img src="../img/airfort.jpg" id="bakcimg">
+	<img src="../img/airport.jpg" id="bakcimg">
 		
 	<table>
 		<tr>
@@ -309,20 +301,7 @@ RollingBanner.prototype = {
 		</tr>
 	</table>
 </div>
-<div id="event">
-	<h2>이벤트</h2>
-	<table id="bodyEvent">
-		<tr>
-		<c:forEach var="eventDTO" items="${requestScope.list }">
-			<td class="bodyEventLeft">
-				<a href="../event/eventView.do?seq=${eventDTO.seq }"><img src="../storage/${eventDTO.image }"></a>
-				${eventDTO.subject }<br>
-				${eventDTO.logtime }
-			</td>
-		</c:forEach>	
-		</tr>
-	</table>
-</div>
+
 <div id="bodyetc">
 	<table class="etc1">
 		<tr>
@@ -335,7 +314,7 @@ RollingBanner.prototype = {
 				<a href="#"><img src="../img/logo.png" class="applogo"><h3>자주에어 앱</h3><br><p>→ 디지털 여행 동반자</p></a>
 			</td>
 			<td>
-				<a href="#"><h3>자주에어 뉴스레터</h3><br>최신소식을 통해 매력적인<br>특가상품을 놓치지 마십시오<p>→ 지금 등록하기</p></a>
+				<a href="#"><h3>자주에어 여행상품</h3><br>제주항공이 추천하는 다양한<br>여행상품을 소개합니다<p>→ 지금 확인하기</p></a>
 			</td>
 		</tr>
 		<tr>
@@ -360,6 +339,11 @@ RollingBanner.prototype = {
 			</td>
 			<td>
 				<h3>고객문의</h3><br><p>→ 1699-1600<br>한국 > 08:00 ~ 18:00<br>일본 > 09:00 ~ 19:00</p></a>
+			</td>
+		</tr>
+		<tr>
+			<td colspan="2" height="100px;">
+				
 			</td>
 		</tr>
 	</table>
