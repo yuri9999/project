@@ -11,38 +11,6 @@
 <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
 <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-<style type="text/css">
-.jajucontainer{
-	position: absolute;
-	top: 350px;
-}
-#flightInput{
-	width: 1200px;
-}
-#flightInput td{
-	background-color: #4B1152;
-}
-#selectDep{
-	position: fixed;
-	width: 1200px;
-	top: 50px;
-	z-index: 2;
-	background-color: white;
-}
-#selectDep img{
-	margin-top: 20px;
-}
-#selectArr{
-	position: fixed;
-	width: 1200px;
-	top: 50px;
-	z-index: 2;
-	background-color: white;
-}
-#selectArr img{
-	margin-top: 20px;
-}
-</style>
 <script type="text/javascript">
 	function inputChk(){
 		if(document.round.dep.value=="출발지"){
@@ -154,7 +122,7 @@
 
 </head>
 <body>
-<div class="jajucontainer">
+<div class="container">
 	<div id="selectDep" class="airTab">
 		<div id="headerDep">
 			<h2>출발지 선택</h2>
@@ -256,7 +224,7 @@
 	</div>
 </div>
 <div class="console">
-	<div id="selectWay" style="width: 1200px;">
+	<div id="selectWay">
 		<ul class="tabWay">
 			<li><a href="#">왕복</a></li>
 			<li><a href="#">편도</a></li>
@@ -273,7 +241,7 @@
 	</div>
 	<hr id="selectWayEnd">
 	<div class="roundtrip">
-		<form action="../book/goAvail.do" name="round" method="post">
+		<form action="goAvail.do" name="round" method="post">
 			<table id="flightInput">
 				<tr id="mybutton">
 					<td>

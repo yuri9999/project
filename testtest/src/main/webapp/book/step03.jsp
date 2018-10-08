@@ -5,19 +5,22 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
 <link rel="stylesheet" href="../css/step1.css">
 <link rel="stylesheet" href="../css/step3.css">
+<link rel="stylesheet" href="../css/showConsole3.css">
 <script type="text/javascript" src="../js/jquery-3.3.1.min.js"></script>
 <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
 <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script src="../js/showConsole.js"></script>
 <script type="text/javascript">
-
 function openSeat(){
+	$("#showExtra1 ul .showSeat1").show();
+	$("#showExtra2 ul .showSeat2").show();
 	var dep = $("#hdep").attr("value");
 	window.open("selectSeat.do",'selectSeat','resizable=no status=no, width=900, height=900, scrollbars=yes');
 }
-/*		수화물 추가 이벤트 		*/
+
+/*		수하물 추가 이벤트 		*/
 $(function(){
 	$("#payLugGo").change(function(){
 		var priceForOne = 29000;
@@ -30,6 +33,14 @@ $(function(){
 		$("#luggageQty1_1").val(lugQty1);
 		$("#luggagePrice1_1").val(lugPrice1);
 		$("#luggagePrice").html(lugPriceTot);
+		
+		// 부가서비스 추가
+		if(lugPrice1>0){
+			$("#showExtra1 ul .showLug1").show();
+			$("#showExtra1 ul .showLug1 span").html(lugPrice1);
+		} else {
+			$("#showExtra1 ul .showLug1").hide();
+		}
 	});
 	$("#payLugBack").change(function(){
 		var priceForOne = 29000;
@@ -42,12 +53,53 @@ $(function(){
 		$("#luggageQty1_2").val(lugQty2);
 		$("#luggagePrice1_2").val(lugPrice2);
 		$("#luggagePrice").html(lugPriceTot);
+		
+		// 부가서비스 추가
+		if(lugPrice2>0){
+			$("#showExtra2 ul .showLug2").show();
+			$("#showExtra2 ul .showLug2 span").html(lugPrice2);
+		} else {
+			$("#showExtra2 ul .showLug2").hide();
+		}
 	});
 });
+
+
+/*		좌석 선택 요금추가 이벤트	*/
+
+
+
 /*		기내식 추가 이벤트			*/
 $(function(){
 	$(".eatery1").change(function(){
-		
+		var eatery1 = $(this).val();
+		var eatery2 = $("#eatPrice1_2").attr("value");
+		if(eatery2==null){eatery2=0}
+		var eateryTot = eval(eatery1) + eval(eatery2);
+		if(eatery1==3000){			
+			// 부가서비스 추가
+			$("#showExtra1 ul .showEat1").show();
+			$("#showExtra1 ul .showEat1 span").html(eatery1);
+		} else{
+			$("#showExtra1 ul .showEat1").hide();
+		}
+		$("#eatPrice1_1").val(eatery1);
+		$("#eateryPrice").html(eateryTot);
+	});
+	$(".eatery2").change(function(){
+		var eatery2 = $(this).val();
+		var eatery1 = $("#eatPrice1_1").attr("value");
+		if(eatery1==null){eatery1=0}
+		var eateryTot = eval(eatery1) + eval(eatery2);
+		if(eatery2==3000){
+			// 부가서비스 추가
+			$("#showExtra2 ul .showEat2").show();
+			$("#showExtra2 ul .showEat2 span").html(eatery2);
+		} else{
+			$("#showExtra2 ul .showEat2").hide();
+		}
+		$("#eatPrice1_2").val(eatery2);
+		$("#eateryPrice").html(eateryTot);
 	});
 });
 </script>
@@ -65,7 +117,8 @@ $(function(){
 	<input type="hidden" id="hkid" name="hkid">
 	<input type="hidden" id="hbaby" name="hbaby">
 </form>
-<form action="../book/step4.do" method="post" name="step03">
+<form action="step04.do" method="post" name="step03">
+
 <!-- hidden input태그  -->
 <input type="hidden" id="luggagePrice1_1" name="luggagePrice1_1">
 <input type="hidden" id="luggagePrice1_2" name="luggagePrice1_2">
@@ -73,7 +126,10 @@ $(function(){
 <input type="hidden" id="luggageQty1_2" name="luggageQty1_2">
 <input type="hidden" id="seatNum1_1" name="seatNum1_1">
 <input type="hidden" id="seatNum1_2" name="seatNum1_2">
-<input type="hidden" id="seatPrice1" name="seatPrice1">
+<input type="hidden" id="seatPrice1_1" name="seatPrice1_1">
+<input type="hidden" id="seatPrice1_2" name="seatPrice1_2">
+<input type="hidden" id="eatPrice1_1" name="eatPrice1_1">
+<input type="hidden" id="eatPrice1_2" name="eatPrice1_2">
 
 <div id="container">
 		<!--step1,2,3,4 부분  -->	
@@ -138,7 +194,7 @@ $(function(){
 							<label><img alt="bul0.png" src="../img/bul0.png">구간2
 							</label>
 							<span class="name1" name="name1_2" id="name1_2">좌석을 선택하실 수 있습니다.</span>
-							<span id="seatName2" name="seatName1_2" class="seatName1">1</span>
+							<span id="seatName2" name="seatName1_2" class="seatName1"></span>
 						</div>
 						<div class="result">결제 금액 <span class="prices" id="seatPrice" name="seatPrice">0</span> KRW</div>
 				</div>
@@ -154,7 +210,7 @@ $(function(){
 							<span class="name1">KIM/YURI </span>
 							<input type="radio" id="eatery1_1" name="eatery1" class="eatery1" value="0" checked="checked">
 							<label for="eatery1_1"> 없음</label>
-							<input type="radio" id="eatery1_2" name="eatery1" class="eatery1" value="1">
+							<input type="radio" id="eatery1_2" name="eatery1" class="eatery1" value="3000">
 							<label for="eatery1_2">기내식 추가 ( +3000원)</label>
 							<br><br>
 							<label><img alt="bul0.png" src="../img/bul0.png">구간2
@@ -162,7 +218,7 @@ $(function(){
 							<span class="name1">KIM/YURI</span>
 							<input type="radio" id="eatery2_1" name="eatery2" class="eatery2" value="0" checked="checked">
 							<label for="eatery2_1"> 없음</label>
-							<input type="radio" id="eatery2_2" name="eatery2" class="eatery2" value="1">
+							<input type="radio" id="eatery2_2" name="eatery2" class="eatery2" value="3000">
 							<label for="eatery2_2">기내식 추가 ( +3000원)</label>
 						</div>
 						<div class="result">결제 금액 <span class="prices" id="eateryPrice" name="eateryPrice">0</span> KRW</div>
@@ -186,7 +242,113 @@ $(function(){
 			</ul>
 			<input type="checkbox" value="">상기 내용을 확인하고 동의합니다.
 		</div>
+		
+		
+	<!-- step1,2,3,4 우측 결제정보 콘솔 -->
+		<div id="showConsole">
+			<div id="innerConsole">
+				<div id="showInfo">
+					<img src="../img/showConsole/ico_silver.png">
+					<div id="memInfo">
+						<p><span id="memName">윤빛가람이다 ${memName}</span> 님</p>
+						<span id="memId">memId입니다 ${memId}</span>
+					</div>
+				</div>
+				<div id="showPoint">
+					<span id="pointHead">가용포인트</span>
+					<span id="memPoint" class="pointRight">${memPoint}50000</span>					
+					<span id="pointFoot" class="pointRight">P</span>
+				</div>
+				<div id="showFlightInfo">
+					<h2 id="showTitle">구간 및 운임</h2>
+					<table>
+						<thead>
+							<tr id="memAge">
+								<td colspan="2">성인1명/소아0명</td>
+							</tr>
+						</thead>
+						<tbody>
+							<tr id="showTripInfo1">
+								<td colspan="2">
+									<p class="gugan">구간1</p>
+									<span id="showTrip1">${dep} - ${arr}</span><br>
+									<span id="showTime1">${dayGo}+ ~ </span>
+								</td>
+							</tr>
+							<tr id="showExtra1">
+								<td>
+									<p class="extraTitle">ㆍ부가서비스</p>
+									<ul id="addExtra1L">
+										<li class="showLug1">-수하물</li>
+										<li class="showSeat1">-좌석</li>
+										<li class="showEat1">-기내식</li>
+									</ul>
+								</td>
+								<td>
+									<ul id="addExtra1R">
+										<li class="showLug1"><span class="showLug1">0</span>KRW</li>
+										<li class="showSeat1"><span class="showSeat1">0</span>KRW</li>
+										<li class="showEat1"><span class="showEat1">0</span>KRW</li>
+									</ul>
+								</td>
+							</tr>
+							<tr id="showTripInfo2">
+								<td colspan="2">
+									<p class="gugan">구간2</p>
+									<span id="showTrip2">${arr} - ${dep}</span><br>
+									<span id="showTime2">${dayCome}+ ~ </span>
+								</td>
+							</tr>
+							<tr id="showExtra2">
+								<td>
+									<p class="extraTitle">ㆍ부가서비스</p>
+									<ul id="addExtra2L">
+										<li class="showLug2">-수하물</li>
+										<li class="showSeat2">-좌석</li>
+										<li class="showEat2">-기내식</li>
+									</ul>
+								</td>
+								<td>
+									<ul id="addExtra2R">
+										<li class="showLug2"><span class="showLug2">0</span>KRW</li>
+										<li class="showSeat2"><span class="showSeat2">0</span>KRW</li>
+										<li class="showEat2"><span class="showEat2">0</span>KRW</li>
+									</ul>
+								</td>
+							</tr>
+							<tr class="showPay">
+								<td class="showPayL">
+									<li>ㆍ항공운임</li>
+									<li>ㆍ유류할증료</li>
+									<li>ㆍ공항시설사용료</li>
+									<li>ㆍ서비스 옵션</li>
+								</td>
+								<td class="showPayR">
+									<span>0</span> KRW<br>
+									<span>0</span> KRW<br>
+									<span>0</span> KRW<br>
+									<span>0</span> KRW<br>
+								</td>
+							</tr>
+						</tbody>
+						<tfoot>
+							<tr>
+								<td colspan="2">
+									<h4>항공운임 등 총액</h4>
+									<div id="showTotal">
+										<span id="showTotalNum">0</span><span id="tfootKrw">KRW</span>
+									</div>
+								</td>
+							</tr>
+						</tfoot>
+					</table>
+				</div>
+			</div>
+		</div>
 		<input type="submit" value="다음">
+		<!-- right Space -->
+		<div id="rightSpace">
+		</div>
 </div>
 </form>
 
