@@ -1,0 +1,171 @@
+@charset "UTF-8";
+/*<!--left:1200px;-->*/
+#showConsole {
+	position: fixed; 
+	left: 1200px;	
+	top: 170px;	
+	width: 260px; 
+	padding: 0;
+	margin: 0;
+	font-weight: bold;
+	background-color: #f3f3f3;	
+}
+#innerConsole {width:100%; margin: 0 auto;}
+
+#showInfo {
+	background-color: #4B1152;
+}
+#showInfo img {
+	display: inline-block;
+	padding: 20px 0 20px 15px;	
+}
+#showInfo #memInfo {
+	color: white;
+	display: inline-block; 
+	margin-top: 20px;
+	padding-right: 40px;
+	float: right;
+}
+#showInfo #memInfo:after {clear: both;}
+#showInfo #memInfo p {margin: 0 0 10px 0;}
+
+#showPoint {
+	background-color: #adadad;
+	color: white;
+	padding: 7px 10px; 
+	text-align: right;
+	border: 1px solid #999999;
+}
+#showPoint #pointHead {font-size: 16px; float: left; margin-top: 7px;}
+#showPoint #pointHead:after{clear: both;}
+#showPoint #memPoint {font-size: 26px;}
+#showPoint #pointFoot {font-size: 22px;}
+
+#showFlightInfo {
+	padding: 10px;
+}
+#showFlightInfo #showTitle {padding:0; margin: 0;}
+#showFlightInfo table {
+	border: 1px solid #e7e7e7;
+	background-color: white;
+	width: 100%;
+	margin-top: 3px;
+	border-spacing: 0;
+}
+#showFlightInfo table thead {
+	background-color: #fdfae3;
+}
+#showFlightInfo table thead td {
+	padding: 8px 5px;
+	font-size: 14px;
+	border-bottom: 1px solid #e7e7e7;
+}
+#showFlightInfo table tbody td {
+	padding: 8px 8px;
+	font-size: 15px;
+	
+	padding-bottom: 15px;
+}
+
+#showFlightInfo table p {margin: 0; padding:0;}
+#showFlightInfo table .gugan {
+	background-color: #4db6e3;
+	width: 55px;
+	padding: 3px 0;
+	margin-bottom: 5px;
+	color: white;
+	font-size: 14px;
+	text-align: center;
+	border-radius: 0.3em;
+}
+#showFlightInfo table #showTripInfo1 td,
+#showFlightInfo table #showTripInfo2 td{
+	border-bottom: 1px solid #e7e7e7;
+	
+}
+#showFlightInfo table #showTrip1,
+#showFlightInfo table #showTrip2 {
+	color: #555555;
+}
+#showFlightInfo table #showTime1,
+#showFlightInfo table #showTime2 {
+	color: #a223af;
+}
+
+#showFlightInfo #showExtra1,
+#showFlightInfo #showExtra2 {
+	width: 100%;
+} 
+
+#showFlightInfo #showExtra1 td,
+#showFlightInfo #showExtra2 td {
+
+	width: 100%;
+}
+#showFlightInfo ul li {
+	list-style: none;
+}
+
+#showFlightInfo .showPay td {
+	padding-left: 2px;
+	border-bottom: 1px solid #e7e7e7;
+}
+#showFlightInfo .showPay .showPayL {
+	padding: 0;
+	margin: 0;
+	width: 104px;
+	font-size: 13px;
+	font-weight: normal;
+	color: #646464;
+	text-align: left;
+}
+#showFlightInfo .showPay .showPayL li {
+	list-style: none;
+	margin-bottom: 2px;
+}
+#showFlightInfo .showPay .showPayR {
+	font-size: 14px;
+	text-align: right;
+} 
+
+#showFlightInfo table tfoot td {
+	border: 1px solid #4db6e3;
+	padding: 10px;
+}
+#showFlightInfo table tfoot h4 {
+	margin: 0 0 10px 0;
+}
+#showFlightInfo table tfoot #showTotal {
+	background-color: #4db6e3;
+	color: white;
+	font-size: 26px;
+	font-weight: 600;
+	text-align: right;
+	width: 100%;
+	margin-bottom: 10px;
+	padding: 8px 0;
+	border-radius: 0.3em;
+}
+#showFlightInfo table tfoot #tfootKrw {
+	font-size: 20px;
+	font-weight: 500;
+	margin: 0 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
