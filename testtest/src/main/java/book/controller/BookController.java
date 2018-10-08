@@ -25,6 +25,22 @@ public class BookController {
 	@Autowired
 	BookService bookService;
 	
+	@RequestMapping(value="/book/step04.do",method=RequestMethod.POST)
+	public ModelAndView step04(HttpServletRequest request) {
+		ModelAndView modelAndView = new ModelAndView();
+		String seatPrice1_1 = request.getParameter("seatPrice1_1");
+		String seatPrice1_2 = request.getParameter("seatPrice1_2");
+		
+		System.out.println(seatPrice1_1);
+		System.out.println(seatPrice1_2);
+		
+		modelAndView.addObject("seatPrice1_1", seatPrice1_1);
+		modelAndView.addObject("seatPrice1_2", seatPrice1_2);
+		
+		modelAndView.addObject("display","../book/step04.jsp");
+		modelAndView.setViewName("../main/main.jsp");
+		return modelAndView;
+	}
 	@RequestMapping(value="/book/selectSeat2.do",method=RequestMethod.POST)
 	public ModelAndView selectSeat2(HttpServletRequest request) {
 		ModelAndView modelAndView = new ModelAndView();
