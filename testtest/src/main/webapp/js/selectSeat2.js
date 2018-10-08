@@ -28,11 +28,12 @@
 	$(function(){
 		var seatPrice1 = $("#seatPrice1").val();
 		if(seatPrice1==null){
-			
+			seatPrice1=0;
 		} else if(seatPrice1!=null){
-			
+			$("#showSeatPrice2").html(seatPrice1);
 		}
 	});
+	
 	/* 좌석선택 마우스 이벤트 */
 	$(function(){
 		// 커서 변환
@@ -50,9 +51,9 @@
 		// 클릭 이벤트
 		$(".seatNum1").click(function(){
 			$(this).css("background-image", "url('../img/seat/seat_orangeA.gif')");
-			$("#showSeatPrice2").html("5000");
-			var seatPrice2 = $("#showSeatPrice2").html();
-			$("#seatPrice2").val(seatPrice2);
+			var seatPrice1 = eval($("#seatPrice1").val()) + 5000;
+			$("#showSeatPrice2").html(seatPrice1);
+			$("#seatPrice2").val(5000);
 			var seatName2 = $(this).html();
 			$("#seatName2").val(seatName2);
 			$(".seatNum1").not(this).css("background-image", "url('../img/seat/seat_blueA.gif')");
@@ -62,9 +63,9 @@
 		});
 		$(".seatNum2").click(function(){
 			$(this).css("background-image", "url('../img/seat/seat_orangeA.gif')");
-			$("#showSeatPrice2").html("3000");
-			var seatPrice2 = $("#showSeatPrice2").html();
-			$("#seatPrice2").val(seatPrice2);
+			var seatPrice1 = eval($("#seatPrice1").val()) + 3000;
+			$("#showSeatPrice2").html(seatPrice1);
+			$("#seatPrice2").val(3000);
 			var seatName2 = $(this).html();
 			$("#seatName2").val(seatName2);
 			$(".seatNum1").not(this).css("background-image", "url('../img/seat/seat_blueA.gif')");
@@ -74,9 +75,9 @@
 		});
 		$(".seatNum3").click(function(){
 			$(this).css("background-image", "url('../img/seat/seat_orangeA.gif')");
-			$("#showSeatPrice2").html("2000");
-			var seatPrice2 = $("#showSeatPrice2").html();
-			$("#seatPrice2").val(seatPrice2);
+			var seatPrice1 = eval($("#seatPrice1").val()) + 2000;
+			$("#showSeatPrice2").html(seatPrice1);
+			$("#seatPrice2").val(2000);
 			var seatName2 = $(this).html();
 			$("#seatName2").val(seatName2);
 			$(".seatNum1").not(this).css("background-image", "url('../img/seat/seat_blueA.gif')");
@@ -86,9 +87,9 @@
 		});
 		$(".seatNum0").click(function(){
 			$(this).css("background-image", "url('../img/seat/seat_orangeA.gif')");
-			$("#showSeatPrice2").html("10000");
-			var seatPrice2 = $("#showSeatPrice2").html();
-			$("#seatPrice2").val(seatPrice2);
+			var seatPrice1 = eval($("#seatPrice1").val()) + 10000;
+			$("#showSeatPrice2").html(seatPrice1);
+			$("#seatPrice2").val(10000);
 			var seatName2 = $(this).html();
 			$("#seatName2").val(seatName2);
 			$(".seatNum1").not(this).css("background-image", "url('../img/seat/seat_blueA.gif')");

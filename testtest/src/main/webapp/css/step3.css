@@ -14,10 +14,20 @@ ul, li {
 }
 
 #container, .part_container{
-   
+   position: relative;
    margin:0 auto; 
-   width:1000px;
-   
+   width:1000px;  
+}
+
+#rightSpace {
+	z-index: 1;
+	position: absolute;
+	width: 260px;
+	height: 80%;
+	background-color: #f3f3f3;
+	padding: 500px 100px;
+	left: 748px;	
+	top: 170px;	
 }
 
    }
@@ -212,3 +222,10 @@ h4 strong {margin-left:10px; font-size: 20px;}
 
 .name1 {margin: 5px 40px;}
 
+submit {
+	background-color: #4B1152;
+	color: white;
+	border-radius: 0.4em;
+	padding: 8px 40px;
+	font-size: 18px;
+}

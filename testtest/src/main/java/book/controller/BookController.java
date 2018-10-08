@@ -29,6 +29,7 @@ public class BookController {
 	@Autowired
 	private MemberService memberService;
 	
+<<<<<<< HEAD
 	@RequestMapping(value="/book/stepForm1.do")
 	public ModelAndView stepForm1(HttpServletRequest request) throws Exception{
 		try {
@@ -40,6 +41,26 @@ public class BookController {
 		HttpSession session = request.getSession();
 		/*String name = (String)session.getAttribute("memName");*/
 		String id = (String)session.getAttribute("memId");
+=======
+	@RequestMapping(value="/book/step04.do",method=RequestMethod.POST)
+	public ModelAndView step04(HttpServletRequest request) {
+		ModelAndView modelAndView = new ModelAndView();
+		String seatPrice1_1 = request.getParameter("seatPrice1_1");
+		String seatPrice1_2 = request.getParameter("seatPrice1_2");
+		
+		System.out.println(seatPrice1_1);
+		System.out.println(seatPrice1_2);
+		
+		modelAndView.addObject("seatPrice1_1", seatPrice1_1);
+		modelAndView.addObject("seatPrice1_2", seatPrice1_2);
+		
+		modelAndView.addObject("display","../book/step04.jsp");
+		modelAndView.setViewName("../main/main.jsp");
+		return modelAndView;
+	}
+	@RequestMapping(value="/book/selectSeat2.do",method=RequestMethod.POST)
+	public ModelAndView selectSeat2(HttpServletRequest request) {
+>>>>>>> refs/remotes/origin/master
 		ModelAndView modelAndView = new ModelAndView();
 		modelAndView.addObject("id", id);
 		modelAndView.addObject("display", "../book/stepForm1.jsp");

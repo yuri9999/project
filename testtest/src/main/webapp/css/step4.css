@@ -1,0 +1,502 @@
+@charset "UTF-8";
+/* tab css */
+
+*, *:before, *:after {
+  margin: 0 auto;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul, li {
+  list-style: none;
+}
+
+#container, .part_container{
+   position: relative;
+   margin:0 auto; 
+   width:1015px;
+}
+
+#leftSpace {
+	float:left;
+	display: inline-block;
+	width: 755px;
+}
+#leftSpace:after {
+	clear: both;
+}
+
+#rightSpace {
+	float:right;
+	width: 260px;
+	height: 1000px;
+	background-color: #f3f3f3;
+	padding: 570px 100px;
+	margin-top: 70px;
+	display: inline-block;
+}
+#rightSpace:after {
+	clear: both;
+}
+
+h1 {
+ padding-top: 50px;
+  font-weight: 400;
+  text-align: left;
+}
+
+
+section {
+  display: none;
+  padding: 20px 0 0;
+  border-top: 1px solid #ddd;/*회색 밑줄  */
+  border-bottom: 1px solid #ddd;
+}
+/*항공권검색 위에 회색 밑줄  */
+#selectBtn{
+   border-top: 1px solid #ddd;
+    padding: 20px 20px;
+    
+}
+/*항공권검색 버튼  */
+#airBtn{
+   padding-right:45px;
+   padding-left:45px;
+    margin-left: 380px;
+}
+/*라디오버튼 안먹히는거 우선 적용  */
+#tab1{display: none !important}
+#part_tab1,#part_tab2,#part_tab3,#part_tab4,#part_tab5,#part_tab6,#part_tab7{display: none !important}
+
+input #tab1,#tab2,#tab3{
+  display: none;
+}
+
+/*구간선택 (왕복,편도,다구간 tab부분)  */
+label.tabClass{
+  display: inline-block;
+  margin: 0 0 -1px;
+  padding: 5px 25px;
+  font-weight: 320;
+  text-align: left;
+  color: #555;
+  border: 1px solid #cacaca;
+ background-color: #efefef;
+   background:url('img/tab_bg.png') 5px -8px no-repeat;
+  
+}
+/*part1,2 부분  */
+label.part_label{
+  display: inline-block;
+  margin: 0 0 -1px;
+  padding: 11px 16px;
+  font-weight: 600;
+  text-align: center;
+  color: #bbb;
+  border: 1px solid transparent;
+}
+
+
+/*구간선택부분에서 글자간격 조절  */
+#part1 {
+    word-spacing: 1em;
+    padding: 5px;
+}
+#part2 {
+    word-spacing: 1em;
+    padding: 5px;
+}
+#part3 {
+    word-spacing: 1em;
+    padding: 5px;
+}
+#part4 {
+    word-spacing: 1em;
+    padding: 5px;
+}
+
+label:before {
+  font-family: fontawesome;
+  font-weight: normal;
+  margin-right: 10px;
+}
+/*icon 설정  */
+/* label[for*='1']:before { content: '\f1cb'; }
+label[for*='2']:before { content: '\f17d'; }
+label[for*='3']:before { content: '\f16b'; }
+label[for*='4']:before { content: '\f1a9'; } */
+
+label:hover {
+  color: #888;
+  cursor: pointer;
+}
+
+
+  
+/*part1,2부분 */
+input:checked + label.part_label {
+  color: #555;
+  border-left: 4px solid #4B1152;
+  border-right: 4px solid #4B1152;
+  border-top: 4px solid #4B1152;
+  border-bottom: 4px solid #fff;
+}
+/* part1,2부분*/
+#part_content1, #part_content2, #part_content3, #part_content4, #part_content5, #part_content6, #part_content7{display: none;}
+#part_tab1:checked ~ #part_content1,
+#part_tab2:checked ~ #part_content2,
+#part_tab3:checked ~ #part_content3,
+#part_tab4:checked ~ #part_content4,
+#part_tab5:checked ~ #part_content5,
+#part_tab6:checked ~ #part_content6,
+#part_tab7:checked ~ #part_content7{
+  display: block;
+}
+
+
+  
+
+#tab1:checked ~ #content1,
+#tab2:checked ~ #content2,
+#tab3:checked ~ #content3,
+#tab4:checked ~ #content4 {
+  display: block;
+}
+
+/* @media screen and (max-width: 650px) {
+  label {
+    font-size: 0;
+  }
+  label:before {
+    margin: 0;
+    font-size: 18px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  label {
+    padding: 15px;
+  }
+}
+ */
+
+/*step2.jsp에 관한 css  */
+/*탑승자정보 회색 밑줄 ,설명부분 */
+#passengerInfo,#text{
+   border-bottom: 1px solid #ddd;
+   padding: 20px 20px;
+}
+
+#text > ul >li{
+   list-style-type: disc ; 
+}
+
+#contactInfo{margin-bottom: 50px;}
+
+
+
+/* step03 혹은 step3 */
+
+h4 {display: inline-block; margin: 20px 0;}
+h4:after {clear: both;}
+h4 strong {margin-left:10px; font-size: 20px;}
+.choices {margin-bottom: 40px;}
+.small {display: inline-block; margin-left:20px; font-size: 18px; color:#686868;} 
+.small:after {clear: both;}
+
+.step4_imgAanGray {margin-bottom: 20px;}
+.step4_imgAanGray .step4_graysection{
+	background-color: #ebebeb; 
+	padding: 20px 20px 20px 10px; 
+	border-radius: 0.3em;
+	width: 740px;
+	margin-right: 50px;
+}
+.step4_imgAanGray img, .step4_imgAanGray .step4_graysection{
+	clear: both;
+}
+#resultWrap {
+	width: 100%;
+	display: inline-block;
+	margin-bottom: 20px;
+}
+#resultWrap .result {
+	float: right; 
+	font-size: 18px; 
+	font-weight: bold; 
+	margin-right: 30px; 
+	margin-top: 20px;
+}
+.result:after {clear: both;}
+.prices {
+	color: #a223af; 
+	margin-left: 170px; 
+	margin-right: 10px;
+}
+.payInform {
+	border-bottom: 3px solid lightgray;
+}
+.payInform li {
+	margin: 10px 0;
+	font-size: 13px;
+}
+
+/*	step04 혹은 step4	*/
+#selectPayment #payContent {
+	border-top: 2px solid lightgray;
+	border-bottom: 2px solid lightgray;
+	width: 730px;
+	margin-left: 0;
+}
+
+#selectPayment #payContent #tables {
+	width:100%;
+	border-bottom: 1px solid lightgray;
+	border-spacing: 0;
+}
+
+#tables #tablePayment {
+	width: 95%;
+	border-spacing: 16px;
+}
+#tables #tablePayment tr {
+	text-align: center;
+}
+#tables #tablePayment .trTitle td {
+	height: 20px;
+	vertical-align: bottom;
+	border: none;
+}
+#tables #tablePayment .trPayment {
+	color: gray;
+	border: 1px solid lightgray;
+}
+#tables #tablePayment .trPayment td {
+	margin: 0 auto;
+	font-size: 14px;
+}
+#tables #tablePayment .selectedBox {
+	font-size: 14px;
+	color: #681771;
+	border: 2px solid #a324b0;
+}
+#tables #tablePayment .payTitle {
+	color: #681771;
+	font-size: 14px;
+	font-weight: bold;
+}
+#tables #tablePayment td {
+	width: 20%;
+	height: 37px;
+	vertical-align: middle;
+	border: 1px solid lightgray;
+}
+#tables #tablePayment td:hover {
+	cursor: pointer;
+}
+#tables #tablePayment .empty {
+	border: none;
+}
+
+
+/*	카드 선택	*/
+
+#tables #trCard td {
+	border-top: 1px solid lightgray;
+	border-bottom: 1px solid lightgray;
+}
+#tables #tableSelectCard {
+	width: 100%;
+	font-size: 13px;
+	color: gray;
+}
+#tables #tableSelectCard td{
+	border:none;
+}
+
+#tables #tableSelectCard #selectCardOpt {
+	border: 1px solid lightGray;
+	width: 122px;
+	height: 35px;
+	padding: 5px 10px;
+	display: inline-block;
+}
+#tables #tableSelectCard #selectCardOpt:hover {
+	cursor: pointer;
+}
+#tables #tableSelectCard #selectCardOpt span {
+	width: 70px;
+	height: 55px;
+	display: inline;
+}
+#tables #tableSelectCard #selectCardOpt img {
+	float:right;
+	margin-top: -5px;
+	margin-right: -11px;
+	padding: 0;
+}
+#tables #tableSelectCard ul {
+	position: absolute;
+	background: white;
+	border: 1px solid #a324b0;
+	z-index: 2;
+}
+#tables #tableSelectCard ul:hover {
+	cursor: pointer;
+}
+#tables #tableSelectCard ul li {
+	border: 1px solid lightgray;
+	width: 120px;
+	height: 35px;
+	padding: 5px 10px;
+}
+
+#tables #tableSelectCard #infoCard {
+	display: inline-block;
+	margin-left: 15px;
+}
+
+#tables #tableSelectCard input {
+	background-color: #4B1152;
+	color: white;
+	border-radius: 0.4em;
+	padding: 5px 15px;
+	font-size: 15px;
+	margin-left: 50px;
+}
+
+#tables #tableDivide {
+	width: 100%;
+	font-size: 13px;
+	color: gray;
+}
+#tables #tableDivide #selectNumOpt {
+	border: 1px solid lightGray;
+	width: 122px;
+	height: 35px;
+	padding: 5px 10px;
+	display: inline-block;
+}
+#tables #tableDivide #selectNumOpt:hover {
+	cursor: pointer;
+}
+#tables #tableDivide #selectNumOpt span {
+	width: 70px;
+	height: 55px;
+	display: inline;
+}
+#tables #tableDivide #selectNumOpt img {
+	margin-top: -5px;
+	margin-right: -11px;
+	float: right;
+	padding: 0;
+	z-index: 1;
+}
+#tables #tableDivide ul {
+	position: absolute;
+	background: white;
+	border: 1px solid #a324b0;
+}
+#tables #tableDivide ul:hover {
+	cursor: pointer;
+}
+#tables #tableDivide ul li {
+	border: 1px solid lightgray;
+	width: 120px;
+	height: 35px;
+	padding: 5px 10px;
+}
+
+#tables #tableDivide input {
+	background-color: #4B1152;
+	color: white;
+	border-radius: 0.4em;
+	padding: 5px 15px;
+	font-size: 15px;
+	margin-left: 10px;
+}
+
+
+.step4_graysection input {
+	background-color: #66176f; 
+	color:white; 
+	border-radius: 0.4em; 
+	margin-top: 17px;
+	margin-bottom: -50px;
+	padding: 0;
+	width: 120px; 
+	height: 35px; 
+	font-size: 16px;
+	float: right;
+}
+.step4_graysection .innerGray {
+	display: inline-block;
+	width: 350px;
+	margin: 0;
+	vertical-align: text-top;
+}
+.step4_graysection .innerGray * {
+	display: inline-block;
+}
+.step4_graysection .innerGray,
+.step4_graysection .innerGray * {
+	clear: both;
+}
+.step4_graysection .innerGray span {
+	vertical-align: top;
+	margin-top: 15px;
+	font-weight: bold;
+}
+.step4_graysection .innerGray ul {
+	display: inline-block;
+}
+.step4_graysection .innerGray ul li {
+	font-size: 12px;
+	display: block;
+}
+.step4_graysection .innerGray ul li span {
+	display: inline-block;
+	margin: 0;
+	color: #4B1152;
+}
+
+#warnText{margin-bottom: 10px;}
+#warnText h4 {margin: 0;}
+#warnText ul {
+	width: 700px;
+	font-size: 12px;
+	text-align: left;
+	margin: 0;
+}
+#warnText ul li {
+	margin: 5px 0;
+}
+#warnText ul li font {
+	text-decoration: underline;
+	font-weight: bold;
+}
+
+.lastText {
+	font-size: 12px;
+	margin: 5px 0;
+}
+#submit {
+	margin: 30px 0;
+	text-align: center;
+}
+#submit input {
+	background-color: #4B1152;
+	color: white;
+	border-radius: 0.4em;
+	padding: 8px 40px;
+	font-size: 18px;
+}
+
+
+
+
+
+
+
+
+
