@@ -244,7 +244,7 @@
 <<<<<<< HEAD
 		<form action="../book/stepForm1.do" name="round" method="post">
 =======
-		<form action="goAvail.do" name="round" method="post">
+		<form action="../book/goAvail.do" name="round" method="post">
 >>>>>>> refs/remotes/origin/master
 			<table id="flightInput">
 				<tr id="mybutton">
