@@ -27,7 +27,7 @@ body{
 }
 #jaju{
 	position: absolute;
-	top: 350px;
+	top: 450px;
 	left: 350px;
 }
 #price{
