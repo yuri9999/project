@@ -7,9 +7,11 @@
 	color: white;
 }
 #selectWay {
-	width: 1015px;
+	width: 1000px;
 	display: inline-block;
 	background: #4B1152;
+	margin: 0;
+	margin-bottom: -5px;
 }
 #selectWay .tabWay {
 	display: block;
@@ -48,7 +50,7 @@
 
 #selectWayEnd {
 	border: 1px solid lightgray;
-	width: 1015px;
+	width: 995px;
 	margin: 0;
 	padding: 0;
 }
@@ -102,7 +104,6 @@ form {
 	position: absolute;
 	display: block;
 }
-/*버튼 길이,높이  */
 #mybutton .location {
 	width: 130px;
 	height: 40px;
