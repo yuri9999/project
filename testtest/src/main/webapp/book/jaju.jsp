@@ -60,45 +60,33 @@
 	    
 	});
 	
-	// 출발지 도착지 탭.
+		// 출발지 도착지 탭.
+	$(function(){
+		$(".container").hide();
+		$("#selectArr").hide();
+		$("#seelectDep").hide();
+	});
+	
 	$(function(){
 		// 출발지
 		$("#dep").click(function(){
-			if($("#selectArr").css("visibility") != "hidden"){
-				$("#selectArr").css("visibility", "hidden");
-				$("#selectArr").css("display", "none");
-				$(".container").css("border", "none");
-				$("#selectDep").css("display", "block");
-			} else if($("#selectArr").css("display") == "block"){
-				$("#selectArr").css("display", "none");
-				$("#selectDep").css("display", "block");
-			}
-			$("#selectDep").css("visibility", "visible");
-			$(".container").css("border", "2px solid #464047");
+			$("#selectArr").hide();
+			$(".container").show(200);
+			$("#selectDep").show();
 		});
 		$("#close1").click(function(){
-			$("#selectDep").css("visibility", "hidden");
-			$(".container").css("border", "none");
+			$(".container").hide();
+			$("#selectDep").hide();
 		});
 		// 도착지
 		$("#arr").click(function(){
-			if($("#selectDep").css("visibility") != "hidden"){
-				setTimeout(function(){
-					$("#selectDep").hide();
-				},3000);
-				$("#selectDep").css("visibility", "hidden");
-				$("#selectDep").css("display", "none");
-				$(".container").css("border", "none");
-			} else if($("#selectDep").css("display") == "block"){
-				$("#selectDep").css("display", "none");
-			}
-			$("#selectArr").css("visibility", "visible");
-			$("#selectArr").css("display", "block");
-			$(".container").css("border", "2px solid #464047");
+			$("#selectDep").hide();
+			$(".container").show(200);
+			$("#selectArr").show();	
 		});
 		$("#close2").click(function(){
-			$("#selectArr").css("visibility", "hidden");
-			$(".container").css("border", "none");
+			$(".container").hide();
+			$("#selectArr").hide();
 		});
 	});
 	
@@ -108,6 +96,7 @@
 			var depName = $(this).attr("value");
 			$("input[name='dep']").val(depName);
 			$("#hdep").val(depName);
+			$(".container").hide();
 			$("#arr").click();
 		});
 		
