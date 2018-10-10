@@ -1,31 +1,58 @@
 package book.bean;
 
-import java.util.Date;
 
 public class BookDTO {
 	private int seq; //순번
-	private String id;				// 고객아이디
-	private String koreanName;		// 고객한글 이름
-	private String englishName;		// 고객영어 이름
-	private String birthday;		//고객생년월일 
-	private String passportNum;		// 고객여권번호
-	private String nation;			// 고객국적
-	private String code;			// 티켓코드(국내,국제 구분용)
-	private String flightName1;		//노선1편명   인천->다낭 24:00
-	private String flightName2 ;	// 노선2편명  다낭->인천
-	private String airportName1 ;	//출발지  인천 
-	private String airportName2 ;	// 도착지  다낭 
-	private String dep1 ;			// 출발일시(갈때) //시간은제외 2018-11-11
-	private String ar1 ;			// 도착일시(갈때)//시간은제외  2018-11-11
-	private String dep2 ;			// 출발일시(올때) //시간은제외 
-	private String ar2 ;			// 도착일시(올때) //시간은제외
-	private String age ;			// 성인구분 
-	private int totalPrice ;		// 총항공운임료 
-	private int nop ;				// 구매티켓 수 
-	private int luggage ;				// 수하물여부
-	private String seat ;			// 좌석 추가요금
-	private String eatery ;			// 기내식 추가요금
-	private Date bookTime ;			//예약일시
+	private String id;            // 고객아이디
+	private String koreanName;      // 고객한글 이름
+	private String englishName;      // 고객영어 이름
+	private String birthday;      //고객생년월일 
+	private String passportNum;      // 고객여권번호
+	private String nation;         // 고객국적
+	private String code;         // 티켓코드(국내,국제 구분용)
+	private String flightName1;      //노선1편명   인천->다낭 24:00
+	private String flightName2 ;   // 노선2편명  다낭->인천
+	private String airportName1 ;   //출발지  인천 
+	private String airportName2 ;   // 도착지  다낭 
+	private String dep1 ;         // 출발일시(갈때) //시간은제외 2018-11-11
+	private String ar1 ;         // 도착일시(갈때)//시간은제외  2018-11-11
+	private String dep2 ;         // 출발일시(올때) //시간은제외 
+	private String ar2 ;         // 도착일시(올때) //시간은제외
+	private String age ;         // 성인구분 
+	private int totalPrice ;      // 총항공운임료 
+	private int nop ;            // 구매티켓 수 
+	private int luggage ;            // 수하물여부
+	private String seatName1;      // 좌석번호1
+	private String seatName2;      // 좌석번호2
+	private int seatPrice1;         // 좌석 추가요금 1
+	private int seatPrice2;         // 좌석 추가요금 2
+	public String getSeatName1() {
+		return seatName1;
+	}
+	public void setSeatName1(String seatName1) {
+		this.seatName1 = seatName1;
+	}
+	public String getSeatName2() {
+		return seatName2;
+	}
+	public void setSeatName2(String seatName2) {
+		this.seatName2 = seatName2;
+	}
+	public int getSeatPrice1() {
+		return seatPrice1;
+	}
+	public void setSeatPrice1(int seatPrice1) {
+		this.seatPrice1 = seatPrice1;
+	}
+	public int getSeatPrice2() {
+		return seatPrice2;
+	}
+	public void setSeatPrice2(int seatPrice2) {
+		this.seatPrice2 = seatPrice2;
+	}
+	private String seat ;         // 좌석 추가요금
+	private String eatery ;         // 기내식 추가요금
+	private String bookTime ;         //예약일시
 	
 	public int getSeq() {
 		return seq;
@@ -159,13 +186,14 @@ public class BookDTO {
 	public void setEatery(String eatery) {
 		this.eatery = eatery;
 	}
-	public Date getBookTime() {
+	public String getBookTime() {
 		return bookTime;
 	}
-	public void setBookTime(Date bookTime) {
+	public void setBookTime(String bookTime) {
 		this.bookTime = bookTime;
 	}
 	
+
 	
 	
 }
