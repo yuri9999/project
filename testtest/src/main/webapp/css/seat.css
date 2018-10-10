@@ -33,9 +33,9 @@ form{padding:0; margin:0; width: 100%;}
 .seatTable1 #abcd{background-color: white; text-align: center;}
 .seatTable1 #abcd td {padding: 5px 0; border-bottom: 1px solid lightgray;}
 
-.seatTable1 #trMain1{background-color: lightgray;}
+.seatTable1 #trMain1{background-color: lightgray; height: 1480px;}
 .seatTable1 .empty {background-color: lightgray;}
-.seatTable1 #trMain1 #selectSeat1 {background-color: white; vertical-align: middle;}
+.seatTable1 #trMain1 #selectSeat1 {background-color: white; vertical-align: text-top;}
 
 .seatTable1 #trMain1 #selectSeat1 #seatInfo1{border-spacing: 1px; vertical-align: middle; width: 354px; text-align: center;}
 .seatTable1 #trMain1 #selectSeat1 #seatInfo1 c .oneline {text-align: center;}

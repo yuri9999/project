@@ -2,11 +2,7 @@
 /*<!--left:1200px;-->*/
 #showConsole {
 	position: fixed; 
-<<<<<<< HEAD
-	left: 1230px;	
-=======
 	left: 1200px;	
->>>>>>> refs/remotes/origin/master
 	top: 170px;	
 	width: 260px; 
 	padding: 0;

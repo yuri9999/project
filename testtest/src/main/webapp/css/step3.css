@@ -7,6 +7,7 @@
   box-sizing: border-box;
 }
 
+.stepNav.threeWide.setp03{background:url('../img/step_bg.png') no-repeat -10px -120px } 
 
 
 ul, li {
@@ -220,9 +221,13 @@ h4 strong {margin-left:10px; font-size: 20px;}
 
 .prices {color: #a223af; margin-left: 170px; margin-right: 10px;}
 
-.name1 {margin: 5px 40px;}
+.name1 {margin: 5px 40px; margin-right: 20px;}
 
-submit {
+.submit {
+	margin: 30px 0;
+	text-align: center;
+}
+.submit input {
 	background-color: #4B1152;
 	color: white;
 	border-radius: 0.4em;
