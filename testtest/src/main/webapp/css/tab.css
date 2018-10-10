@@ -1,0 +1,254 @@
+@charset "UTF-8";
+*, *:before, *:after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+ul, li {
+  list-style: none;
+}
+
+ #container, .part_container{
+   position: relative;
+   margin:0 auto; 
+   width:1015px;
+} 
+
+.btn{
+	background: #ffffff;
+    color: #666;
+    width: auto;
+    border-radius: 5px;
+    padding: 0;
+    
+}
+
+.goToComePart{
+	line-height: 25px;
+	padding: 10px;
+	height:35px;
+	width:150px;
+}
+
+#leftSpace {
+   float:left;
+   display: inline-block;
+   width: 755px;
+}
+#leftSpace:after {
+   clear: both;
+}
+
+#rightSpace {
+   float:right;
+   width: 260px;
+   height: 70%;
+   background-color: #f3f3f3;
+   padding: 500px 100px;
+   display: inline-block;
+}
+#rightSpace:after {
+   clear: both;
+}
+
+	}
+h1 {
+ padding-top: 50px;
+  font-weight: 400;
+  text-align: left;
+}
+
+
+section {
+  display: none;
+  padding: 20px 0 0;
+  border-top: 1px solid #ddd;/*회색 밑줄  */
+  border-bottom: 1px solid #ddd;
+   width:1015px;
+}
+/*항공권검색 위에 회색 밑줄  */
+#selectBtn{
+	border-top: 1px solid #ddd;
+	 padding: 20px 20px;
+	 
+}
+/*항공권검색 버튼  */
+#airBtn{
+	padding-right:45px;
+	padding-left:45px;
+	 margin-left: 380px;
+	 height: 45px;
+	 width:200px;
+	 background-color: #4B1152;
+	 color: white;
+}
+/*submit버튼  */
+#submitBtn{
+	padding-right:45px;
+	padding-left:45px;
+	 margin-left: 380px;
+	 height: 45px;
+	 width:200px;
+	 background-color: #4B1152;
+	 color: white;
+}
+
+/*라디오버튼 안먹히는거 우선 적용  */
+#tab1{display: none !important}
+#part_tab1,#part_tab2,#part_tab3,#part_tab4,#part_tab5,#part_tab6,#part_tab7{display: none !important}
+
+#part_tab_come1,#part_tab_come2,#part_tab_come3,#part_tab_come4,#part_tab_come5,#part_tab_come6,#part_tab_come7{display: none !important}
+
+input #tab1,#tab2{
+  display: none;
+}
+
+/*구간선택 (왕복,편도,다구간 tab부분)  */
+label.tabClass{
+  display: inline-block;
+  margin: 0 0 -1px;
+  padding: 5px 25px;
+  font-weight: 320;
+  text-align: left;
+  color: #555;
+  border: 1px solid #cacaca;
+ background-color: #efefef;
+	background:url('img/tab_bg.png') 5px -8px no-repeat;
+  
+}
+/*part1,2 부분  */
+label.part_label,label.part_label_come {
+  display: inline-block;
+  margin: 0 0 -1px;
+  padding: 11px 16px;
+  font-weight: 600;
+  text-align: center;
+  color: #bbb;
+  border: 1px solid transparent;
+}
+
+
+/*구간선택부분에서 글자간격 조절  */
+#part1 {
+	 word-spacing: 1em;
+	 padding: 5px;
+}
+#part2 {
+	 word-spacing: 1em;
+	 padding: 5px;
+}
+#part3 {
+	 word-spacing: 1em;
+	 padding: 5px;
+}
+#part4 {
+	 word-spacing: 1em;
+	 padding: 5px;
+}
+
+label:before {
+  font-family: fontawesome;
+  font-weight: normal;
+  margin-right: 10px;
+}
+
+label:hover {
+  color: #888;
+  cursor: pointer;
+}
+/*출발지 팝업창  */
+#selectDep{
+	border:1px solid;
+	background: white;
+}
+/*도착지팝업창  */
+#selectArr{
+	border:1px solid;
+	background: white;
+}
+
+
+
+input:checked + label {
+  color: #393939;
+  border: 3px solid #4B1152;
+  border-top: 2px solid #4B1152;
+  border-bottom: 1px solid #fff;
+  background-color: #fff;
+  background:url('img/tab_bg.png') 5px 13px no-repeat;
+}
+  
+/*part1,2부분 */
+input:checked + label.part_label {
+  color: #555;
+  border-left: 4px solid #4B1152;
+  border-right: 4px solid #4B1152;
+  border-top: 4px solid #4B1152;
+  border-bottom: 4px solid #fff;
+}
+input:checked + label.part_label_come {
+  color: #555;
+  border-left: 4px solid #4B1152;
+  border-right: 4px solid #4B1152;
+  border-top: 4px solid #4B1152;
+  border-bottom: 4px solid #fff;
+}
+
+
+/* part1,2부분*/
+#part_content1, #part_content2, #part_content3, #part_content4, #part_content5, #part_content6, #part_content7{display: none;}
+#part_tab1:checked ~ #part_content1,
+#part_tab2:checked ~ #part_content2,
+#part_tab3:checked ~ #part_content3,
+#part_tab4:checked ~ #part_content4,
+#part_tab5:checked ~ #part_content5,
+#part_tab6:checked ~ #part_content6,
+#part_tab7:checked ~ #part_content7{
+  display: block;
+}
+
+
+  
+
+#tab1:checked ~ #content1,
+#tab2:checked ~ #content2{
+  display: block;
+}
+/*반응형 미디어 웹  */
+ @media screen and (max-width: 650px) {
+  label {
+    font-size: 0;
+  }
+  label:before {
+    margin: 0;
+    font-size: 18px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  label {
+    padding: 15px;
+  }
+}
+
+
+/*step2.jsp에 관한 css  */
+/*탑승자정보 회색 밑줄 ,설명부분   광선씨가 준 코드로 변경하기!!!!!!!!!!!!!!!!!!! */
+#passengerInfo,#text{
+   border-bottom: 1px solid #ddd;
+   padding: 20px 20px 20px 0;
+}
+
+#text > ul >li{
+   list-style-type: disc ; 
+} 
+
+#contactInfo{margin-bottom: 50px;}
+/* #text{margin-bottom: 50px;} */
+
+
+
+
+
