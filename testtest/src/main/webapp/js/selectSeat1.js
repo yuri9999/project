@@ -52,6 +52,7 @@
 			$(".seatNum0").not(this).css("background-image", "url('../img/seat/seat_yellow.gif')");
 		});
 		$(".seatNum2").click(function(){
+			$("#hname1").value(hname1);
 			$(this).css("background-image", "url('../img/seat/seat_orangeA.gif')");
 			$("#showSeatPrice1").html("3000");
 			var seatPrice1 = $("#showSeatPrice1").html();
