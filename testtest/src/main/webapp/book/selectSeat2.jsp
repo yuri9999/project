@@ -17,7 +17,8 @@
 <form action="" name="selectSeat2" method="post">
 	
 	<!-- 값을 넘겨주기 위한 Hidden input -->
-	<input type="hidden" id="hname" name="hname">
+	<input type="hidden" id="hname1" name="hname1" value="${hname1}">
+	<input type="hidden" id="hname2" name="hname2">
 	<input type="hidden" id="seatName1" name="seatName1" value="${seatName1}">
 	<input type="hidden" id="seatName2" name="seatName2">
 	<input type="hidden" id="seatPrice1" name="seatPrice1" value="${seatPrice1}">
@@ -28,10 +29,10 @@
 		<tr id="timeNflight">
 			<td colspan="3"><span id="arr">&nbsp;${arr}</span>
 			<img src="../img/airplane.png" width="50px" height="50px"> 
-			<span id="dep">${dep}&nbsp;</span><br><span id="dayGo">${dayGo}</span></td>
+			<span id="dep">${dep}&nbsp;</span><br><span id="dayGo">${dayGo2}-${dayCome2}</span></td>
 		</tr>
 		<tr id="name">
-			<td colspan="3"><span id="name2">JEON JIN</span></td>
+			<td colspan="3"><span id="name2">${memberDTO.englishName}</span></td>
 		</tr>
 		<tr id="priceInfo">
 			<td colspan="3">
@@ -119,7 +120,7 @@
 			<tr id="button1">
 				<td></td>
 				<td class="2btns">
-					<button id="to1" onclick="location.href='selectSeat.do?'">구간 1 선택</button>
+					<button id="to1" onclick="location.href='selectSeat.do'">구간 1 선택</button>
 					<button id="selectEnd" onclick="chkEmer();">선택 완료</button>
 				</td>
 				<td></td>

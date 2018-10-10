@@ -44,7 +44,7 @@
 </script>
 </head>
 <body>
-	<form action="step03.do" method="post" name="step01">
+	<form action="../book/step03.do" method="post" name="step01">
 	
 	<div id="container">
 		<!--step1,2,3,4 부분  -->	
@@ -52,7 +52,7 @@
 		<h1>항공권 예매</h1>
 		<ul class="stepNav threeWide setp01" >
 			<li><span class="stepNavOn1">Step.1</span><strong class="stepNavOn2">구간 및 운임 선택</strong></li>
-			 <li><span>Step.2</span><strong>탑승자 정보입력</strong></li>
+			<li><span>Step.2</span><strong>탑승자 정보입력</strong></li>
 			<li><span>Step.3</span><strong>부가서비스 선택</strong></li>
 			<li><span>Step.4</span> <strong>항공권 결제</strong></li> 
 		</ul>

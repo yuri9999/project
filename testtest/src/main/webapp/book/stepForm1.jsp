@@ -19,28 +19,25 @@
 <!--=====전진씨 CSS=========  -->
 <!--sidebar  -->
 <link rel="stylesheet" type="text/css" href="../css/showConsole.css">
-<link rel="stylesheet" type="text/css" href="../css/airport.css">
-<link rel="stylesheet" type="text/css" href="../css/flightBooking.css">
+<link rel="stylesheet" type="text/css" href="../css/airport1.css">
+ <link rel="stylesheet" type="text/css" href="../css/flightBooking1.css"> 
+
 <script src="../js/inputChk.js"></script>
 <!--sidebar  -->
 <script src="../js/showConsole.js"></script>
-
 
 <script type="text/javascript">
 
 	window.onload = $(function() {
 		$("#tab1").click();
-		
-
+	
 	});
 	
-
-
 </script>
 
 </head>
 <body>
-	<form action="../book/step1.do" method="post" name="stepForm1">
+	<form action="stepForm2.do" method="post" name="stepForm1">
 
 		<div id="container">
 			<!--step1,2,3,4 부분  -->
@@ -85,7 +82,7 @@
 						<hr id="headerEnd">
 						<ul class="nav">
 						<div class="navAirports">
-						<div id="navKor" class="column">
+							<div id="navKor" class="column">
 							<h3>한국</h3>
 							<ul>
 								<li value="인천(ICN)"><a href="#">인천(ICN)</a></li>
@@ -124,7 +121,7 @@
 							</ul>
 						</div>
 					</div>
-					</ul>
+				</ul>
 			</div>
 
 	<!--===========도착지팝업창 ================ -->
@@ -184,137 +181,48 @@
 
 				<div id="part1">
 					<label><img alt="bul0.png" src="../img/bul0.png">구간1</label>
-					<div class="roundtrip">
-	<!-- 	<form action="goAvail.do" name="round" method="post"> -->
-			<table id="flightInput">
-				<tr id="mybutton">
-					<td>
-						<div class="btn"><input type="button" class="location" name="dep" id="dep" value="출발지" ></div>
-						<a class="inputImg" href="#"><img alt="dep1" src="../img/dep.jpg" height="30px" width="30px"></a>
-					</td>
-					<td>
-						<div class="btn"><input type="button" class="location" name="arr" id="arr" value="도착지"></div>
-						<a class="inputImg" href="#"><img alt="arr1" src="../img/arr.jpg" height="30px" width="30px"></a>
-					</td>
-					<td id="dayGo">
-						<div class="btn"><input type="button" class="calendar" id="datepicker" name="dayGo" value="가는 날"></div>
-						<a class="inputImg"><img alt="dep2" src="../img/cal.jpg" height="30px" width="30px"></a>
-					</td>
+					
+						<div class="btn"><input type="text" class="location goToComePart" name="dep" id="dep" value="출발지" ></div>
+						<div class="btn"><input type="text" class="location goToComePart" name="arr" id="arr" value="도착지"></div>
+						<div class="btn"><input type="text" class="location goToComePart" id="datepicker" name="dayGo" value="가는 날"></div>
 					
 					
-					<td>
-						<!-- hidden input태그  -->
-						<!--hdep와 harr는   -->
-						<input type="hidden" id="hdep" name="hdep">
+						<!-- hidden input태그  왜 2개 해났지?-->
+						<!-- <input type="hidden" id="hdep" name="hdep">
 						<input type="hidden" id="harr" name="harr">
-						
 						<input type="hidden" id="hdayGo" name="hdayGo">
 						<input type="hidden" id="hdayCome" name="hdayCome">
 						<input type="hidden" id="hadult" name="hadult">
 						<input type="hidden" id="hkid" name="hkid">
-						<input type="hidden" id="hbaby" name="hbaby">
-						
-					</td>
-				</tr>
-				
-					<!-- <div class="roundtrip">
-						<table id="flightInput">
-							<tr id="mybutton">
-								<td id="dep">
-									<div class="btn">
-										<input type="button" class="location" name="dep" value="출발지">
-									</div> 
-									<a class="inputImg" href="#"><img alt="dep1" src="../img/dep.jpg" height="30px" width="30px"></a>
-								</td>
-								<td id="arr">
-									<div class="btn">
-										<input type="button" class="location" name="arr" value="도착지">
-									</div> 
-									<a class="inputImg" href="#"><img alt="arr1" src="../img/arr.jpg" height="30px" width="30px"></a>
-								</td>
-							</tr>
-						</table>
-					</div>
-
+						<input type="hidden" id="hbaby" name="hbaby"> -->
 					
-					<input type="text" id="datepicker" onclick="datepicker()"> -->
-				</table>
-				</div>
 			</div>
 			<!--========================구간2 ================================= -->
 				<div id="part2">
 					<label><img alt="bul0.png" src="../img/bul0.png">구간2</label>
-					<div class="roundtrip">
-	<!-- 	<form action="goAvail.do" name="round" method="post"> -->
-			<table id="flightInput">
-				<tr id="mybutton">
-					<td>
-						<div class="btn"><input type="button" class="location" name="arr" id="arr" value="출발지" ></div>
-						<a class="inputImg" href="#"><img alt="dep1" src="../img/dep.jpg" height="30px" width="30px"></a>
-					</td>
-					<td>
-						<div class="btn"><input type="button" class="location" name="dep" id="dep" value="도착지"></div>
-						<a class="inputImg" href="#"><img alt="arr1" src="../img/arr.jpg" height="30px" width="30px"></a>
-					</td>
-					<td id="dayCome">
-						<div class="btn"><input type="button" class="calendar" id="datepicker2" name="dayCome" value="오는 날"></div>
-						<a class="inputImg"><img alt="arr2" src="../img/cal.jpg" height="30px" width="30px"></a>
-					</td>
 					
-					<td>
-						<!-- hidden input태그  -->
-						<!--hdep와 harr는   -->
-						<input type="hidden" id="hdep" name="hdep">
-						<input type="hidden" id="harr" name="harr">
+						<div class="btn"><input type="text" class="location goToComePart" name="arr" id="arr" value="출발지" ></div>
+						<div class="btn"><input type="text" class="location goToComePart" name="dep" id="dep" value="도착지"></div>
+						<div class="btn"><input type="text" class="location goToComePart" id="datepicker2" name="dayCome" value="오는 날"></div>
+				
 						
+						<!-- hidden input태그    -->
+				 		<input type="hidden" id="hdep" name="hdep">
+						<input type="hidden" id="harr" name="harr">
 						<input type="hidden" id="hdayGo" name="hdayGo">
 						<input type="hidden" id="hdayCome" name="hdayCome">
 						<input type="hidden" id="hadult" name="hadult">
 						<input type="hidden" id="hkid" name="hkid">
 						<input type="hidden" id="hbaby" name="hbaby">
-						
-					</td>
-				</tr>
-				
-					
-				</table>
-				</div>
+						 
 				</div>
 
 
 				<div id="part3">
 					<label><img alt="bul0.png" src="../img/bul0.png">인원</label> 
-					<table>
-					 <td>
-						<div class="btn"><input type="button" class="ppl" name="adult" id="adult" value="성인1명"></div>
-						<a class="inputImg" href="#"><img alt="adlt" src="../img/ppl.jpg" height="30px" width="30px"></a>
-					</td>
-					<td>
-						<div class="btn"><input type="button" class="ppl" name="kid" id="kid" value="소아0명"></div>
-						<a class="inputImg" href="#"><img alt="kid" src="../img/ppl.jpg" height="30px" width="30px"></a>
-					</td>
-					<td>
-						<div class="btn"><input type="button" class="ppl" name="baby" id="baby" value="유아0명"></div>
-						<a class="inputImg" href="#"><img alt="bby" src="../img/ppl.jpg" height="30px" width="30px"></a>
-					</td>
-					</table>
-					
-					<select name="adult">
-						<option value="adult_num1">성인 1명</option>
-						<option value="adult_num2">성인 2명</option>
-						<option value="adult_num3">성인 3명</option>
-						<option value="adult_num4">성인 4명</option>
-					</select> <select name="child">
-						<option value="child_num1">아동 1명</option>
-						<option value="child_num2">아동 2명</option>
-						<option value="child_num3">아동 3명</option>
-						<option value="child_num4">아동 4명</option>
-					</select> <select name="baby">
-						<option value="baby_num1">소아 1명</option>
-						<option value="baby_num2">소아 2명</option>
-						<option value="baby_num3">소아 3명</option>
-						<option value="baby_num4">소아 4명</option>
-					</select>
+						<div class="btn"><input type="text" class="location goToComePart" name="adult" id="adult" value="성인1명"></div>
+						<div class="btn"><input type="text" class="location goToComePart" name="kid" id="kid" value="소아0명"></div>
+						<div class="btn"><input type="text" class="location goToComePart" name="baby" id="baby" value="유아0명"></div>
 				</div>
 
 			<!--========================결제, 검색버튼 ================================= -->
@@ -403,10 +311,7 @@
 			<div class="part_container" style="display: none;">
 				<!--구간1 제목  -->
 				<h4>
-			
-					<img alt="title1.jpg" src="../img/title1.jpg"><strong>구간1:인천->다낭</strong>
-
-				
+					<img alt="title1.jpg" src="../img/title1.jpg"><strong id="strong"></strong>
 				</h4>
 				<br>
 
@@ -457,7 +362,7 @@
 			<div class="part_container" style="display: none;">
 				<!--구간1 제목  -->
 				<h4>
-					<img alt="title1.jpg" src="../img/title1.jpg"><strong>구간2:다낭- 서울(인천)</strong>
+					<img alt="title1.jpg" src="../img/title1.jpg"><strong id="strong2"></strong>
 				</h4>
 				<br>
 
@@ -500,9 +405,14 @@
 					</ul>
 
 				</div>
+				<input type="hidden" id="dayGoAndDateGo1" name="dayGoAndDateGo1"><!-- 구간1 Go -->
+				<input type="hidden" id="dayGoAndDateCome1" name="dayGoAndDateCome1"><!--구간1 Come -->
+				<input type="hidden" id="dayGoAndDateGo2" name="dayGoAndDateGo2"><!--구간2 Go -->
+				<input type="hidden" id="dayGoAndDateCome2" name="dayGoAndDateCome2"><!-- 구간2 Come -->
+				<input type="hidden" id="hiddenGetChecked" name="hiddenGetChecked" value=" "><!--선택된 편명   -->
 				<input type="hidden" id="hiddenGetChecked" name="hiddenGetChecked" value=" ">
 				<input type="hidden" id="hiddenGetChecked2" name="hiddenGetChecked2" value=" ">
-				<input type="submit" value="구간 및 운임 선택 완료" onclick="getChecked()" >
+				<div><input type="submit" id="submitBtn" value="구간 및 운임 선택 완료" onclick="getChecked()" ></div>
 			</div>
 	</div>
 	</div>
@@ -520,7 +430,7 @@
 				</div>
 				<div id="showPoint">
 					<span id="pointHead">가용포인트</span>
-					<span id="memPoint" class="pointRight">${memPoint}50000</span>					
+					<span id="memPoint" class="pointRight">${memberDTO.totalPoint }</span>					
 					<span id="pointFoot" class="pointRight">P</span>
 				</div>
 				<div id="showFlightInfo">

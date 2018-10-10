@@ -17,6 +17,7 @@
 <form action="selectSeat2.do" name="selectSeat" method="post">
 	
 	<!-- 값을 넘겨주기 위한 Hidden input -->
+	<input type="hidden" id="hname1" name="hname1">
 	<input type="hidden" id="seatName1" name="seatName1">
 	<input type="hidden" id="seatPrice1" name="seatPrice1">
 	
@@ -25,10 +26,10 @@
 		<tr id="timeNflight">
 			<td colspan="3"><span id="dep">${dep}&nbsp;</span> 
 			<img src="../img/airplane.png" width="50px" height="50px"> 
-			<span id="arr">&nbsp;${arr}</span><br><span id="dayGo">${dayGo}</span></td>
+			<span id="arr">&nbsp;${arr}</span><br><span id="dayGo">${dayGo}-${dayCome}</span></td>
 		</tr>
 		<tr id="name">
-			<td colspan="3"><span id="name1">JEON JIN</span></td>
+			<td colspan="3"><span id="name1">${memberDTO.englishName}</span></td>
 		</tr>
 		<tr id="priceInfo">
 			<td colspan="3">

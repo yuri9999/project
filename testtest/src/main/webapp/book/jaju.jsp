@@ -17,7 +17,20 @@
 			alert("출발지를 선택해주세요");
 			document.round.dep.focus();
 			return false;
+		} else if(document.round.arr.value=="도착지"){
+			alert("도착지를 선택해주세요");
+			document.round.arr.focus();
+			return false;
+		} else if(document.round.dayGo.value=="가는 날"){
+			alert("가는 일정을 선택해주세요");
+			document.round.dayGo.focus();
+			return false;
+		} else if(document.round.dayCome.value=="오는 날"){
+			alert("오는 일정을 선택해주세요");
+			document.round.dayCome.focus();
+			return false;
 		}
+		
 		var dayGo = $("#datepicker").attr("value");
 		var dayCome = $("#datepicker2").attr("value");
 		var adult = $("#adult").attr("value");
@@ -60,7 +73,7 @@
 	    
 	});
 	
-		// 출발지 도착지 탭.
+	// 출발지 도착지 탭.
 	$(function(){
 		$(".container").hide();
 		$("#selectArr").hide();
@@ -105,6 +118,7 @@
 			$("input[name='arr']").val(arrName);
 			$("#harr").val(arrName);
 			$("#close2").click();
+			document.round.dayGo.focus();
 		});
 	});
 </script>
@@ -230,11 +244,7 @@
 	</div>
 	<hr id="selectWayEnd">
 	<div class="roundtrip">
-<<<<<<< HEAD
-		<form action="../book/stepForm1.do" name="round" method="post">
-=======
 		<form action="../book/goAvail.do" name="round" method="post">
->>>>>>> refs/remotes/origin/master
 			<table id="flightInput">
 				<tr id="mybutton">
 					<td>

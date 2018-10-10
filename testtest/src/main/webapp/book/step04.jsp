@@ -8,6 +8,11 @@
 <link rel="stylesheet" href="../css/step1.css">
 <link rel="stylesheet" href="../css/step4.css">
 <link rel="stylesheet" href="../css/showConsole3.css">
+<style type="text/css">
+#container{
+
+height: 1600px;}
+</style>
 <script type="text/javascript" src="../js/jquery-3.3.1.min.js"></script>
 <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
 <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
@@ -127,9 +132,9 @@ $(function(){
 		<!--step1,2,3,4 부분  -->	
 		<div id="top">
 			<h1>항공권 예매</h1>
-			<ul class="stepNav threeWide setp03" >
-				 <li><span>Step.1</span><strong>구간 및 운임 선택</strong></li>
-				 <li><span>Step.2</span><strong>탑승자 정보 입력</strong></li>
+			<ul class="stepNav threeWide setp04" >
+				<li><span>Step.1</span><strong>구간 및 운임 선택</strong></li>
+				<li><span>Step.2</span><strong>탑승자 정보 입력</strong></li>
 				<li><span>Step.3</span><strong>부가서비스 선택</strong></li>
 				<li><span class="stepNavOn1">Step.4</span><strong class="stepNavOn2">항공권 결제</strong></li> 
 			</ul>
@@ -310,13 +315,13 @@ $(function(){
 				<div id="showInfo">
 					<img src="../img/showConsole/ico_silver.png">
 					<div id="memInfo">
-						<p><span id="memName">윤빛가람이다 ${memName}</span> 님</p>
-						<span id="memId">memId입니다 ${memId}</span>
+						<p><span id="memName"> ${memName}</span> 님</p>
+						<span id="memId">${memId}</span>
 					</div>
 				</div>
 				<div id="showPoint">
 					<span id="pointHead">가용포인트</span>
-					<span id="memPoint" class="pointRight">${memPoint}50000</span>					
+					<span id="memPoint" class="pointRight">${memberDTO.totalPoint}</span>					
 					<span id="pointFoot" class="pointRight">P</span>
 				</div>
 				<div id="showFlightInfo">
@@ -331,8 +336,8 @@ $(function(){
 							<tr id="showTripInfo1">
 								<td colspan="2">
 									<p class="gugan">구간1</p>
-									<span id="showTrip1">${dep}간다${arr}</span><br>
-									<span id="showTime1">${dayGo}+출시 ~ 도시</span>
+									<span id="showTrip1">${dep} - ${arr}</span><br>
+									<span id="showTime1">${dayGo}+ ~ </span>
 								</td>
 							</tr>
 							<tr id="showExtra1">
@@ -346,8 +351,8 @@ $(function(){
 								</td>
 								<td>
 									<ul id="addExtra1R">
-										<li class="showLug1"><span class="showLug1">5000</span>KRW</li>
-										<li class="showSeat1"><span class="showSeat1">1000</span>KRW</li>
+										<li class="showLug1"><span class="showLug1">0</span>KRW</li>
+										<li class="showSeat1"><span class="showSeat1">0</span>KRW</li>
 										<li class="showEat1"><span class="showEat1">0</span>KRW</li>
 									</ul>
 								</td>
@@ -355,8 +360,8 @@ $(function(){
 							<tr id="showTripInfo2">
 								<td colspan="2">
 									<p class="gugan">구간2</p>
-									<span id="showTrip2">${arr}온다${dep}</span><br>
-									<span id="showTime2">${dayCome}+출시 ~ 도시</span>
+									<span id="showTrip2">${arr} - ${dep}</span><br>
+									<span id="showTime2">${dayCome}+ ~ </span>
 								</td>
 							</tr>
 							<tr id="showExtra2">
@@ -370,8 +375,8 @@ $(function(){
 								</td>
 								<td>
 									<ul id="addExtra2R">
-										<li class="showLug2"><span class="showLug2">5000</span>KRW</li>
-										<li class="showSeat2"><span class="showSeat2">2000</span>KRW</li>
+										<li class="showLug2"><span class="showLug2">0</span>KRW</li>
+										<li class="showSeat2"><span class="showSeat2">0</span>KRW</li>
 										<li class="showEat2"><span class="showEat2">0</span>KRW</li>
 									</ul>
 								</td>
@@ -396,7 +401,7 @@ $(function(){
 								<td colspan="2">
 									<h4>항공운임 등 총액</h4>
 									<div id="showTotal">
-										<span id="showTotalNum">420000</span><span id="tfootKrw">KRW</span>
+										<span id="showTotalNum">0</span><span id="tfootKrw">KRW</span>
 									</div>
 								</td>
 							</tr>
