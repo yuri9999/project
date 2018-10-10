@@ -18,6 +18,13 @@ public class FlightInfoDTO {
 	
 	
 	
+	@Override
+	public String toString() {
+		return "FlightInfoDTO [seq=" + seq + ", depAirport1=" + depAirport1 + ", depAirCode1=" + depAirCode1
+				+ ", arrAirport1=" + arrAirport1 + ", arrAirCode1=" + arrAirCode1 + ", depDate1=" + depDate1
+				+ ", flightName1=" + flightName1 + ", depTime1=" + depTime1 + ", arrTime1=" + arrTime1 + ", depPrice1="
+				+ depPrice1 + ", depFuelPrice1=" + depFuelPrice1 + ", depAirportPrice1=" + depAirportPrice1 + "]";
+	}
 	public String getDepAirCode1() {
 		return depAirCode1;
 	}
